@@ -1,8 +1,0 @@
-{
-  "name": "jjt.io",
-  "version": "0.0.0",
-  "dependencies": {
-    "solarized": "~0.1.1",
-    "pure-place": "~0.2.4"
-  }
-}

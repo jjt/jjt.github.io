@@ -1,15 +1,16 @@
 @import "pure-place/scss/classes/base";
 @import "pure-place/scss/pure-placeholders";
 @import "bourbon/bourbon";
-//@import "solarized/scss/solarized";
-@import "solarized-local/scss/solarized";
+@import "solarized/scss/solarized";
 @import "sticky-footer";
 
+$pure-u-prefixes: content;
+$pure-grid-divisor: 3;
+@import "pure-place/scss/grid-classes";
 // General
 
 $body-color: #5A502E;
 $site-title-colors: 6 7 8 2 3 4;
-
 
 body {
   @extend %solarized-bg-3;
@@ -27,10 +28,18 @@ p {
   line-height:1.5;
 }
 
+h1,h2,h3,h4,h5 {
+  text-align: center;
+}
+
+.no-break {
+  display:inline-block;
+}
 
 // Scaffolding
 
 .container {
+  @extend %pure-g-r;
   max-width: 680px;
   margin:0 auto;
 }
@@ -41,6 +50,7 @@ p {
 
 .content {
   @extend %unit;
+  @extend %pure-u-1;
 }
 
 @include sticky-footer(80px);
@@ -136,6 +146,7 @@ p {
 
 .blurb p {
   font-size:22px;
+  text-align: justify;
 }
 
 
