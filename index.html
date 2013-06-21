@@ -1,10 +1,20 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: JJT.IO - Jason Trill
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
+  <div class="blurb">
+    
+    <h1>I'm Jason Trill, web developer &amp; designer</h1>
+    <p class="big">
+    I'm a full-stack developer with a focus on front-end web apps,
+    effective UI design, and modern web development techniques. 
+    I live in beautiful Victoria, BC, Canada and am available
+    for development and consultation locally and abroad.
+    </p>
+  </div>
+  <h2>Recent Posts</h2>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>

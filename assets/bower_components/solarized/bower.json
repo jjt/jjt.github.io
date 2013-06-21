@@ -1,0 +1,17 @@
+{
+  "name": "solarized",
+  "version": "0.1.1",
+  "main": "css/solarized.css",
+  "ignore": [
+    ".sass-cache"
+  ],
+  "gitHead": "7f3d730ef32661b9af1fac4dac01502c3cacc9c1",
+  "readme": "# bower-solarized\n\nA css + sass realization of [Solarized](http://ethanschoonover.com/solarized).\nInstallation via Bower (preferred): `bower install solarized`,\nor cloning into your site assets:\n`git clone git@github.com:jjt/bower-solarized.git`.\n\n## Add To Your Site\n\n**CSS/HTML**\n\n    <link rel=\"stylesheet\" href=\"path-to-solarized/css/solarized.css\" />\n\n\n**Sass** \n\n    // Just Sass placeholders, no CSS classes output\n    @import \"path-to-solarized/scss/solarized\";\n\n    // CSS classes and placeholders\n    @import \"path-to-solarized/scss/solarized-classes\";\n",
+  "readmeFilename": "README.md",
+  "_id": "solarized@0.1.1",
+  "description": "A css + sass realization of [Solarized](http://ethanschoonover.com/solarized). Installation via Bower (preferred): `bower install solarized`, or cloning into your site assets: `git clone git@github.com:jjt/bower-solarized.git`.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jjt/bower-solarized.git"
+  }
+}
