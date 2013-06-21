@@ -1,2 +1,3 @@
 name: JJT.IO 
 pygments: true
+exclude: ["Gemfile*","bower.json","bower_components","scss","compass"]
