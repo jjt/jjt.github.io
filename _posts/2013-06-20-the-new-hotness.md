@@ -9,7 +9,7 @@ title: The New Hotness
 Jay jay tee dot eye oh. Hmmm, nice. So svelte compared to jasontrill.com. Only
 fitting that the rest of the site slims down to match the name.
 
-## Sniglet might be the best and most-appropriately-named font
+## Sniglet might be the best and most appropriately named font
 My old Jekyll blog served out of jasontrill.com was created using 
 Jekyll-Bootstrap. It's great for getting up and running quickly, but Bootstrap
 is just completely unnecessary for my simple 1-column blog. So instead I'm using 
