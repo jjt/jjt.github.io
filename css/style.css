@@ -1226,3 +1226,12 @@ body > #main #push-footer {
   font-size: 22px;
   text-align: justify;
 }
+
+/* line 158, ../scss/style.scss */
+.page-header h1 {
+  margin-bottom: 0;
+}
+/* line 162, ../scss/style.scss */
+.page-header .meta {
+  text-align: center;
+}
