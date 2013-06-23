@@ -1028,54 +1028,54 @@ body {
     width: 100%;
   }
 }
-/* line 15, ../scss/style.scss */
+/* line 19, ../scss/style.scss */
 body {
-  font: 18px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 18px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 21, ../scss/style.scss */
+/* line 25, ../scss/style.scss */
 a {
   text-decoration: none;
 }
-/* line 24, ../scss/style.scss */
+/* line 28, ../scss/style.scss */
 a:hover {
   color: #1e6ea7;
 }
 
-/* line 29, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
 p {
   line-height: 1.5;
   padding-left: 0.08em;
 }
 
-/* line 34, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 li {
   margin: 0.5em 0;
 }
 
-/* line 38, ../scss/style.scss */
+/* line 42, ../scss/style.scss */
 h1, h2, h3, h4, h5 {
   color: #93a1a1;
 }
 
-/* line 42, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 h1, h2, h3 {
   font-weight: normal;
   letter-spacing: -0.05em;
 }
 
-/* line 47, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 .no-break {
   display: inline-block;
 }
 
-/* line 53, ../scss/style.scss */
+/* line 57, ../scss/style.scss */
 .container, .stripey-guy .inner {
   max-width: 680px;
   margin: 0 auto;
 }
 
-/* line 59, ../scss/style.scss */
+/* line 63, ../scss/style.scss */
 .content {
   padding: 0 20px;
 }
@@ -1106,76 +1106,29 @@ body > #main #push-footer {
   position: relative;
 }
 
-/* line 69, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 #footer {
   padding-top: 50px;
   height: 30px;
   font-size: 14px;
   text-align: center;
 }
-/* line 75, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 #footer a {
   display: inline-block;
   margin: 0 9px;
 }
 
-/* line 86, ../scss/style.scss */
-.stripey-guy {
-  font-size: 0px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.1);
-}
-/* line 92, ../scss/style.scss */
-.stripey-guy .inner {
-  height: 5px;
-  line-height: 5px;
-}
-/* line 96, ../scss/style.scss */
-.stripey-guy .inner div {
-  position: relative;
-  display: inline-block;
-  width: 16.66666%;
-  height: 5px;
-  opacity: 0.7;
-}
-/* line 103, ../scss/style.scss */
-.stripey-guy .inner div:nth-child(1) {
-  background: #449edd;
-}
-/* line 103, ../scss/style.scss */
-.stripey-guy .inner div:nth-child(2) {
-  background: #32c1b7;
-}
-/* line 103, ../scss/style.scss */
-.stripey-guy .inner div:nth-child(3) {
-  background: #a8c200;
-}
-/* line 103, ../scss/style.scss */
-.stripey-guy .inner div:nth-child(4) {
-  background: #e75c23;
-}
-/* line 103, ../scss/style.scss */
-.stripey-guy .inner div:nth-child(5) {
-  background: #e25452;
-}
-/* line 103, ../scss/style.scss */
-.stripey-guy .inner div:nth-child(6) {
-  background: #da5797;
-}
-
-/* line 114, ../scss/style.scss */
+/* line 97, ../scss/style.scss */
 .site-title {
   font-family: 'Sniglet';
-  font-size: 160px;
+  font-size: 144px;
   line-height: 0.8em;
-  margin-top: 20px;
   text-align: center;
-  margin: 0 auto 20px;
-  padding-top: 50px;
+  margin: 0 auto;
+  padding: 36px 0 24px;
 }
-/* line 122, ../scss/style.scss */
+/* line 104, ../scss/style.scss */
 .site-title a {
   position: relative;
   display: inline-block;
@@ -1193,7 +1146,7 @@ body > #main #push-footer {
   clear: both;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .st1, .st2, .st3, .st4, .st5, .st6 {
   display: block;
   float: left;
@@ -1205,59 +1158,105 @@ body > #main #push-footer {
   text-shadow: 0px 0px 14px rgba(253, 246, 227, 0.5);
 }
 
-/* line 147, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .st1 {
   color: #268bd2;
   z-index: 10;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .st2 {
   color: #2aa198;
   z-index: 9;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .st3 {
   color: #859900;
   z-index: 8;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .st4 {
   color: #cb4b16;
   z-index: 13;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .st5 {
   color: #dc322f;
   z-index: 12;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .st6 {
   color: #d33682;
   z-index: 11;
 }
 
-/* line 157, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
+.stripey-guy {
+  font-size: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #eee8d5;
+}
+/* line 142, ../scss/style.scss */
+.stripey-guy .inner {
+  height: 5px;
+  line-height: 5px;
+}
+/* line 146, ../scss/style.scss */
+.stripey-guy .inner div {
+  position: relative;
+  display: inline-block;
+  width: 16.66666%;
+  height: 5px;
+  opacity: 0.7;
+}
+/* line 153, ../scss/style.scss */
+.stripey-guy .inner div:nth-child(1) {
+  background: #449edd;
+}
+/* line 153, ../scss/style.scss */
+.stripey-guy .inner div:nth-child(2) {
+  background: #32c1b7;
+}
+/* line 153, ../scss/style.scss */
+.stripey-guy .inner div:nth-child(3) {
+  background: #a8c200;
+}
+/* line 153, ../scss/style.scss */
+.stripey-guy .inner div:nth-child(4) {
+  background: #e75c23;
+}
+/* line 153, ../scss/style.scss */
+.stripey-guy .inner div:nth-child(5) {
+  background: #e25452;
+}
+/* line 153, ../scss/style.scss */
+.stripey-guy .inner div:nth-child(6) {
+  background: #da5797;
+}
+
+/* line 163, ../scss/style.scss */
 .blurb h1 {
   letter-spacing: -0.06em;
   text-align: center;
 }
 
-/* line 162, ../scss/style.scss */
+/* line 168, ../scss/style.scss */
 .blurb p {
   font-size: 22px;
   text-align: justify;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 .page-header {
   margin-bottom: 2em;
 }
-/* line 173, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .page-header h1 {
   margin-bottom: 0;
   margin-top: 0;

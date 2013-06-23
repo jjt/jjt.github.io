@@ -12,10 +12,14 @@ $pure-grid-divisor: 3;
 $body-color: #5A502E;
 $site-title-colors: 6 7 8 2 3 4;
 
+$body-font-size: 18px;
+$body-line-height: 24px;
+$vert-unit: $body-line-height;
+
 body {
   @extend %solarized-bg-3;
   @extend %solarized-00;
-  font: 18px/24px $helvetica;
+  font: #{$body-font-size}/1 $helvetica;
 }
 
 a {
@@ -83,42 +87,20 @@ h1,h2,h3 {
 }
 
 
-.stripey-guy {
-  font-size:0px;
-  position:fixed;
-  top:0;
-  width:100%;
-  background: rgba(0,0,0,0.1);
-  .inner {
-    @extend .container;
-    height:5px;
-    line-height: 5px;
-    div {
-      position: relative;
-      display: inline-block;
-      width:16.66666%;
-      height: 5px;
-      opacity: 0.7;
-      @for $i from 1 through 6 {
-        &:nth-child(#{$i}) {
-          background: lighten(nth($solarized-accent-colors, nth($site-title-colors, $i)), 8%);
-        }
-      }
-    }
-  }
-}
 
 
 // Title
 
+.site-header {
+}
+
 .site-title {
   font-family: 'Sniglet';
-  font-size: 160px;
+  font-size: $vert-unit * 6;
   line-height: 0.8em;
-  margin-top:20px;
   text-align: center; 
-  margin:0 auto 20px;
-  padding-top: 50px;
+  margin:0 auto;
+  padding: 1.5 * $vert-unit 0 $vert-unit;
   a {
     position:relative;
     display:inline-block;
@@ -151,6 +133,30 @@ h1,h2,h3 {
   }
 }
 
+.stripey-guy {
+  font-size:0px;
+  position:fixed;
+  top: 0;
+  width:100%;
+  background: $solarized-2;
+  .inner {
+    @extend .container;
+    height:5px;
+    line-height: 5px;
+    div {
+      position: relative;
+      display: inline-block;
+      width:16.66666%;
+      height: 5px;
+      opacity: 0.7;
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          background: lighten(nth($solarized-accent-colors, nth($site-title-colors, $i)), 8%);
+        }
+      }
+    }
+  }
+}
 
 // Home Page
 
