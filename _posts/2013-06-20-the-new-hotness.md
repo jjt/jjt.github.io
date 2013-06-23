@@ -1,7 +1,17 @@
 ---
+"0": f
+"1": u
+"2": "n"
+"3": e
+"4": g
+"5": o
+"6": r
+"7": "y"
+"8": ":"
 layout: post
 published: true
 title: The New Hotness
+fun: true
 ---
 
 ## JJT.IO: New Domain, New Blog Design
