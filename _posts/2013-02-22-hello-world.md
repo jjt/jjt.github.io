@@ -3,8 +3,9 @@ layout: post
 title: "Fiddle-dee fuck, another Jekyll blog"
 description: ""
 tagline: "Oh boy, I bet it's even hosted on Github too"
-category: 
+category: null
 tags: []
+published: true
 ---
 
 *update:* Jekyll-Bootstrap was okay, but my blog is now [The New Hotness](/2013/06/20/the-new-hotness) 
@@ -29,4 +30,3 @@ Ground round pig t-bone sausage beef ribs ribeye short ribs pork loin swine pork
 Bacon chicken ham hock bresaola jerky cow. Sausage strip steak chuck, doner fatback capicola boudin turducken drumstick bresaola tri-tip pork. Beef ribs shoulder capicola ham hock, frankfurter rump chuck shank pancetta tenderloin pork pig. Prosciutto andouille t-bone doner, beef flank ham hock chuck. Tail jowl ham sirloin flank pork corned beef pig leberkas turkey rump bacon t-bone chuck fatback.
 
 Pastrami jowl chicken boudin ham hock pig pork chop pork belly beef ribs brisket shankle. Tri-tip pork loin kielbasa venison drumstick flank hamburger. Tenderloin strip steak tri-tip boudin shankle spare ribs venison kielbasa. Sirloin pastrami spare ribs bresaola strip steak pork loin turkey tri-tip chuck shank venison bacon. Ham hock beef turkey biltong beef ribs drumstick bresaola leberkas sausage swine kielbasa hamburger pork belly fatback shank. Meatloaf tenderloin pig boudin, tri-tip sausage strip steak ball tip venison sirloin turkey ribeye filet mignon. Prosciutto boudin pork pork chop spare ribs ball tip jerky salami pork loin strip steak beef t-bone drumstick.
-
