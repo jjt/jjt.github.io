@@ -1,13 +1,4 @@
 ---
-"0": c
-"1": a
-"2": t
-"3": e
-"4": g
-"5": o
-"6": r
-"7": "y"
-"8": ":"
 layout: post
 published: true
 title: The New Hotness
