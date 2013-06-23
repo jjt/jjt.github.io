@@ -15,8 +15,7 @@ $site-title-colors: 6 7 8 2 3 4;
 body {
   @extend %solarized-bg-3;
   @extend %solarized-00;
-  font: $helvetica;
-  font-size: 18px;
+  font: 18px/24px $helvetica;
 }
 
 a {
@@ -92,6 +91,8 @@ h1,h2,h3 {
   background: rgba(0,0,0,0.1);
   .inner {
     @extend .container;
+    height:5px;
+    line-height: 5px;
     div {
       position: relative;
       display: inline-block;
