@@ -1,3 +1,11 @@
 name: JJT.IO 
 pygments: true
 exclude: ["Gemfile*","bower.json","bower_components","scss","compass", "CNAME"]
+prose:
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "text"
+          label: "Layout"
+          value: "post"
