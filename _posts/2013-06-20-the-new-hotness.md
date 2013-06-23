@@ -2,7 +2,6 @@
 layout: post
 published: true
 title: The New Hotness
-category: blog
 ---
 
 ## JJT.IO: New Domain, New Blog Design
