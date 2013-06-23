@@ -40,6 +40,11 @@ h1,h2,h3,h4,h5 {
   color: $solarized-1;
 }
 
+h1,h2,h3 {
+  font-weight: normal;
+  letter-spacing: -0.05em;
+}
+
 .no-break {
   display:inline-block;
 }

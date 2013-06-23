@@ -1060,17 +1060,23 @@ h1, h2, h3, h4, h5 {
 }
 
 /* line 43, ../scss/style.scss */
+h1, h2, h3 {
+  font-weight: normal;
+  letter-spacing: -0.05em;
+}
+
+/* line 48, ../scss/style.scss */
 .no-break {
   display: inline-block;
 }
 
-/* line 49, ../scss/style.scss */
+/* line 54, ../scss/style.scss */
 .container, .stripey-guy .inner {
   max-width: 680px;
   margin: 0 auto;
 }
 
-/* line 55, ../scss/style.scss */
+/* line 60, ../scss/style.scss */
 .content {
   padding: 0 20px;
 }
@@ -1101,20 +1107,20 @@ body > #main #push-footer {
   position: relative;
 }
 
-/* line 65, ../scss/style.scss */
+/* line 70, ../scss/style.scss */
 #footer {
   padding-top: 50px;
   height: 30px;
   font-size: 14px;
   text-align: center;
 }
-/* line 71, ../scss/style.scss */
+/* line 76, ../scss/style.scss */
 #footer a {
   display: inline-block;
   margin: 0 9px;
 }
 
-/* line 82, ../scss/style.scss */
+/* line 87, ../scss/style.scss */
 .stripey-guy {
   font-size: 0px;
   position: fixed;
@@ -1122,7 +1128,7 @@ body > #main #push-footer {
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
 }
-/* line 90, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 .stripey-guy .inner div {
   position: relative;
   display: inline-block;
@@ -1130,32 +1136,32 @@ body > #main #push-footer {
   height: 5px;
   opacity: 0.7;
 }
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(1) {
   background: #449edd;
 }
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(2) {
   background: #32c1b7;
 }
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(3) {
   background: #a8c200;
 }
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(4) {
   background: #e75c23;
 }
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(5) {
   background: #e25452;
 }
-/* line 97, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(6) {
   background: #da5797;
 }
 
-/* line 108, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .site-title {
   font-family: 'Sniglet';
   font-size: 160px;
@@ -1165,7 +1171,7 @@ body > #main #push-footer {
   margin: 0 auto 20px;
   padding-top: 50px;
 }
-/* line 116, ../scss/style.scss */
+/* line 121, ../scss/style.scss */
 .site-title a {
   position: relative;
   display: inline-block;
@@ -1183,7 +1189,7 @@ body > #main #push-footer {
   clear: both;
 }
 
-/* line 125, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .st1, .st2, .st3, .st4, .st5, .st6 {
   display: block;
   float: left;
@@ -1195,59 +1201,59 @@ body > #main #push-footer {
   text-shadow: 0px 0px 14px rgba(253, 246, 227, 0.5);
 }
 
-/* line 141, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .st1 {
   color: #268bd2;
   z-index: 10;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .st2 {
   color: #2aa198;
   z-index: 9;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .st3 {
   color: #859900;
   z-index: 8;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .st4 {
   color: #cb4b16;
   z-index: 13;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .st5 {
   color: #dc322f;
   z-index: 12;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .st6 {
   color: #d33682;
   z-index: 11;
 }
 
-/* line 151, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 .blurb h1 {
   letter-spacing: -0.06em;
   text-align: center;
 }
 
-/* line 156, ../scss/style.scss */
+/* line 161, ../scss/style.scss */
 .blurb p {
   font-size: 22px;
   text-align: justify;
 }
 
-/* line 165, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .page-header {
   margin-bottom: 2em;
 }
-/* line 167, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 .page-header h1 {
   margin-bottom: 0;
   margin-top: 0;
