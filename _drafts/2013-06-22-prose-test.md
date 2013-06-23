@@ -5,6 +5,6 @@ title: ""
 splash: ""
 ---
 
-## A New Post
+## GitHub Pages and Prose.io is the future
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+So, for most of the client CMS sites I've done over the years, I'd say that 95% of them were mostly static pages and a blog section.
