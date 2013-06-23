@@ -1234,19 +1234,20 @@ body > #main #push-footer {
 /* line 151, ../scss/style.scss */
 .blurb h1 {
   letter-spacing: -0.06em;
+  text-align: center;
 }
 
-/* line 155, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 .blurb p {
   font-size: 22px;
   text-align: justify;
 }
 
-/* line 164, ../scss/style.scss */
+/* line 165, ../scss/style.scss */
 .page-header {
   margin-bottom: 2em;
 }
-/* line 166, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 .page-header h1 {
   margin-bottom: 0;
   margin-top: 0;
