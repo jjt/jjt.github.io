@@ -7,14 +7,11 @@ prose:
   media: 'media'
   metadata:
     _posts:
-      - name: "category"
-        field:
-          element: "text"
-          value: "blog"
       - name: "layout"
         field:
           element: "text"
-          value: "blog"
+          label: "Layout"
+          value: "default"
       - name: "title"
         field:
           element: "text"
