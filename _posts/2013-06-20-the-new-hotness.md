@@ -1,6 +1,6 @@
 ---
-layout: default
-published: false
+layout: post
+published: true 
 title: The New Hotness
 splash: ""
 ---

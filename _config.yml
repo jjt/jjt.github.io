@@ -11,7 +11,7 @@ prose:
         field:
           element: "text"
           label: "Layout"
-          value: "default"
+          value: "post"
       - name: "title"
         field:
           element: "text"

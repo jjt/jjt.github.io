@@ -26,10 +26,11 @@ a {
 
 p {
   line-height:1.5;
+  padding-left:0.08em;
 }
 
 h1,h2,h3,h4,h5 {
-  text-align: center;
+  color: $solarized-1;
 }
 
 .no-break {
@@ -154,11 +155,13 @@ h1,h2,h3,h4,h5 {
 // Posts
 
 .page-header {
+  margin-bottom: 2em;
   h1 {
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   .meta {
-    text-align:center;
+    @extend %solarized-0;
   }
 }
