@@ -1,47 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+---
+layout: default_no_header
+---
+      <div class="site-header container">
+        <div class="r">
+          <div class="g-4 text-right">
+            <p>You're reading an article on</p>
+          </div>
+          <div class="site-title-g">
+            <a href="/" class="site-title">
+              <span class="st1">J</span>
+              <span class="st2">J</span>
+              <span class="st3">T</span>
+              <span class="st4">.</span>
+              <span class="st5">I</span>
+              <span class="st6">O</span>
+            </a>
+          </div>
 
-        <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
-        <link href='http://fonts.googleapis.com/css?family=Sniglet:800&text=jtioJT.IO' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-      <div class="stripey-guy">
-        <div class="inner">
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-        </div>
-      </div>
-      <div class="site-header">
-        <div class="site-title"><a href="/">
-          <span class="st1">J</span>
-          <span class="st2">J</span>
-          <span class="st3">T</span>
-          <span class="st4">.</span>
-          <span class="st5">I</span>
-          <span class="st6">O</span>
-        </a></div>
-      </div>
-      <div id="main" class="container">
-        <div class="content">
-          {{ content }}
-        </div>
-        <div id="push-footer">
-          
+          <div class="g-4">
+            <p>which is a blog by Jason Trill</p>
+          </div>
         </div>
       </div>
 
-      <div id="footer" class="footer container">
-        <div class="pure-u-1 contact">
-          <a>&copy;Jason Trill</a>
-          <a href="mailto:jason@jasontrill.com">jason@jasontrill.com</a>
-          <a href="http://github.com/jjt/">github.com/jjt</a>
-          <a href="http://twitter.com/jjt/">twitter.com/jjt</a>
-        </div>
-      </div>
-
-    </body>
-</html>
+      {{ content }}

@@ -1,6 +1,6 @@
 name: JJT.IO 
 pygments: true
-exclude: ["Gemfile*","bower.json","bower_components","scss","compass", "CNAME"]
+exclude: ["Gemfile*","bower.json","scss","compass", "CNAME"]
 prose:
   rooturl: '_posts'
   siteurl: 'http://jjt.io/'

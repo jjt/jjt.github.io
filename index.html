@@ -1,23 +1,50 @@
 ---
-layout: default
+layout: default_no_header
 title: JJT.IO - Jason Trill
 ---
+<div class="r">
+    <div class="site-title-g-home">
+      <a href="/" class="site-title-home">
+        <span class="st1">J</span>
+        <span class="st2">J</span>
+        <span class="st3">T</span>
+        <span class="st4">.</span>
+        <span class="st5">I</span>
+        <span class="st6">O</span>
+      </a>
+    </div>
+  
+</div>
+<div class="r">
+  <div class="g-12">
+    <h1 class=jason-is>
+      I'm Jason Trill, full-stack <span class=no-break>developer & designer</span>
+    </h1>
+  </div>
+</div>
 
-<div class="pure-u-1" id="home">
-  <div class="blurb">
-    
-    <h1>I'm Jason Trill, web <span class=no-break>developer &amp; designer</span></h1>
-    <p class="big">
-    I'm a full-stack developer with a focus on front-end web apps,
-    effective UI design, and modern web development techniques. 
+<div class="r">
+  <div class="g-9">
+    <p class="blurb">
+    I'm a full-stack developer with a focus on using
+    effective UI design and modern web development practices to create
+    high-performing responsive web applications.
     I live in beautiful Victoria, BC, Canada and am available
-    for development and consultation locally and abroad.
+    for development and project consultation locally and abroad.
     </p>
   </div>
-  <h2>Recent Posts</h2>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="g-3">
+    <img class="face-home" src="/assets/images/jjt-256.jpg" />
+  </div>
+</div>
+
+<div class="r">
+  <div class="g-9">
+    <h2>Recent Posts</h2>
+    <ul class="posts list-plain">
+      {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> <span>{{ post.date | date_to_string }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
