@@ -4,7 +4,7 @@
 .vr-lines {
   background-size: 100% $base-line-height * $base-leading-factor;
   $r: rgba(255,0,0,0.2);
-  $b: rgba(0,0,255,0.2);
+  $b: rgba($solarized-1,0.4);
   $t: transparent;
   @include linear-gradient(top,
     $t, $b, $b 1px,

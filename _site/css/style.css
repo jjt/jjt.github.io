@@ -15,6 +15,11 @@ a {
   color: #586e75;
 }
 
+/* line 67, ../bower_components/solarized/scss/solarized.scss */
+body {
+  background-color: #586e75;
+}
+
 /* line 64, ../bower_components/solarized/scss/solarized.scss */
 body {
   color: #657b83;
@@ -28,11 +33,6 @@ body {
 /* line 64, ../bower_components/solarized/scss/solarized.scss */
 #footer, #footer a {
   color: #93a1a1;
-}
-
-/* line 67, ../bower_components/solarized/scss/solarized.scss */
-body {
-  background-color: #fdf6e3;
 }
 
 /* line 14, ../scss/_type.scss */
@@ -588,7 +588,7 @@ p > code {
 
 /* line 29, ../scss/style.scss */
 html {
-  background: #fdf6e3;
+  background: #586e75;
 }
 
 /* line 39, ../scss/style.scss */

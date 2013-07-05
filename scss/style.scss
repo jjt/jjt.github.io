@@ -14,7 +14,7 @@ $max-width: 40em;
 //@import "pure-place/scss/grid-classes";
 // General
 
-$body-color: #5A502E;
+$body-color: $solarized-00;
 
 @import "type";
 
@@ -27,20 +27,19 @@ $body-color: #5A502E;
 @import "lists";
 
 html {
-  background: $solarized-3;
+  background: $solarized-03;
 }
 
 body {
-  @extend %solarized-bg-3;
-  @extend %solarized-00;
+  @extend %solarized-1;
   //@extend .vr-lines;
 }
 
 a {
-  @extend %solarized-blue;
+  @extend %solarized-2;
   text-decoration: none;
   &:hover {
-    color: darken($solarized-blue, 10%);
+    color: darken($solarized-2, 10%);
   }
 }
 
@@ -51,11 +50,11 @@ pre {
   padding-right: 1rem;
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
-  background: $solarized-2;
+  background: $solarized-02;
 }
 
 p > code {
-  background: $solarized-2;
+  background: $solarized-02;
 }
 
 
@@ -66,19 +65,25 @@ p > code {
 
 // Scaffolding
 
+.site-content {
+  a {
+    border-bottom: 1px solid rgba($solarized-2, 0.3);
+  }
+}
 
 #footer {
   @extend %solarized-1;
   padding-top: 3rem;
-  height: 2rem;
+  padding-bottom: 2rem;
   font-size: 0.8rem;
   text-align: center;
-  a {
+  a, span {
     @extend %solarized-1;
     display:inline-block;
-    &:hover {
-      @extend %solarized-01;
-    }
+    margin:0 1em;
+  }
+  a:hover {
+    @extend %solarized-01;
   }
 }
 
@@ -93,15 +98,15 @@ p > code {
 }
 
 .site-header {
-  @extend .container;
-  height: 6rem;
-  padding-top:rem(18);
+  height: 7.5rem;
+  padding-top:rem(35);
   line-height:1em;
   .g-4 {
     padding-top:1rem;
   }
   p {
     @extend .epsilon; 
+    font-family: $georgia;
     font-style: italic;
     display:inline-block;
     position: relative;
@@ -130,8 +135,8 @@ p > code {
   float:left;
   text-align: center;
   margin:0 -0.155em;
-  -webkit-text-stroke: 1px;
-  text-shadow: 0px 0px 14px rgba($solarized-3, 0.25);
+  text-shadow: 0px 0px 14px rgba($solarized-02, 0.25);
+  position:relative;
 }
 
 
@@ -141,8 +146,10 @@ p > code {
   $z-indexes: 10 9 8 13 12 11;
   .st#{$i} {
     @extend %s;
-    z-index: nth($z-indexes, $i);
-    color: rgba($color,0.5);
+    //z-index: nth($z-indexes, $i);
+    z-index: 18-$i;
+    color: rgba($color,0.7);
+    //color: rgba($solarized-1, 0.5);
     a:hover & {
     }
   }
@@ -153,7 +160,7 @@ p > code {
   position:fixed;
   top: 0;
   width:100%;
-  background: $solarized-2;
+  background: $solarized-02;
   .inner {
     height:5px;
     line-height: 5px;
@@ -162,7 +169,7 @@ p > code {
       width: 16.6666%;
       height: 5px;
       float:left;
-      opacity: 0.7;
+      opacity: 0.8;
       @for $i from 1 through 6 {
         &:nth-child(#{$i}) {
           background: lighten(nth($solarized-accent-colors, nth($site-title-colors, $i)), 8%);
@@ -253,8 +260,8 @@ p > code {
 
 .site-title-g-home {
   @extend .g-12;
-  height: 12rem;
-  padding-top: 1.5rem;
+  height: 13.5rem;
+  padding-top: 3rem;
   text-align: center;
 }
 
