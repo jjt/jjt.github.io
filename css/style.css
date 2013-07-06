@@ -6,7 +6,7 @@
 }
 
 /* line 64, ../bower_components/solarized/scss/solarized.scss */
-#footer a:hover {
+.contact a:hover {
   color: #586e75;
 }
 
@@ -16,7 +16,7 @@
 }
 
 /* line 64, ../bower_components/solarized/scss/solarized.scss */
-body, #footer, #footer a, #footer span {
+body, #footer, .contact a, .contact span {
   color: #93a1a1;
 }
 
@@ -162,6 +162,11 @@ p > code {
 /* line 142, ../scss/_type.scss */
 .text-right {
   text-align: right;
+}
+
+/* line 146, ../scss/_type.scss */
+.text-left {
+  text-align: left;
 }
 
 /* line 4, ../scss/_grid.scss */
@@ -581,16 +586,22 @@ html {
   background: #002b36;
 }
 
-/* line 38, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
+::selection {
+  color: #002b36;
+  background: #eee8d5;
+}
+
+/* line 43, ../scss/style.scss */
 a {
   text-decoration: none;
 }
-/* line 41, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 a:hover {
   color: #dfd4b1;
 }
 
-/* line 46, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 pre {
   margin-left: -1rem;
   margin-right: -1rem;
@@ -601,63 +612,92 @@ pre {
   background: #073642;
 }
 
-/* line 56, ../scss/style.scss */
+/* line 61, ../scss/style.scss */
 p > code {
   background: #073642;
 }
 
-/* line 69, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 .site-content a {
   border-bottom: 1px solid rgba(238, 232, 213, 0.3);
 }
 
-/* line 74, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 #footer {
+  text-align: center;
   padding-top: 3rem;
   padding-bottom: 2rem;
-  font-size: 0.8rem;
-  text-align: center;
-}
-/* line 80, ../scss/style.scss */
-#footer a, #footer span {
-  display: inline-block;
-  margin: 0 1em;
 }
 
+/* line 86, ../scss/style.scss */
+.contact {
+  padding: 0 1em;
+  width: 38%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* line 91, ../scss/style.scss */
+.contact a, .contact span {
+  display: block;
+  font-size: 0.8rem;
+}
 /* line 95, ../scss/style.scss */
+.contact a:first-child, .contact span:first-child {
+  margin-left: 0;
+}
+/* line 98, ../scss/style.scss */
+.contact a:last-child, .contact span:last-child {
+  margin-right: 0;
+}
+
+/* line 108, ../scss/style.scss */
+#footer .face, #footer .face-home, .contact, .contact {
+  vertical-align: middle;
+}
+
+/* line 115, ../scss/style.scss */
+#footer .face, #footer .face-home {
+  border: 2px solid rgba(238, 232, 213, 0.4);
+  padding: 5px;
+  display: inline-block;
+  max-width: 20%;
+  box-sizing: border-box;
+}
+
+/* line 127, ../scss/style.scss */
 .site-title-g {
   text-align: center;
 }
 
-/* line 100, ../scss/style.scss */
+/* line 132, ../scss/style.scss */
 .site-header {
   height: 7.5rem;
   padding-top: 1.94444rem;
   line-height: 1em;
 }
-/* line 104, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 .site-header .g-4 {
   padding-top: 1rem;
 }
-/* line 107, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 .site-header p {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: italic;
   display: inline-block;
   position: relative;
 }
-/* line 113, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 .site-header p .span {
   position: relative;
   top: -16px;
 }
 
-/* line 120, ../scss/style.scss */
+/* line 152, ../scss/style.scss */
 .site-header .r div:first-child {
   margin-left: 4.2649%;
 }
 
-/* line 125, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 .site-title {
   font: 4.61111rem/4.77778rem "Sniglet";
   overflow: hidden;
@@ -666,7 +706,7 @@ p > code {
   margin: 0 auto;
 }
 
-/* line 133, ../scss/style.scss */
+/* line 165, ../scss/style.scss */
 .st1, .st2, .st3, .st4, .st5, .st6 {
   display: inline-block;
   float: left;
@@ -676,168 +716,127 @@ p > code {
   position: relative;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .st1 {
   z-index: 17;
   color: rgba(38, 139, 210, 0.7);
 }
 
-/* line 147, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .st2 {
   z-index: 16;
   color: rgba(42, 161, 152, 0.7);
 }
 
-/* line 147, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .st3 {
   z-index: 15;
   color: rgba(133, 153, 0, 0.7);
 }
 
-/* line 147, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .st4 {
   z-index: 14;
   color: rgba(203, 75, 22, 0.7);
 }
 
-/* line 147, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .st5 {
   z-index: 13;
   color: rgba(220, 50, 47, 0.7);
 }
 
-/* line 147, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .st6 {
   z-index: 12;
   color: rgba(211, 54, 130, 0.7);
 }
 
-/* line 159, ../scss/style.scss */
+/* line 191, ../scss/style.scss */
 .stripey-guy {
   position: fixed;
   top: 0;
   width: 100%;
   background: #073642;
 }
-/* line 164, ../scss/style.scss */
+/* line 196, ../scss/style.scss */
 .stripey-guy .inner {
   height: 5px;
   line-height: 5px;
   margin: 0 -1rem;
 }
-/* line 168, ../scss/style.scss */
+/* line 200, ../scss/style.scss */
 .stripey-guy .inner div {
   width: 16.6666%;
   height: 5px;
   float: left;
   opacity: 0.8;
 }
-/* line 174, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(1) {
   background: #449edd;
 }
-/* line 174, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(2) {
   background: #32c1b7;
 }
-/* line 174, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(3) {
   background: #a8c200;
 }
-/* line 174, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(4) {
   background: #e75c23;
 }
-/* line 174, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(5) {
   background: #e25452;
 }
-/* line 174, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(6) {
   background: #da5797;
 }
-/* line 178, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 .stripey-guy .inner div:last-child {
   width: 16.667%;
 }
 
-/* line 195, ../scss/style.scss */
+/* line 227, ../scss/style.scss */
 .posts li span {
   color: #93a1a1;
 }
 
-/* line 201, ../scss/style.scss */
-.face, .face-home {
+/* line 233, ../scss/style.scss */
+.face, #footer .face, .face-home {
   display: inline-block;
   width: 100%;
 }
 
-/*
-.face-cont {
-  perspective: 800px;
-  position: relative;
-  width:184px;
-  height:184px;
-  z-index:5;
-  &:hover {
-    .face-holder{
-      @include transform(rotateY(180deg));    
-      opacity: 1;
-    }
-  }
-}
-
-.face-holder {
-  margin-top: 22px;
-  width:184px;
-  height:184px;
-  position:relative;
-  opacity:0.7;
-  @include transform-style(preserve-3d);
-  @include transition(all 1000ms cubic-bezier(0.060, 0.810, 0.170, 0.985));
-}
-
-.face {
-  @extend .round;
-  @include filter(grayscale(1) sepia(0.6) );
-  position: absolute;
-  left:0;
-  width:100%;
-  height:100%;
-  @include backface-visibility(hidden);
-}
-
-.face-back {
-  @include transform(rotateY(180deg));
-  @include filter(grayscale(0));
-}
-
-*/
-/* line 261, ../scss/style.scss */
+/* line 251, ../scss/style.scss */
 .site-title-g-home {
   height: 13.5rem;
   padding-top: 3rem;
   text-align: center;
 }
 
-/* line 269, ../scss/style.scss */
+/* line 259, ../scss/style.scss */
 .site-title-home {
   font: 9.22222rem/9.22222rem "Sniglet";
   display: inline-block;
   padding: 0 1rem;
 }
 
-/* line 275, ../scss/style.scss */
+/* line 267, ../scss/style.scss */
 .face-home {
   margin-top: 0.16667rem;
 }
 
-/* line 280, ../scss/style.scss */
+/* line 272, ../scss/style.scss */
 .face-g-home {
   margin-left: 4.2649%;
 }
 
-/* line 284, ../scss/style.scss */
+/* line 276, ../scss/style.scss */
 .jason-is {
   text-align: justify;
 }
