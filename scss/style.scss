@@ -1,24 +1,16 @@
-//$visual-grid: true;
 @import "bourbon/bourbon";
 
 $visual-grid-color: #ff0000;
 $visual-grid-opacity: 0.1;
 $site-title-colors: 6 7 8 2 3 4;
-$max-width: 40em; 
+$max-width: 700px; 
 @import "neat/neat";
 @import "solarized/scss/solarized";
 @import "functions/all.scss";
 
-//$pure-u-prefixes: content;
-//$pure-grid-divisor: 3;
-//@import "pure-place/scss/grid-classes";
-// General
-
 $body-color: $solarized-00;
 
 @import "type";
-
-
 @import "grid";
 @include output-grid-classes;
 //@import "compass/typography/vertical_rhythm";
@@ -46,7 +38,7 @@ a {
   @extend %solarized-2;
   text-decoration: none;
   &:hover {
-    color: darken($solarized-2, 10%);
+    color: $solarized-1;
   }
 }
 
@@ -114,9 +106,9 @@ p > code {
     $color $bot, transparent $bot, transparent);
 }
 
-.guy, .guys-title {
+.g-guy, .g-guys-title {
   float:left;
-  width:38%;
+  width:39%;
   @include bg-horizontal-box(rem(30), rem(140));
   & p {
     @extend .text-center;
@@ -140,23 +132,42 @@ p > code {
   display: inline-block;
   width:100%;
   padding:5px;
-  border:3px solid $solarized-1;
+  border:3px solid $solarized-2;
 }
 
 // Title
-.face-g {
+.g-face {
   @include bg-horizontal-box(rem(30), rem(140));
-  padding:0.95rem 0.8rem 0;
-  width:24%;
+  padding:0.5rem 0 0;
+  width:22%;
   float:left;
+  a {
+    display:block;
+    margin:0 auto;
+    max-width:12rem;
+  }
   a:hover .face {
-    border-color:$solarized-2;
+    border-color:$solarized-1;
   }
 }
 
+@media screen and (max-width: $max-width) {
+    .g-face, .g-guy, .g-guys-title {
+      background:none;
+      p {
+        display:block;
+        padding-top:0;
+        margin-bottom:0.4rem;
+      }
+    }
+}
+
+
+
+
+
 .site-title-g {
   text-align: center;
-  @extend .g-3;
 }
 
 .site-header {
@@ -164,9 +175,9 @@ p > code {
   a {
     @extend %underlink;
   }
-  .g-12 {
-    margin:0 -1rem;
-  }
+  //.g-12 {
+    //margin:0 -1rem;
+  //}
   .site-header-copy {
     @extend .text-center;
     @extend .epsilon; 
@@ -266,12 +277,6 @@ p > code {
 
 // Home Page
 
-.site-title-g-home {
-  @extend .g-12;
-  height: 13.5rem;
-  padding-top: 3rem;
-  text-align: center;
-}
 
 
 .site-title-home {
