@@ -4,6 +4,7 @@ exclude: ["Gemfile*","bower.json","scss","compass", "CNAME", "public",
   "node_modules", "bower_components"]
 destination: public
 permalink: pretty
+
 prose:
   rooturl: '_posts'
   siteurl: 'http://jjt.io/'
