@@ -67,14 +67,19 @@ p > code {
 
 // Style
 
+.em {
+  color:$solarized-2;
+}
 
-
+%underlink {
+    border-bottom: 1px solid rgba($solarized-2, 0.3);
+}
 
 // Scaffolding
 
 .site-content {
   a {
-    border-bottom: 1px solid rgba($solarized-2, 0.3);
+    @extend %underlink;
   }
 }
 
@@ -83,48 +88,71 @@ p > code {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 2rem;
+  a {
+    color:$solarized-1;
+    border-bottom: 1px solid $solarized-01;
+  }
+  a, span{
+    @extend .zeta;
+    line-height:rem(14);
+    display:inline-block;
+    margin:0 1em;
+  }
 }
 
-.contact {
-  padding:0 1em;
+
+.site-header-home {
+  padding-top:rem(28);
+  margin-bottom:1.5rem;
+  a {
+    border:none;
+  }
+}
+
+@mixin bg-horizontal-box($top, $bot, $color:$solarized-02) {
+  @include linear-gradient(transparent, transparent $top, $color $top,
+    $color $bot, transparent $bot, transparent);
+}
+
+.guy, .guys-title {
+  float:left;
   width:38%;
-  display:inline-block;
-  box-sizing: border-box;
-  a, span {
-    @extend %solarized-1;
-    display:block;
-    font-size:0.8rem;
-    &:first-child {
-      margin-left: 0;
+  @include bg-horizontal-box(rem(30), rem(140));
+  & p {
+    @extend .text-center;
+    @extend .alpha;
+    padding-left:0;
+    display:inline-block;
+    vertical-align:middle;
+    padding-top:rem(46);
+    letter-spacing:-0.05em;
+    .em {
+      @extend .deca; 
+      white-space: nowrap;
     }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  a:hover {
-    @extend %solarized-01;
   }
 }
 
 
-#footer .face, .contact, .contact {
-  vertical-align:middle;
-}
 
-#footer .g-4.contact {
-}
-
-#footer .face {
-  @extend .face;
-  border: 2px solid rgba($solarized-2, 0.4);
-
-  padding: 5px;
-  display:inline-block;
-  max-width:20%;
-  box-sizing: border-box;
+.face {
+  @extend .round;
+  display: inline-block;
+  width:100%;
+  padding:5px;
+  border:3px solid $solarized-1;
 }
 
 // Title
+.face-g {
+  @include bg-horizontal-box(rem(30), rem(140));
+  padding:0.95rem 0.8rem 0;
+  width:24%;
+  float:left;
+  a:hover .face {
+    border-color:$solarized-2;
+  }
+}
 
 .site-title-g {
   text-align: center;
@@ -132,27 +160,20 @@ p > code {
 }
 
 .site-header {
-  height: 7.5rem;
-  padding-top:rem(35);
-  line-height:1em;
-  .g-4 {
-    padding-top:1rem;
+  padding-top:1.5rem;
+  a {
+    @extend %underlink;
   }
-  p {
+  .g-12 {
+    margin:0 -1rem;
+  }
+  .site-header-copy {
+    @extend .text-center;
     @extend .epsilon; 
-    font-family: $georgia;
-    font-style: italic;
-    display:inline-block;
-    position: relative;
-    .span {
-      position:relative;
-      top:-16px;
-    }
+    background: $solarized-02;
+    margin-bottom: rem(10);
+    padding-bottom: rem(8);
   }
-}
-
-.site-header .r div:first-child {
-  @include shift(0.5);
 }
 
 
@@ -232,11 +253,6 @@ p > code {
 }
 
 
-.face {
-  @extend .round;
-  display: inline-block;
-  width:100%;
-}
 
 // Posts
 
@@ -264,17 +280,9 @@ p > code {
   padding:0 1rem;
 }
 
+// Content page
 
-
-.face-home {
-  @extend .face;
-  margin-top:rem(3);
-}
-
-.face-g-home {
-  @include shift(0.5);
-}
-
-.jason-is {
-  text-align:justify;
+.content-g {
+  padding-top:1.5rem;
+  margin-top:1.5rem;
 }

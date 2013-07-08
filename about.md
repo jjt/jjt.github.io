@@ -1,0 +1,14 @@
+---
+layout: content 
+title: Jason Trill
+youre_reading: "about the author of"
+---
+
+#About
+TODO. Have some [bacon lipsum](http://baconlipsum.com) for now:
+
+Bacon ipsum dolor sit amet short ribs ball tip pancetta fatback, spare ribs turkey meatball kielbasa meatloaf salami tri-tip flank t-bone. Pork doner shoulder strip steak tongue shankle frankfurter jerky meatloaf kielbasa hamburger filet mignon chuck bresaola drumstick. Leberkas capicola biltong boudin ribeye sausage. Ground round short loin turducken sirloin, fatback biltong corned beef. Chicken pig kielbasa, tenderloin tongue corned beef sirloin prosciutto leberkas bresaola cow strip steak. Bresaola hamburger capicola meatball andouille jowl, sausage doner swine shank turkey.
+
+Shankle pancetta flank venison ribeye, brisket pork pig. Pork loin salami ham hock spare ribs, shankle tail frankfurter turkey bacon shank doner t-bone short loin pancetta kielbasa. Chicken venison rump shank cow. Meatloaf jerky ground round sirloin pancetta spare ribs. Pork loin bresaola chuck ground round tri-tip ribeye strip steak.
+
+Ham tenderloin t-bone pork loin pork spare ribs meatball. Beef ribs shank chuck, frankfurter biltong strip steak ground round ham hock tongue drumstick ribeye chicken kielbasa flank ham. Sausage strip steak fatback shank tenderloin shoulder tongue. Fatback salami hamburger turducken pastrami. Corned beef sausage rump, boudin sirloin shank pork hamburger tongue bacon drumstick. Turducken tail shank t-bone andouille. Pastrami spare ribs short ribs capicola doner tri-tip.
