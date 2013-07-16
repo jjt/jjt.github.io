@@ -1,3 +1,4 @@
+@import "normalize";
 @import "bourbon/bourbon";
 
 $visual-grid-color: #ff0000;
@@ -8,7 +9,9 @@ $max-width: 700px;
 @import "solarized/scss/solarized";
 @import "functions/all.scss";
 
-$body-color: $solarized-00;
+$body-color: $solarized-3;
+$link-color: $solarized-blue;
+$link-hover-color: darken($link-color, 10%);
 
 @import "type";
 @import "grid";
@@ -19,7 +22,7 @@ $body-color: $solarized-00;
 @import "lists";
 
 html {
-  background: $solarized-03;
+  background: $solarized-3;
 }
 
 ::selection {
@@ -28,17 +31,17 @@ html {
 }
 
 body {
-  @extend %solarized-1;
+  @extend %solarized-01;
   margin:0;
   padding:0;
   //@extend .vr-lines;
 }
 
 a {
-  @extend %solarized-2;
+  color: $link-color;
   text-decoration: none;
   &:hover {
-    color: $solarized-1;
+    color: $link-hover-color;
   }
 }
 
@@ -50,21 +53,17 @@ pre {
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
   background: $solarized-02;
+  color:$solarized-1;
+  white-space: pre-wrap;
 }
 
-p > code {
-  background: $solarized-02;
-}
 
 
 // Style
 
-.em {
-  color:$solarized-2;
-}
 
 %underlink {
-    border-bottom: 1px solid rgba($solarized-2, 0.3);
+    border-bottom: 1px solid rgba($solarized-blue, 0.3);
 }
 
 // Scaffolding
@@ -82,7 +81,7 @@ p > code {
   padding-bottom: 2rem;
   a {
     color:$solarized-1;
-    border-bottom: 1px solid $solarized-01;
+    border-bottom: 1px solid rgba($solarized-1,0.5);
   }
   a, span{
     @extend .zeta;
@@ -101,18 +100,19 @@ p > code {
   }
 }
 
-@mixin bg-horizontal-box($top, $bot, $color:$solarized-02) {
+@mixin bg-horizontal-box($top, $bot, $color:$solarized-blue) {
   @include linear-gradient(transparent, transparent $top, $color $top,
     $color $bot, transparent $bot, transparent);
 }
 
 .g-guy, .g-guys-title {
   float:left;
-  width:39%;
-  @include bg-horizontal-box(rem(30), rem(140));
+  width:38%;
+  //@include bg-horizontal-box(rem(30), rem(140));
   & p {
     @extend .text-center;
     @extend .alpha;
+    color:$solarized-1;
     padding-left:0;
     display:inline-block;
     vertical-align:middle;
@@ -132,14 +132,15 @@ p > code {
   display: inline-block;
   width:100%;
   padding:5px;
-  border:3px solid $solarized-2;
+  border:6px solid $solarized-blue;
+  background: $solarized-2;
 }
 
 // Title
 .g-face {
-  @include bg-horizontal-box(rem(30), rem(140));
-  padding:0.5rem 0 0;
-  width:22%;
+  //@include bg-horizontal-box(rem(30), rem(140));
+  padding:0.32rem 0 0;
+  width:24%;
   float:left;
   a {
     display:block;
@@ -147,7 +148,7 @@ p > code {
     max-width:12rem;
   }
   a:hover .face {
-    border-color:$solarized-1;
+    border-color:darken($solarized-blue,10%);
   }
 }
 
@@ -158,6 +159,7 @@ p > code {
         display:block;
         padding-top:0;
         margin-bottom:0.4rem;
+        color:$solarized-1;
       }
     }
 }
@@ -181,7 +183,7 @@ p > code {
   .site-header-copy {
     @extend .text-center;
     @extend .epsilon; 
-    background: $solarized-02;
+    color:$solarized-1;
     margin-bottom: rem(10);
     padding-bottom: rem(8);
   }

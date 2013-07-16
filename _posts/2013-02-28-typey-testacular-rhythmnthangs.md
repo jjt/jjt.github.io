@@ -13,7 +13,17 @@ Pork loin leberkas swine pancetta tenderloin salami corned beef capicola turkey,
 
 ##Short loin chuck spare ribs rump pig beef ribs turkey. Brisket leberkas pastrami meatball, short loin chuck salami jowl flank pork belly tenderloin shoulder chicken spare ribs beef. 
 
-    Bacon rump sirloin bresaola beef, `chicken pork belly spare ribs meatloaf shoulder.` Venison tenderloin frankfurter, pancetta pastrami shankle flank. Jerky prosciutto pastrami meatloaf ham hock rump pork loin biltong. Capicola ribeye pancetta, shank shankle chuck pork loin short ribs ham tenderloin. Turducken cow meatloaf ham hock leberkas beef corned beef swine biltong pastrami drumstick capicola tri-tip meatball ribeye. Pork ribeye chicken capicola pastrami. Ham hock jowl shankle strip steak, salami boudin hamburger swine pastrami pig biltong pork chop beef ribs.
+    Bacon rump sirloin bresaola beef, `chicken pork belly spare ribs meatloaf shoulder.`
+    Venison tenderloin frankfurter, pancetta pastrami shankle flank. 
+      Jerky prosciutto pastrami meatloaf 
+      ham hock rump pork loin biltong. 
+        Capicola ribeye pancetta,
+        
+    shank shankle chuck pork loin short ribs ham tenderloin. 
+    Turducken cow meatloaf ham hock leberkas beef corned beef swine biltong pastrami 
+    drumstick capicola tri-tip meatball ribeye. Pork ribeye chicken capicola pastrami.
+    Ham hock jowl shankle strip steak, salami boudin hamburger 
+    swine pastrami pig biltong pork chop beef ribs.
 
 Bacon rump sirloin bresaola beef, chicken pork belly spare ribs meatloaf shoulder. Venison tenderloin frankfurter, pancetta pastrami shankle flank. Jerky prosciutto pastrami meatloaf ham hock rump pork loin biltong. Capicola ribeye pancetta, shank shankle chuck pork loin short ribs ham tenderloin. Turducken cow meatloaf ham hock leberkas beef corned beef swine biltong pastrami drumstick capicola tri-tip meatball ribeye. Pork ribeye chicken capicola pastrami. Ham hock jowl shankle strip steak, salami boudin hamburger swine pastrami pig biltong pork chop beef ribs.
 
