@@ -91,18 +91,19 @@ pre {
   }
 }
 
+@mixin bg-horizontal-box($top, $bot, $color:$solarized-2) {
+  @include linear-gradient(transparent, transparent $top, $color $top,
+    $color $bot, transparent $bot, transparent);
+}
+
 
 .site-header-home {
   padding-top:rem(28);
-  margin-bottom:1.5rem;
+  @include bg-horizontal-box(rem(50), rem(184));
+  margin:0 -1rem;
   a {
     border:none;
   }
-}
-
-@mixin bg-horizontal-box($top, $bot, $color:$solarized-blue) {
-  @include linear-gradient(transparent, transparent $top, $color $top,
-    $color $bot, transparent $bot, transparent);
 }
 
 .g-guy, .g-guys-title {
@@ -116,8 +117,12 @@ pre {
     padding-left:0;
     display:inline-block;
     vertical-align:middle;
-    padding-top:rem(46);
+    padding-top:1.6rem;
+    padding-bottom: 0.6em;
+    margin-top: rem(22);
     letter-spacing:-0.05em;
+    //border-top: 1px solid rgba($solarized-1, 0.6);
+    //border-bottom: 1px solid rgba($solarized-1, 0.6);
     .em {
       @extend .deca; 
       white-space: nowrap;
@@ -132,8 +137,8 @@ pre {
   display: inline-block;
   width:100%;
   padding:5px;
-  border:6px solid $solarized-1;
-  background: $solarized-2;
+  border:2px solid rgba($solarized-1,0.7);
+  background:$solarized-3;
 }
 
 // Title
@@ -142,6 +147,7 @@ pre {
   padding:0.32rem 0 0;
   width:24%;
   float:left;
+  //background:$solarized-3;
   a {
     display:block;
     margin:0 auto;
@@ -153,15 +159,32 @@ pre {
 }
 
 @media screen and (max-width: $max-width) {
-    .g-face, .g-guy, .g-guys-title {
-      background:none;
-      p {
-        display:block;
-        padding-top:0;
-        margin-bottom:0.4rem;
-        color:$solarized-1;
-      }
+  .site-header-home {
+    padding-top:1rem;
+    padding-bottom:2rem;
+    margin-bottom:1rem;
+    border-bottom: 1px solid $solarized-1;
+    background:$solarized-2;
+  }
+  .g-face, .g-guy, .g-guys-title {
+    background:none;
+    p {
+      border:none;
+      display:block;
+      padding-top:0;
+      margin:0;
+      padding:0;
+      color:$solarized-1;
     }
+  }
+  .g-guys-title p {
+  }
+  .g-guy p {
+    margin-bottom:rem(4);
+  }
+  .face {
+    border-color: $solarized-1;
+  }
 }
 
 
@@ -173,22 +196,24 @@ pre {
 }
 
 .site-header {
-  padding-top:1.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
   a {
     @extend %underlink;
   }
   //.g-12 {
     //margin:0 -1rem;
   //}
-  .site-header-copy {
-    @extend .text-center;
-    @extend .epsilon; 
-    color:$solarized-1;
-    margin-bottom: rem(10);
-    padding-bottom: rem(8);
-  }
 }
 
+.site-header-copy {
+  @extend .text-center;
+  @extend .epsilon; 
+  border-bottom:1px solid rgba($solarized-1,0.6);
+  color:$solarized-1;
+  margin-bottom: rem(8);
+  padding-bottom: rem(8);
+}
 
 .site-title {
   font: #{rem(83)}/#{rem(86)} 'Sniglet';
@@ -255,6 +280,7 @@ pre {
 
 .blurb  {
   @extend .gamma;
+  color: $solarized-0;
 }
 
 
