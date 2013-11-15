@@ -42,8 +42,7 @@ You'll now see approximately 20 metric assloads of output to the screen while Ye
 
 This should open up a browser window with ourApp, which will look something like this:
 
-
-
+![Screenshot of Angular app on first run](/media/ng-generator-1.png)
 
 ```
 ▾ app/
@@ -83,4 +82,3 @@ This should open up a browser window with ourApp, which will look something like
 [3]: https://github.com/yeoman/generator-angular
 [4]: http://yeoman.io/gettingstarted.html
 [5]: http://yeoman.io/community-generators.html
-
