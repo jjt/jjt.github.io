@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Easy Angular development with Yeoman and generator-angular"
 layout: post
 ---
