@@ -114,7 +114,43 @@ The other generators are much the same in their functionality - they exist to sa
 
 ## Smash the hash: using html5mode for pretty urls
 
-You might have noticed that we used a hash in our routing. This is the way that Angular ships by default. Fortunately for us more picky devs, there exists the [html5mode][7] setting which uses htmlPushState with a fallback shim for unsupported browsers.
+You might have noticed that we used a hash in our url routing. This is the way that Angular ships by default. Fortunately for us more picky devs, there exists the [html5mode][7] setting which uses htmlPushState with a fallback shim for unsupported browsers.
+
+Everything will work great when clicking around in our app, but it will 404 on refresh because the connect dev server doesn't know how to serve anything other than `/` and static files. Sounds like a job for `connect-modrewrite`! First we'll install it, saving it to our package.json:
+
+    $ npm install --save-dev connect-modrewrite
+
+And then we'll add the following snippet to our Gruntfile in the `connect.options` object in the `grunt.initConfig` function call. It will rewrite anything other than a static file to `index.html`.
+
+```js
+connect: {
+  options: {
+    // ...
+    // Modrewrite rule, connect.static(path) for each path in target's base
+    middleware: function (connect, options) {
+      var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
+      return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
+        optBase.map(function(path){ return connect.static(path); }));
+    }
+  }
+}
+``` 
+
+So we reload our browser at `http://127.0.0.1:9000/foo` and it loads, but there's nothing happening on the screen and there's no css. That's because generator-angular assumes that we'll be using the hash mode and uses relative paths like
+
+    <script src="scripts/app.js"></script>
+    
+What I've been doing is just going into `index.html` and turning every script and link tag into a root-relative one:
+
+    <script src="/scripts/app.js"></script>
+
+Another option is to use the base tag and put `<base href="/">` in the head of our site, but it's not without [its problems][8]. There is [some discussion][9] on the generator-angular issue tracker about adding html5mode support, but until that happens you'll need to figure out whether or not it's worth it to get rid of that hash.
+
+Note that enabling html5mode support requires you to have a server that can do the modrewriting in production. One of the advantages of Angular is that you can ordinarily do a static deploy to S3 or another static server, reducing devops work and server cost.
+
+## Fly my pretties!
+
+Once you've developed your app and you want to deploy a release, you can do so with the `grunt build` command. It will run a whole bunch of handy tasks, like minify/uglify, jshint, ngmin, concatenation, etc. Once it's successfully done, it will result in a production-ready build under the `dist` directory. You can now push the contents of that directory to a static server and baby, you got a stew goin!
 
 
 
@@ -127,3 +163,6 @@ You might have noticed that we used a hash in our routing. This is the way that 
 [4]: http://yeoman.io/gettingstarted.html
 [5]: http://yeoman.io/community-generators.html
 [6]: http://egghead.io/lessons
+[7]: http://docs.angularjs.org/guide/dev_guide.services.$location#general-overview-of-the-api_$location-service-configuration
+[8]: http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag
+[9]: https://github.com/yeoman/generator-angular/issues/433
