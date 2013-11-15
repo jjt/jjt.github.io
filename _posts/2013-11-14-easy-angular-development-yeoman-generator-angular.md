@@ -24,7 +24,7 @@ If you haven't used Yeoman before, follow [their instructions][4] to get up and 
 
 First, we'll install the generator and answer some questions about our project. I'm going to go with the defaults for this install. Feel free to ditch Bootstrap, but I'd recommend keeping the default Angular modules unless you have a compelling reason to strip them out.
 
-```shell
+```
 $ mkdir myApp && cd myApp
 $ npm install -g generator-angular
 $ npm install generator-angular
@@ -93,7 +93,7 @@ When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which 
 
 We're going to use a few of them now to create a new `foo` route, with a matching controller and view. Assuming you want all three to be named `foo`, you can take a shortcut by just using the route generator, which will call the controller and view  generators in turn.
 
-```shell
+```
 $ yo angular:route foo
    invoke   angular:controller:/path/to/myApp/node_modules/generator-angular/route/index.js
    create     app/scripts/controllers/foo.js
