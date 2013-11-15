@@ -39,7 +39,7 @@ $ yo angular myApp (--coffee)
  ⬢ angular-route.js
 ```
 
-We'll now see approximately 20 metric assloads of output to the screen while Yeoman scaffolds out our project and pulls down npm and Bower modules. If that finishes okay, we'll have our development environment all set up!
+We'll now see approximately 20 metric assloads of output to the screen while Yeoman takes a minute to scaffold out our project and pull down npm and Bower modules. If that finished okay, we'll have our development environment all set up.
 
 Here are some relevant directories/files that Yeoman made for us:
 
@@ -78,18 +78,18 @@ So far we've just let Yeoman set the project up and then turned to Grunt, but no
 
 When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which is one generator out of a dozen or so available to us. We can get the list of available generators by typing `yo --help`, but I've made it easy for us
 
-https:- [angular](https://github.com/yeoman/generator-angular#app) (aka [angular:app](https://github.com/yeoman/generator-angular#app))
-https:- [angular:controller](https://github.com/yeoman/generator-angular#controller)
-https:- [angular:directive](https://github.com/yeoman/generator-angular#directive)
-https:- [angular:filter](https://github.com/yeoman/generator-angular#filter)
-https:- [angular:route](https://github.com/yeoman/generator-angular#route)
-https:- [angular:service](https://github.com/yeoman/generator-angular#service)
-https:- [angular:provider](https://github.com/yeoman/generator-angular#service)
-https:- [angular:factory](https://github.com/yeoman/generator-angular#service)
-https:- [angular:value](https://github.com/yeoman/generator-angular#service)
-https:- [angular:constant](https://github.com/yeoman/generator-angular#service)
-https:- [angular:decorator] (https://github.com/yeoman/generator-angular#decorator)
-https:- [angular:view](https://github.com/yeoman/generator-angular#view)
+- [angular](https://github.com/yeoman/generator-angular#app) (aka [angular:app](https://github.com/yeoman/generator-angular#app))
+- [angular:controller](https://github.com/yeoman/generator-angular#controller)
+- [angular:directive](https://github.com/yeoman/generator-angular#directive)
+- [angular:filter](https://github.com/yeoman/generator-angular#filter)
+- [angular:route](https://github.com/yeoman/generator-angular#route)
+- [angular:service](https://github.com/yeoman/generator-angular#service)
+- [angular:provider](https://github.com/yeoman/generator-angular#service)
+- [angular:factory](https://github.com/yeoman/generator-angular#service)
+- [angular:value](https://github.com/yeoman/generator-angular#service)
+- [angular:constant](https://github.com/yeoman/generator-angular#service)
+- [angular:decorator] (https://github.com/yeoman/generator-angular#decorator)
+- [angular:view](https://github.com/yeoman/generator-angular#view)
 
 We're going to use a few of them now to create a new `foo` route, with a matching controller and view. Assuming you want all three to be named `foo`, you can take a shortcut by just using the route generator, which will call the controller and view  generators in turn.
 
