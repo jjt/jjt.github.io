@@ -4,11 +4,10 @@ title: "Easy Angular development, with Yeoman and generator-angular"
 layout: post
 ---
 
-One of the best things to happen in web development over the past few years has been the variety of tools built on [Node.js][1001] and made available through its package manager, [npm][1000]. Three of my most-used command line tools are [Grunt][0], a versatile task runner; [Bower][1], a frontend asset package manager; and [Yeoman][2], a generator framework that automates repetitive scaffolding tasks.
+One of the best things to happen in web development over the past few years has been the variety of tools built on [Node.js][1001] and made available through its package manager, [npm][1000]. Three of my most-used command line tools are [Grunt][0], a versatile task runner; [Bower][1], a frontend asset package manager; and [Yeoman][2], a generator framework that automates repetitive scaffolding and dev/deploy tasks using Grunt and Bower.
 
 This article will focus on using the [Angular generator][3] to get a full frontend application development environment going with the following features:
 
-- Gruntfile and Bower
 - Development server (connect) with livereload
 - Unit and integration testing framework
 - Choice between Javascript (default) and Coffeescript
@@ -23,10 +22,10 @@ If you haven't used Yeoman before, follow [their instructions][4] to get up and 
 We're going to install the generator and answer some questions about our project. I'm going to go with the defaults for this install. Feel free to ditch Bootstrap, but I'd recommend keeping the modules unless you're quite familiar with how Angular works.
 
 ```shell
-$ mkdir ourApp && cd ourApp
+$ mkdir myApp && cd myApp
 $ npm install -g generator-angular
 $ npm install generator-angular
-$ yo angular ourApp (--coffee)
+$ yo angular myApp (--coffee)
 
 [?] Would you like to include Twitter Bootstrap? (Y/n)
 [?] Would you like to use the SCSS version of Twitter Bootstrap with the Compass CSS Authoring Framework? (Y/n)
@@ -39,8 +38,16 @@ $ yo angular ourApp (--coffee)
 You'll now see approximately 20 metric assloads of output to the screen while Yeoman scaffolds out our project and pulls down npm and Bower modules. Assuming everything went OK, we should be able to start our server with Grunt:
 
     $ grunt server
+    
+    Running "server" task
+    # ... sub tasks
+    
+    Running "watch" task
+    Waiting...
 
-This should open up a browser window with ourApp, which will look something like this:
+At this point, we have our development server running at `http://127.0.0.1:9000/` and Grunt is monitoring our project for changes. If we modify a `.scss` or `.coffee` file (if you added the `--coffee` flag when starting the project), it will recompile to css/js respectively and livereload will refresh the browser automatically.
+
+Speaking of the browser, running `grunt server` should have opened up a browser tab with our app, which will look something like this:
 
 ![Screenshot of Angular app on first run](/media/ng-generator-1.png)
 
