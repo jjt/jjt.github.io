@@ -9,11 +9,11 @@ One of the best things to happen in web development over the past few years has 
 This article will focus on using the [Angular generator][3] to get a full frontend application development environment going with the following features:
 
 - Development server (connect) with livereload
-- Unit and integration testing framework
+- Unit and integration testing framework (karma)
 - Choice between Javascript (default) and Coffeescript
-- Project scaffolding (
-- Sass/Compass, and Coffeescript watch & compilation
-- Production build (uglify, css min, static versioning, concat files, etc)
+- Project scaffolding (index.html, scripts/style/images directory, etc)
+- Sass/Compass and Coffeescript watch & compilation
+- Production build task (uglify, css min, static versioning, concat, etc)
 
 ## Getting started
 
@@ -35,30 +35,34 @@ $ yo angular myApp (--coffee)
  ⬢ angular-sanitize.js
  ⬢ angular-route.js
 ```
-You'll now see approximately 20 metric assloads of output to the screen while Yeoman scaffolds out our project and pulls down npm and Bower modules. Assuming everything went OK, we should be able to start our server with Grunt:
+You'll now see approximately 20 metric assloads of output to the screen while Yeoman scaffolds out our project and pulls down npm and Bower modules. If you take a look at our project directory at this point, you'll see
+
+
+Assuming everything went OK, we should be able to start our server with Grunt:
 
     $ grunt server
     
     Running "server" task
-    # ... sub tasks
-    
+    # ... 
     Running "watch" task
     Waiting...
 
-At this point, we have our development server running at `http://127.0.0.1:9000/` and Grunt is monitoring our project for changes. If we modify a `.scss` or `.coffee` file (if you added the `--coffee` flag when starting the project), it will recompile to css/js respectively and livereload will refresh the browser automatically.
+At this point, we have our development server running and Grunt is monitoring our project for changes. If we modify a `.scss` file or `.coffee` file, Grunt will recompile the Sass/Coffeescript respectively and livereload will refresh the browser automatically.
 
 Speaking of the browser, running `grunt server` should have opened up a browser tab with our app, which will look something like this:
 
 ![Screenshot of Angular app on first run](/media/ng-generator-1.png)
 
+## Let's do some stuff
+
 ```
-▾ app/
-  ▸ bower_components/
-  ▾ scripts/
-    ▾ controllers/
+▾ app/					# Main directory for application
+  ▸ bower_components/   
+  ▾ scripts/            # controllers, directives, services, etc go here
+    ▾ controllers/ 
         main.js
       app.js
-  ▾ styles/
+  ▾ styles/           	# css/scss
       main.scss
   ▾ views/
       main.html
