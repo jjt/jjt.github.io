@@ -76,7 +76,7 @@ Speaking of the browser, running `grunt server` should have opened up a browser 
 
 So far we've just let Yeoman set the project up and then turned to Grunt, but now we'll want to actually *build* our app. The focus of this post is the Yeoman generator so some Angular knowledge is assumed for this section. As long as you're familiar with MVC frameworks you should be able to follow along. If you're looking for more how-to-Angular, I recommend the classic [Egghead.io videos][6].
 
-When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which is one generator out of a dozen or so available to us. We can get the list of available generators by typing `yo --help`, but I've made it easy for us
+When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which is one generator out of a dozen or so available to us. We can get the list of available generators by typing `yo --help`, but here's a better reference:
 
 - [angular](https://github.com/yeoman/generator-angular#app) (aka [angular:app](https://github.com/yeoman/generator-angular#app))
 - [angular:controller](https://github.com/yeoman/generator-angular#controller)
