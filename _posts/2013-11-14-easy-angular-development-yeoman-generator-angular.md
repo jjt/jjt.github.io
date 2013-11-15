@@ -11,7 +11,7 @@ This article will focus on using Yeoman and [generator-angular][3] to set up a g
 - Development server (connect) with livereload
 - Unit and integration testing framework (karma)
 - Choice between Javascript (default) and Coffeescript
-- Project scaffolding (index.html, scripts/style/images directory, etc)
+- Project scaffolding (index.html, scripts/style/images directories, etc)
 - Generators for controllers, views, directives, etc.
 - Sass/Compass and Coffeescript watch & compilation
 - Production build task (uglify, css min, static versioning, concat, etc)
@@ -22,7 +22,7 @@ If Angular isn't your thing, there are also [dozens of other Yeoman generators][
 
 If you haven't used Yeoman before, follow [their instructions][4] to get up and running.
 
-First, we'll install the generator and answer some questions about our project. I'm going to go with the defaults for this install. Feel free to ditch Bootstrap, but I'd recommend keeping the default Angular modules unless you're quite familiar with how it works.
+First, we'll install the generator and answer some questions about our project. I'm going to go with the defaults for this install. Feel free to ditch Bootstrap, but I'd recommend keeping the default Angular modules unless you have a compelling reason to strip them out.
 
 ```shell
 $ mkdir myApp && cd myApp
