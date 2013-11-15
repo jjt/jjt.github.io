@@ -68,13 +68,13 @@ Assuming everything went OK, we should be able to start our server with Grunt:
 
 At this point, we have our development server running and Grunt is monitoring our project for changes. If one of our tests change (or we touch the file), Grunt will run it. If we modify a `.scss` file or `.coffee` file, Grunt will rebuild our css or js, respectively, and livereload will refresh the browser automatically.
 
-Speaking of the browser, running `grunt server` should have opened up a browser tab pointed to `http://127.0.0.1:9000` which will look something like this:
-
-![](/media/ng-generator-1.png)
+Speaking of the browser, running `grunt server` should have opened up a browser tab pointed to `http://127.0.0.1:9000` which should be the front page of our app with a big, green "Splendid!" button.
 
 ## Let it all Ang out
 
-So far we've just let Yeoman set the project up and then turned to Grunt, but now we'll want to actually *build* our app. The focus of this post is the Yeoman generator so some Angular knowledge is assumed for this section. As long as you're familiar with MVC frameworks you should be able to follow along. If you're looking for more how-to-Angular, I recommend the classic [Egghead.io videos][6].
+The focus of this post is the Yeoman generator so some Angular knowledge is assumed for this section. As long as you're familiar with MVC frameworks you should be able to follow along. If you're looking for more how-to-Angular, I recommend the classic [Egghead.io videos][6].
+
+So far we've got an enthusiastic greeting from Yeoman, but we'll probably want to add our own routes and controllers. Yeoman has us covered.
 
 When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which is one generator out of a dozen or so available to us. We can get the list of available generators by typing `yo --help`, but here's a better reference:
 
@@ -88,7 +88,7 @@ When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which 
 - [angular:factory](https://github.com/yeoman/generator-angular#service)
 - [angular:value](https://github.com/yeoman/generator-angular#service)
 - [angular:constant](https://github.com/yeoman/generator-angular#service)
-- [angular:decorator] (https://github.com/yeoman/generator-angular#decorator)
+- [angular:decorator](https://github.com/yeoman/generator-angular#decorator)
 - [angular:view](https://github.com/yeoman/generator-angular#view)
 
 We're going to use a few of them now to create a new `foo` route, with a matching controller and view. Assuming you want all three to be named `foo`, you can take a shortcut by just using the route generator, which will call the controller and view  generators in turn.
@@ -136,22 +136,23 @@ connect: {
 }
 ``` 
 
-So we reload our browser at `http://127.0.0.1:9000/foo` and it loads, but there's nothing happening on the screen and there's no css. That's because generator-angular assumes that we'll be using the hash mode and uses relative paths like
+So we reload our browser at `http://127.0.0.1:9000/foo` and it loads, but there's nothing happening on the screen and there's no css. That's because generator-angular assumes that we'll be using the hash mode and generates relative paths like:
 
     <script src="scripts/app.js"></script>
     
-What I've been doing is just going into `index.html` and turning every script and link tag into a root-relative one:
+My low tech solution is just going into `index.html` and turning every script and link tag into a root-relative one:
 
     <script src="/scripts/app.js"></script>
 
-Another option is to use the base tag and put `<base href="/">` in the head of our site, but it's not without [its problems][8]. There is [some discussion][9] on the generator-angular issue tracker about adding html5mode support, but until that happens you'll need to figure out whether or not it's worth it to get rid of that hash.
+Another option to the relative urls is to set the base url of the site by putting `<base href="/">` in the head, but that's not without [its problems][8]. There is [some discussion][9] on the generator-angular issue tracker about adding html5mode support, or at least adding the option of a leading slash on the script/link tags. 
 
-Note that enabling html5mode support requires you to have a server that can do the modrewriting in production. One of the advantages of Angular is that you can ordinarily do a static deploy to S3 or another static server, reducing devops work and server cost.
+Note that enabling html5mode support also requires us to have a production server that can do the modrewriting. One of the advantages of Angular is that we can ordinarily do a static deploy to S3 or another static server, reducing devops work and server cost. So it's up to you to decide whether or not html5mode is worth it.
 
 ## Fly my pretties!
 
-Once you've developed your app and you want to deploy a release, you can do so with the `grunt build` command. It will run a whole bunch of handy tasks, like minify/uglify, jshint, ngmin, concatenation, etc. Once it's successfully done, it will result in a production-ready build under the `dist` directory. You can now push the contents of that directory to a static server and baby, you got a stew goin!
+Once we've developed our app and you want to deploy a release, we can do so with the `grunt build` command. It will run a whole bunch of handy tasks, like minify/uglify, jshint, ngmin, concatenation, etc. Once it's successfully done, it will result in a production-ready build under the `dist` directory. We can now push the contents of that directory to a static server and baby, we got a stew goin!
 
+I hope this article has shown how Yeoman and generator-angular can help you to more quickly and efficiently develop Angular applications.
 
 
 [1000]: https://npmjs.org/
