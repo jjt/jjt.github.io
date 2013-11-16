@@ -1,7 +1,7 @@
 name: JJT.IO 
 pygments: true
 exclude: ["Gemfile*","bower.json","scss","compass", "CNAME", "public",
-  "node_modules", "bower_components"]
+  "node_modules"]
 destination: public
 permalink: pretty
 

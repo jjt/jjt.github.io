@@ -1,12 +1,14 @@
 @import "normalize";
 @import "bourbon/bourbon";
 
+$body-bg: #fcfbf7;
+
 $visual-grid-color: #ff0000;
 $visual-grid-opacity: 0.1;
 $site-title-colors: 6 7 8 2 3 4;
 $max-width: 700px; 
 @import "neat/neat";
-@import "solarized/scss/solarized";
+@import "../assets/bower_components/solarized/scss/solarized";
 @import "functions/all.scss";
 
 $body-color: $solarized-3;
@@ -21,8 +23,10 @@ $link-hover-color: darken($link-color, 10%);
 
 @import "lists";
 
+@import "lined-header";
+
 html {
-  background: $solarized-3;
+  background: $body-bg;
 }
 
 ::selection {
@@ -31,6 +35,7 @@ html {
 }
 
 body {
+  font-family: 'Lora', Georgia, serif;
   @extend %solarized-01;
   margin:0;
   padding:0;
@@ -46,16 +51,39 @@ a {
 }
 
 pre {  
+  @extend .zeta;
   margin-left: -1rem;
   margin-right: -1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.4rem;
-  background: $solarized-02;
-  color:$solarized-1;
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
+  background: desaturate($solarized-2, 40%);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  color:$solarized-01;
   white-space: pre-wrap;
 }
+
+pre + h2, p + h2, {
+  margin-top:1.5rem;
+}
+
+a.imglink {
+  display:block;
+  border-bottom:0;
+  width: 100%;
+  img {
+    border:1px solid $body-bg;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+  &:hover img {
+    box-shadow: 0 0 2px 2px rgba($solarized-blue, 0.4);
+  }
+} 
 
 
 
@@ -63,16 +91,14 @@ pre {
 
 
 %underlink {
-    border-bottom: 1px solid rgba($solarized-blue, 0.3);
+    border-bottom: 1px solid rgba($solarized-blue, 0.2);
 }
 
 // Scaffolding
 
-.site-content {
   a {
     @extend %underlink;
   }
-}
 
 #footer {
   @extend %solarized-1;
@@ -81,7 +107,7 @@ pre {
   padding-bottom: 2rem;
   a {
     color:$solarized-1;
-    border-bottom: 1px solid rgba($solarized-1,0.5);
+    border-bottom: 1px solid rgba($solarized-1,0.2);
   }
   a, span{
     @extend .zeta;
@@ -91,7 +117,7 @@ pre {
   }
 }
 
-@mixin bg-horizontal-box($top, $bot, $color:$solarized-2) {
+@mixin bg-horizontal-box($top, $bot, $color:#e5e4e1) {
   @include linear-gradient(transparent, transparent $top, $color $top,
     $color $bot, transparent $bot, transparent);
 }
@@ -121,6 +147,7 @@ pre {
     padding-bottom: 0.6em;
     margin-top: rem(22);
     letter-spacing:-0.05em;
+    line-height: 1.5rem;
     //border-top: 1px solid rgba($solarized-1, 0.6);
     //border-bottom: 1px solid rgba($solarized-1, 0.6);
     .em {
@@ -138,7 +165,7 @@ pre {
   width:100%;
   padding:5px;
   border:2px solid rgba($solarized-1,0.7);
-  background:$solarized-3;
+  background:$body-bg;
 }
 
 // Title
@@ -209,11 +236,13 @@ pre {
 .site-header-copy {
   @extend .text-center;
   @extend .epsilon; 
-  border-bottom:1px solid rgba($solarized-1,0.6);
+  @extend .lined-header;
   color:$solarized-1;
+  overflow: hidden;
   margin-bottom: rem(8);
-  padding-bottom: rem(8);
+  padding-bottom: rem(9);
 }
+
 
 .site-title {
   font: #{rem(83)}/#{rem(86)} 'Sniglet';
