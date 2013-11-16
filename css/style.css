@@ -1079,46 +1079,51 @@ pre + h2, p + h2 {
 }
 
 /* line 74, ../scss/style.scss */
+code {
+  background: #e2e2e1;
+}
+
+/* line 79, ../scss/style.scss */
 a.imglink {
   display: block;
   border-bottom: 0;
   width: 100%;
 }
-/* line 78, ../scss/style.scss */
+/* line 83, ../scss/style.scss */
 a.imglink img {
   border: 1px solid #fcfbf7;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
-/* line 83, ../scss/style.scss */
+/* line 88, ../scss/style.scss */
 a.imglink:hover img {
   box-shadow: 0 0 2px 2px rgba(38, 139, 210, 0.4);
 }
 
-/* line 93, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 a, .site-header a {
   border-bottom: 1px solid rgba(38, 139, 210, 0.2);
 }
 
-/* line 103, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 #footer {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
-/* line 108, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 #footer a {
   color: #93a1a1;
   border-bottom: 1px solid rgba(147, 161, 161, 0.2);
 }
-/* line 112, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
 #footer a, #footer span {
   line-height: 0.77778rem;
   display: inline-block;
   margin: 0 1em;
 }
 
-/* line 126, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 .site-header-home {
   padding-top: 1.55556rem;
   background-color: transparent;
@@ -1127,17 +1132,17 @@ a, .site-header a {
   background-image: linear-gradient(transparent, transparent 2.77778rem, #e5e4e1 2.77778rem, #e5e4e1 10.22222rem, transparent 10.22222rem, transparent);
   margin: 0 -1rem;
 }
-/* line 130, ../scss/style.scss */
+/* line 135, ../scss/style.scss */
 .site-header-home a {
   border: none;
 }
 
-/* line 135, ../scss/style.scss */
+/* line 140, ../scss/style.scss */
 .g-guy, .g-guys-title {
   float: left;
   width: 38%;
 }
-/* line 139, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 .g-guy p, .g-guys-title p {
   color: #93a1a1;
   padding-left: 0;
@@ -1149,12 +1154,12 @@ a, .site-header a {
   letter-spacing: -0.05em;
   line-height: 1.5rem;
 }
-/* line 153, ../scss/style.scss */
+/* line 158, ../scss/style.scss */
 .g-guy p .em, .g-guys-title p .em {
   white-space: nowrap;
 }
 
-/* line 162, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 .face {
   display: inline-block;
   width: 100%;
@@ -1163,25 +1168,25 @@ a, .site-header a {
   background: #fcfbf7;
 }
 
-/* line 172, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 .g-face {
   padding: 0.32rem 0 0;
   width: 24%;
   float: left;
 }
-/* line 178, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .g-face a {
   display: block;
   margin: 0 auto;
   max-width: 12rem;
 }
-/* line 183, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 .g-face a:hover .face {
   border-color: #268bd2;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 189, ../scss/style.scss */
+  /* line 194, ../scss/style.scss */
   .site-header-home {
     padding-top: 1rem;
     padding-bottom: 2rem;
@@ -1190,11 +1195,11 @@ a, .site-header a {
     background: #eee8d5;
   }
 
-  /* line 196, ../scss/style.scss */
+  /* line 201, ../scss/style.scss */
   .g-face, .g-guy, .g-guys-title {
     background: none;
   }
-  /* line 198, ../scss/style.scss */
+  /* line 203, ../scss/style.scss */
   .g-face p, .g-guy p, .g-guys-title p {
     border: none;
     display: block;
@@ -1204,28 +1209,28 @@ a, .site-header a {
     color: #93a1a1;
   }
 
-  /* line 209, ../scss/style.scss */
+  /* line 214, ../scss/style.scss */
   .g-guy p {
     margin-bottom: 0.22222rem;
   }
 
-  /* line 212, ../scss/style.scss */
+  /* line 217, ../scss/style.scss */
   .face {
     border-color: #93a1a1;
   }
 }
-/* line 221, ../scss/style.scss */
+/* line 226, ../scss/style.scss */
 .site-title-g {
   text-align: center;
 }
 
-/* line 225, ../scss/style.scss */
+/* line 230, ../scss/style.scss */
 .site-header {
   margin-left: -1rem;
   margin-right: -1rem;
 }
 
-/* line 236, ../scss/style.scss */
+/* line 241, ../scss/style.scss */
 .site-header-copy {
   color: #93a1a1;
   overflow: hidden;
@@ -1233,7 +1238,7 @@ a, .site-header a {
   padding-bottom: 0.5rem;
 }
 
-/* line 247, ../scss/style.scss */
+/* line 252, ../scss/style.scss */
 .site-title {
   font: 4.61111rem/4.77778rem "Sniglet";
   overflow: hidden;
@@ -1242,7 +1247,7 @@ a, .site-header a {
   margin: 0 auto;
 }
 
-/* line 255, ../scss/style.scss */
+/* line 260, ../scss/style.scss */
 .st1, .st2, .st3, .st4, .st5, .st6 {
   display: inline-block;
   float: left;
@@ -1252,109 +1257,109 @@ a, .site-header a {
   position: relative;
 }
 
-/* line 269, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .st1 {
   z-index: 17;
   color: rgba(38, 139, 210, 0.7);
 }
 
-/* line 269, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .st2 {
   z-index: 16;
   color: rgba(42, 161, 152, 0.7);
 }
 
-/* line 269, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .st3 {
   z-index: 15;
   color: rgba(133, 153, 0, 0.7);
 }
 
-/* line 269, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .st4 {
   z-index: 14;
   color: rgba(203, 75, 22, 0.7);
 }
 
-/* line 269, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .st5 {
   z-index: 13;
   color: rgba(220, 50, 47, 0.7);
 }
 
-/* line 269, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .st6 {
   z-index: 12;
   color: rgba(211, 54, 130, 0.7);
 }
 
-/* line 281, ../scss/style.scss */
+/* line 286, ../scss/style.scss */
 .stripey-guy {
   position: fixed;
   top: 0;
   width: 100%;
   background: #073642;
 }
-/* line 286, ../scss/style.scss */
+/* line 291, ../scss/style.scss */
 .stripey-guy .inner {
   height: 5px;
   line-height: 5px;
   margin: 0 -1rem;
 }
-/* line 290, ../scss/style.scss */
+/* line 295, ../scss/style.scss */
 .stripey-guy .inner div {
   width: 16.6666%;
   height: 5px;
   float: left;
   opacity: 0.8;
 }
-/* line 296, ../scss/style.scss */
+/* line 301, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(1) {
   background: #449edd;
 }
-/* line 296, ../scss/style.scss */
+/* line 301, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(2) {
   background: #32c1b7;
 }
-/* line 296, ../scss/style.scss */
+/* line 301, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(3) {
   background: #a8c200;
 }
-/* line 296, ../scss/style.scss */
+/* line 301, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(4) {
   background: #e75c23;
 }
-/* line 296, ../scss/style.scss */
+/* line 301, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(5) {
   background: #e25452;
 }
-/* line 296, ../scss/style.scss */
+/* line 301, ../scss/style.scss */
 .stripey-guy .inner div:nth-child(6) {
   background: #da5797;
 }
-/* line 300, ../scss/style.scss */
+/* line 305, ../scss/style.scss */
 .stripey-guy .inner div:last-child {
   width: 16.667%;
 }
 
-/* line 310, ../scss/style.scss */
+/* line 315, ../scss/style.scss */
 .blurb {
   color: #839496;
 }
 
-/* line 318, ../scss/style.scss */
+/* line 323, ../scss/style.scss */
 .posts li span {
   color: #93a1a1;
 }
 
-/* line 339, ../scss/style.scss */
+/* line 344, ../scss/style.scss */
 .site-title-home {
   font: 9.22222rem/9.22222rem "Sniglet";
   display: inline-block;
   padding: 0 1rem;
 }
 
-/* line 347, ../scss/style.scss */
+/* line 352, ../scss/style.scss */
 .content-g {
   padding-top: 1.5rem;
   margin-top: 1.5rem;

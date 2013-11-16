@@ -71,6 +71,11 @@ pre + h2, p + h2, {
   margin-top:1.5rem;
 }
 
+code {
+  background: desaturate($solarized-2, 40%);
+
+}
+
 a.imglink {
   display:block;
   border-bottom:0;
