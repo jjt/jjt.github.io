@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: "Easy Angular development with Yeoman and generator-angular"
 layout: post
 ---
@@ -153,6 +153,17 @@ we would edit the files we just created to make our foo page into something.
 
 The other angular:_______ generators are much the same in their functionality - they exist to
 save time by handling all the monotonous scaffolding tasks.
+
+## Build for production
+
+Once our app has gotten to the point where we want to release it, we'll want to
+use the `grunt build` task. This is pretty easy:
+
+    $ grunt build
+    # ... lots of output
+
+I
+
 
 ## Smash the hash: Angular's html5mode and htmlPushState
 
