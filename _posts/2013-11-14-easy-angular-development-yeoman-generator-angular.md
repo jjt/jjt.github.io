@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Easy Angular development with Yeoman and generator-angular"
 layout: post
 ---
@@ -13,8 +13,8 @@ versatile task runner; [Bower][1], a frontend asset package manager; and
 dev/deploy tasks, using Grunt and Bower.
 
 This article will focus on using Yeoman and [generator-angular][3] to set up a
-great environment for developing Angular applications. With only a handful of terminal
-commands, we'll have the following features: 
+great environment for developing Angular applications in a modular, testable fashion. With only a handful of terminal
+commands, we'll have the following features:
 
 - Development server (connect) with livereload
 - Unit and integration testing framework (karma)
@@ -22,28 +22,40 @@ commands, we'll have the following features:
 - Project scaffolding (index.html, scripts/style/images directories, etc)
 - Generators for routes, controllers, views, directives, etc.
 - Sass/Compass and Coffeescript watch & compilation
-- Production build task (uglify, css min, static versioning, concat, etc)
+- Production build tasks (uglify, css min, static versioning, concat, etc)
 
 If Angular isn't your thing, there are also [dozens of other Yeoman
-generators][5] that are worth checking out.
+generators][5] that are worth checking out, including `generator-generator`
+which is a generator that helps build your own generators. Xzibit would be proud.
+
+I'm going to be writing this targetted at Linux/Mac, but Windows users *should* be
+able to follow along, as most of the commands are similar.
 
 ## Getting started
 
-If you've never used Yeoman and/or it isn't installed, follow their
-[instructions][4] and read up on what it does. If you don't have an `npm`
-command, that likely means you don't have Node.js installed. I'd recommend
-[nvm][1015] if you're on Linux/Mac, or the Windows installer from [the Node.js
-homepage][1001].
+The first thing is to make sure we have Node available, as everything in this article relies on it. If you have `node` and `npm` commands available to you, you're probably good to go and can skip this part.
 
-Once we have Node.js and Yeoman, we'll install the generator and use it to scaffold our application by answering some questions about our project.
-We're going to go with the defaults for this install, but on future projects feel free to ditch
-Bootstrap. However, I'd recommend keeping the default Angular modules unless you
-have a compelling reason to strip them out.
+For installating Node, I'd recommend
+[nvm][1015] if you're on Linux/Mac, or the Windows installer from [the Node homepage][1001]. Much like pyenv/rbenv/rvm, nvm allows us to install, manage, and switch seamlessly between Node versions. *Highly recommended*.
+ 
+    $ curl https://raw.github.com/creationix/nvm/master/install.sh
+    $ cat install.sh         # Let's see what they want us to install
+    $ sh install.sh && source ~/.nvm/nvm.sh
+    $ nvm install 0.10   # Stable minor branch at time of writing
+    $ nvm use 0.10
+    $ node --version
+      v0.10.22
 
-    $ mkdir myApp && cd myApp
+Once we have Node, we'll install `generator-angular` which will also automatically install Yeoman, Grunt, and Bower. Then we'll run the generator to
+scaffold our application by answering some questions about our project.  We're
+going to go with the defaults for this install, but on future projects feel
+free to ditch Bootstrap. However, I'd recommend keeping the default Angular
+modules unless you have a compelling reason to strip them out.
+ 
     $ npm install -g generator-angular
-    $ npm install generator-angular
-    $ yo angular myApp (--coffee)
+    $ mkdir myApp && cd myApp
+    $ npm install generator-angular    # Local install to myApp
+    $ yo angular:app myApp    # Add the --coffee flag for coffescript
 
     [?] Would you like to include Twitter Bootstrap? (Y/n)
     [?] Would you like to use the SCSS version of Twitter Bootstrap with the Compass CSS Authoring Framework? (Y/n)
@@ -54,7 +66,7 @@ have a compelling reason to strip them out.
      ⬢ angular-route.js
 
 After answering these configuration questions, Yeoman will take a minute to 
-scaffold our project files and pull down npm and Bower modules. Once that
+scaffold our project files and pull down Node and Bower modules. Once that
 finishes, we'll have our development environment all set
 up.
 
@@ -75,8 +87,9 @@ Here are some relevant directories/files that Yeoman made for us:
 ## Grunt work
 
 Assuming everything went smoothly, we should be able to start our server with Grunt.
-Once you run `grunt server` bunch of tasks will complete and then Grunt will
-run the "watch" task.
+Running `grunt server` will fire off a bunch of tasks, the last one being the 
+"watch" task which monitors our html/scss/css/js/coffee/etc files and 
+recomplies as necessary.
 
     $ grunt server
     # ... Grunt will start a bunch of tasks 
@@ -93,26 +106,21 @@ chipper dialogue with a big, green "Splendid!" button.
   </a>
 </p>
 
-At this point, we have our development server running and Grunt is monitoring
-our project for changes. If we modify any project files (js, coffee, (s)css, html,
-etc.) Grunt will
-recompile as approprite and livereload will refresh the browser
-automatically. If one of our tests change (or we touch the file),
-Grunt will launch Karma to run it.
-
 All of the features promised in the intro are now available to us and we can
-focus on developing our app, which is a great place to be after issuing just 5-10
-commands. Yeoman and Grunt work hard so we don't have to.
+focus on developing our app, which is a great place to be after issuing just a half
+dozen commands in a terminal.
+
+Now let's turn to how Yeoman can help us in fleshing out our application with its
+other generators.
 
 ## Let it all Ang out
 
-The focus of this post is the Yeoman generator so some Angular knowledge is
+The focus of this post is generator-angular so some Angular knowledge is
 assumed for this section. As long as you're familiar with MVC frameworks you
 should be able to follow along. If you're looking for more how-to-Angular, I
 recommend the classic [Egghead.io videos][6].
 
-When we ran `yo angular myApp`, we were using a synonym of `angular:app`, which
-is one generator out of a dozen or so available to us. We can get the list of
+When we ran `yo angular:app myApp`, we used only one of the dozen or so available generators. We can get the list of
 available generators by typing `yo --help`, but here's a better reference:
 
 - [angular](https://github.com/yeoman/generator-angular#app) (aka [angular:app](https://github.com/yeoman/generator-angular#app))
@@ -151,105 +159,35 @@ If we were to go to `http://127.0.0.1:9000/#/foo` now, we would see the
 stunningly beautiful sight of "This is the foo view" on a blank page. At this point
 we would edit the files we just created to make our foo page into something.
 
-The other angular:_______ generators are much the same in their functionality - they exist to
+The other angular generators are much the same in their functionality - they exist to
 save time by handling all the monotonous scaffolding tasks.
 
-## Build for production
+## Production build and beyond
 
-Once our app has gotten to the point where we want to release it, we'll want to
-use the `grunt build` task. This is pretty easy:
+Once our app has gotten to the point where we want to release it, we'll want to use the `grunt build` task. This will take our site and build an optimized version for deployment.
 
     $ grunt build
-    # ... lots of output
+    # ... Tasks running ... 
+    Done, without errors.
 
-I
+    Elapsed time
+    concurrent:dist       8s  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 84%
+    autoprefixer:dist  172ms  ▇ 2%
+    ngmin:dist         258ms  ▇ 3%
+    copy:dist          291ms  ▇ 3%
+    uglify:generated   513ms  ▇▇ 6%
+    Total 9s
 
+Once the build finishes, we'll have a `dist` directory that we can push to a production server. Since Angular is completely a frontend framework, this can be a simple static server like S3. 
 
-## Smash the hash: Angular's html5mode and htmlPushState
+In this article, we've just used the Grunt tasks that generator-angular created for us. While providing tons of common functionality and a good baseline, it won't fit everyone's needs. The nice thing about our setup is that we can add to and modify our Gruntfile with relative ease. 
 
-You might have noticed that we used a hash in our url routing, when going to `/#/foo`.
-This is the way
-that Angular ships by default and it's completely fine, but for us pickier devs there's the [html5Mode][7]
-setting which uses htmlPushState with a fallback shim for
-unsupported browsers. Open up `app.js`, add the `$locationProvider` service to the
-`config` function, and tell Angular to use html5Mode:
+Need to build to `../../some/other/path/build` instead of `dist`? Just change `yeoman.dist` at the top of the `grunt.initConfig` function. Want to use less instead of compass? Install [grunt-contrib-less][7], add a `less` configuration block, and call the `less` task whereever `compass` would get called. Want to use Angular's [html5Mode][] and pushState for prettier urls? [I've got us covered][10].
 
-    .config(function ($routeProvider, $locationProvider) {
-      $locationProvider.html5Mode(true);
-      //...
-    })
+I haven't even scratched the surface of [available Grunt packages][8]. Point being, generator-angular produces what can be thought of as a Gruntfile boilerplate for you to build off of. Just remember that the more you modify your Gruntfile, the harder it will be to update to a new version of generator-angular. It's currently at v0.6.0-rc1,which means the project has the potential for rapid and deep change.
 
-Now if we visit our app and click on a link to `/foo` for example,
-it should change to the 'foo' view just as it did with the hash before.
-Everything will work great when clicking around in our app, but once we start making
-changes to our app, livereload will refresh the browser and it will 404. Huh?
-
-That's happening because our connect server doesn't know how to serve anything
-other than `/` and static files. So it sees `/foo` and looks for that file, which
-doesn't exist. If you've
-done any ops work using Apache or Nginx, (mod_)rewrite should spring to mind as the solution.
-We'll be using the connect middleware `connect-modrewrite` for this job.
-
-First we'll install it, saving it to our package.json:
-
-    $ npm install --save-dev connect-modrewrite
-
-And then we'll add the following snippet to our Gruntfile in the
-`connect.options` object in the large `grunt.initConfig` function call, right
-around line 60. This middleware rewrites any request that isn't for a valid static
-file to `index.html`.
-
-    connect: {
-      options: {
-        // ...
-        // Modrewrite rule, connect.static(path) for each path in target's base
-        middleware: function (connect, options) {
-          var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
-          return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
-            optBase.map(function(path){ return connect.static(path); }));
-        }
-      }
-    }
-
-Alright, now we reload our browser at `http://127.0.0.1:9000/foo` and it loads
-(hurray!), but our Angular app isn't initializing and the page is unstyled. We
-can pop open our browser's network inspector and we'll see a bunch of 404s. 
-
-This is because generator-angular assumes that we'll be using the hash mode and
-generates relative paths like:
-
-    <script src="scripts/app.js"></script>
-
-So the browser is looking for `/foo/scripts/app.js`, which obviously doesn't exist.
-I'm a fan of root-relative urls, so I go into `index.html` and turt every script
-and link tag into root-relative ones:
-
-    <script src="/scripts/app.js"></script>
-
-Another option to the relative urls is to set the base url of the site by
-putting `<base href="/">` in the head, but that's not without [its
-problems][8]. There is [some discussion][9] on the generator-angular issue
-tracker about adding html5mode support, or at least adding the option of a
-prefix on the script/link tags (either just a slash for root-relative, or a full
-absolute base url).
-
-Note that enabling html5mode support also requires us to have a production
-server that can do the rewriting. One of the advantages of Angular is that
-we can ordinarily do a static deploy to S3 or another static server, reducing
-devops work and server cost. So it's up to you to decide whether or not
-html5mode is worth it.
-
-## Fly my pretties!
-
-Once we've developed our app and you want to deploy a release, we can do so
-with the `grunt build` command. It will run a whole bunch of handy tasks, like
-minify/uglify, jshint, ngmin, concatenation, etc. Once it's successfully done,
-it will result in a production-ready build under the `dist` directory. We can
-now push the contents of that directory to a static server and baby, we got a
-stew goin!
-
-I hope this article has shown how Yeoman and generator-angular can help you to
-more quickly and efficiently develop Angular applications.
+I hope this article has shown how Yeoman, Grunt, and generator-angular can help you to
+more quickly and efficiently develop Angular applications. Ping me [@jasontrill][twitter] with any questions, or [open a Github issue][gitissues] if you have any suggestions on how to improve this article. 
 
 
 [1000]: https://npmjs.org/
@@ -262,6 +200,9 @@ more quickly and efficiently develop Angular applications.
 [4]: http://yeoman.io/gettingstarted.html
 [5]: http://yeoman.io/community-generators.html
 [6]: http://egghead.io/lessons
-[7]: http://docs.angularjs.org/guide/dev_guide.services.$location#general-overview-of-the-api_$location-service-configuration
-[8]: http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag
-[9]: https://github.com/yeoman/generator-angular/issues/433
+[7]: https://github.com/gruntjs/grunt-contrib-less
+[8]: http://eirikb.github.io/nipster/#grunt
+[10]: /2013/11/16/angular-html5mode-using-yeoman-generator-angular/
+[html5Mode]: http://docs.angularjs.org/guide/dev_guide.services.$location#general-overview-of-the-api_$location-service-configuration
+[twitter]: https://twitter.com/jasontrill
+[gitissues]: https://github.com/jjt/jjt.github.io/issues

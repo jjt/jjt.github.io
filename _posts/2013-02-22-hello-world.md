@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fiddle-dee fuck, another Jekyll blog"
+title: "Fiddle-dee fudge, another Jekyll blog"
 description: ""
 tagline: "Oh boy, I bet it's even hosted on Github too"
 category: null
@@ -15,7 +15,7 @@ published: true
 * Start new Github repo, maybe with [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
 * Find the [Readable Theme](http://bootswatch.com/readable/) and tweak styles/markup
 * Tell yourself that you'll compile Bootstrap without the unnecessary modules, then [motivate yourself using constructive language](https://github.com/jjt/jjt.github.com/issues/1)
-* Set A/CNAME records to serve the site from your own domain (if *user*.github.com isn't to your liking)
+* Set A/CNAME records to serve the site from your own domain (if *user*.github.io isn't to your liking)
 * Write an inspirational inaugural post:
 
 ##Bacon Ipsum

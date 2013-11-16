@@ -1,18 +1,17 @@
 ---
-published: false
-title: "Angular html5Mode support for Yeoman & generator-angular"
+published: true
+title: "Angular html5Mode support for Yeoman + generator-angular"
 layout: post
 ---
 
 
-## Smash the hash: Angular's html5mode and htmlPushState
+## Smash the hash: Angular's html5mode and pushState
 
-In my previous article about using generator-angular to develop Angular applications, we left Angular with its default setting of using hashes for urls, for example `http://127.0.0.1:9000/#/foo`.
-This is the way that Angular ships by default and it's completely fine, but for us pickier devs there's the [html5Mode][7] setting which uses htmlPushState with a fallback shim for unsupported browsers. There are a few things we need to do in order to enable Yeoman & generator-angular to work in this way
+In my previous article about [using generator-angular to develop Angular applications][1000], we left Angular with its default setting of using hashes for urls, for example `http://127.0.0.1:9000/#/foo`.
+This is the way that Angular ships by default and it's completely fine, but for us pickier devs there's the [html5Mode][7] setting which uses [pushState][] with a fallback shim for [unsupported browsers][1001]. There are a few things we need to do in order to enable Yeoman & generator-angular to work in this way.
 
 
-
-To set html5Mode in our Angular app, open up `app.js`, add the `$locationProvider` service to the `config` function, and tell Angular to use html5Mode:
+First off is setting html5Mode in our app so that Angular knows we want to use pushState instead of hashes. Open up `app.js`, add the `$locationProvider` service to the `config` function, and tell Angular to use html5Mode:
 
     .config(function ($routeProvider, $locationProvider) {
       $locationProvider.html5Mode(true);
@@ -33,8 +32,7 @@ First we'll install it, saving it to our package.json:
     $ npm install --save-dev connect-modrewrite
 
 And then we'll add the following snippet to our Gruntfile in the
-`connect.options` object in the large `grunt.initConfig` function call, which should be around line 60. This middleware rewrites any request that isn't for a valid static
-file to `index.html`.
+`connect.options` object which should be around line 60, in the large `grunt.initConfig` function call. This middleware rewrites any request that isn't for a valid static file to `index.html`.
 
     connect: {
       options: {
@@ -49,7 +47,7 @@ file to `index.html`.
     }
 
 Alright, now we reload our browser at `http://127.0.0.1:9000/foo` and it loads
-(hurray!), but our Angular app isn't initializing and the page is unstyled. If we
+(hurray!), but our Angular app isn't initializing and the page is unstyled (boo). If we
 pop open our browser's network inspector we'll see a bunch of 404s. This is due to...
 
 ## Relative vs root-relative paths
@@ -81,6 +79,9 @@ we can ordinarily do a static deploy to S3 or the like, reducing
 ops work and server cost. So it's up to you to decide whether or not
 html5mode is worth it.
 
+[1000]: /2013/11/14/easy-angular-development-yeoman-generator-angular/
+[1001]: http://caniuse.com/#feat=history
+[pushState]: https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history
 [7]: http://docs.angularjs.org/guide/dev_guide.services.$location#general-overview-of-the-api_$location-service-configuration
 [8]: http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag
 [9]: https://github.com/yeoman/generator-angular/issues/433
