@@ -23,7 +23,7 @@ title: JJT.IO - Jason Trill
       </div>
       <div class="g-face">
         <a href="/about">
-          <img class="face" src="/assets/images/jjt-256.jpg" height=256/>
+          <img class="face" src="/assets/images/jjt-256.jpg">
         </a>
       </div>
       <div class="g-guys-title">
@@ -36,7 +36,7 @@ title: JJT.IO - Jason Trill
       <p class="blurb">
       I'm a full-stack developer with a focus on using
       effective UI design and modern web development practices to create
-      high-performing responsive web applications.
+      high-performing, maintainable web applications.
       I live in beautiful Victoria, BC, Canada and am available
       for development and project consultation locally and abroad.
       </p>
@@ -45,9 +45,9 @@ title: JJT.IO - Jason Trill
 
   <div class="r">
     <div class="g-12">
-      <h2>Recent Posts</h2>
+      <h2>Articles</h2>
       <ul class="posts list-plain list-delta">
-        {% for post in site.posts %}
+        {% for post in site.posts  %}
           <li><a href="{{ post.url }}">{{ post.title }}</a> <span>{{ post.date | date_to_string }}</span></li>
         {% endfor %}
       </ul>

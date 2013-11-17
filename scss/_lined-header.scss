@@ -5,6 +5,8 @@
 .lined-header-span {
   display: inline-block;
   position: relative;  
+  padding-left:10px;
+  padding-right:10px;
 }
 .lined-header-span:before,
 .lined-header-span:after {
@@ -19,11 +21,9 @@
 }
 .lined-header-span:before {
   right: 100%;
-  margin-right: 10px;
 }
 .lined-header-span:after {
   left: 100%;
-  margin-left: 10px;
 }
 
 
