@@ -108,7 +108,7 @@ chipper dialogue with a big, green "Splendid!" button.
 
 All of the features promised in the intro are now available to us and we can
 focus on developing our app, which is a great place to be after issuing just a half
-dozen commands in a terminal.
+dozen commands in a terminal (Node installation not withstanding).
 
 Now let's turn to how Yeoman can help us in fleshing out our application with its
 other generators.
