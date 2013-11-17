@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Angular html5Mode support for Yeoman + generator-angular"
+title: "Angular html5Mode support for Yeoman & generator-angular"
 layout: post
 ---
 

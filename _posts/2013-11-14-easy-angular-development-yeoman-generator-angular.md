@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Easy Angular development with Yeoman and generator-angular"
+title: "Easy Angular development with Yeoman & generator-angular"
 layout: post
 ---
 
@@ -186,8 +186,6 @@ Need to build to `../../some/other/path/build` instead of `dist`? Just change `y
 
 I haven't even scratched the surface of [available Grunt packages][8]. Point being, generator-angular produces what can be thought of as a Gruntfile boilerplate for you to build off of. Just remember that the more you modify your Gruntfile, the harder it will be to update to a new version of generator-angular. It's currently at v0.6.0-rc1,which means the project has the potential for rapid and deep change.
 
-I hope this article has shown how Yeoman, Grunt, and generator-angular can help you to
-more quickly and efficiently develop Angular applications. Ping me [@jasontrill][twitter] with any questions, or [open a Github issue][gitissues] if you have any suggestions on how to improve this article. 
 
 
 [1000]: https://npmjs.org/
