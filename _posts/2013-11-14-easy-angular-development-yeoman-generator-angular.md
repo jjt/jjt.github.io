@@ -28,7 +28,7 @@ If Angular isn't your thing, there are also [dozens of other Yeoman
 generators][5] that are worth checking out, including `generator-generator`
 which is a generator that helps build your own generators. Xzibit would be proud.
 
-I'm going to be writing this targetted at Linux/Mac, but Windows users *should* be
+I'm going to be writing this targeted at Linux/Mac, but Windows users *should* be
 able to follow along, as most of the commands are similar.
 
 ## Getting started
@@ -162,7 +162,7 @@ we would edit the files we just created to make our foo page into something.
 The other angular generators are much the same in their functionality - they exist to
 save time by handling all the monotonous scaffolding tasks.
 
-## Production build and beyond
+## Production build
 
 Once our app has gotten to the point where we want to release it, we'll want to use the `grunt build` task. This will take our site and build an optimized version for deployment.
 
@@ -178,13 +178,15 @@ Once our app has gotten to the point where we want to release it, we'll want to 
     uglify:generated   513ms  ▇▇ 6%
     Total 9s
 
-Once the build finishes, we'll have a `dist` directory that we can push to a production server. Since Angular is completely a frontend framework, this can be a simple static server like S3. 
+Once the build finishes, we'll have a `dist` directory that we can push to a production server. Since Angular is completely a frontend framework this can be a simple static server like S3, or as part of the static assets of a backend server.
 
-In this article, we've just used the Grunt tasks that generator-angular created for us. While providing tons of common functionality and a good baseline, it won't fit everyone's needs. The nice thing about our setup is that we can add to and modify our Gruntfile with relative ease. 
+## We all Grunt differently
 
-Need to build to `../../some/other/path/build` instead of `dist`? Just change `yeoman.dist` at the top of the `grunt.initConfig` function. Want to use less instead of compass? Install [grunt-contrib-less][7], add a `less` configuration block, and call the `less` task wherever `compass` would get called. Want to use Angular's [html5Mode][] and pushState for prettier urls? [I've got us covered][10].
+In this article, we've just used the Grunt tasks that generator-angular created for us. While providing tons of common functionality and a good baseline, it won't fit everyone's needs. A nice thing about generator-angular is that it produces what can be thought of as a Gruntfile boilerplate that we can add to or modify.
 
-I haven't even scratched the surface of [available Grunt packages][8]. Point being, generator-angular produces what can be thought of as a Gruntfile boilerplate for you to build off of. Just remember that the more you modify your Gruntfile, the harder it will be to update to a new version of generator-angular. It's currently at v0.6.0-rc1,which means the project has the potential for rapid and deep change.
+Need to build to `../../some/other/path/build` instead of `dist`? Just change `yeoman.dist` at the top of the `grunt.initConfig` function. Want to use Less instead of Sass/Compass? Install [grunt-contrib-less][7], add a `less` configuration block, and call the `less` task wherever `compass` would get called. Want to use Angular's [html5Mode][] and pushState for prettier urls? [I've got us covered][10]. We haven't even scratched the surface of [available Grunt packages][8].
+
+One cautionary note is that the more you modify your Gruntfile, the harder it will be to update to a new version of generator-angular for a given project. It's currently at v0.6.0-rc1, which means the project has the potential for rapid and deep change. Even so I think it's a productivity win using generator-angular and modifying to suit, even if you do risk some time updating in the future.
 
 
 
