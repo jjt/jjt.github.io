@@ -182,7 +182,7 @@ Once the build finishes, we'll have a `dist` directory that we can push to a pro
 
 ## We all Grunt differently
 
-In this article, we've just used the Grunt tasks that generator-angular created for us. While providing tons of common functionality and a good baseline, it won't fit everyone's needs. A nice thing about generator-angular is that it produces what can be thought of as a Gruntfile boilerplate that we can add to or modify.
+In this article, we've used just the Grunt tasks that generator-angular created for us. While providing tons of common functionality and a good baseline, it won't fit everyone's needs. A nice thing about generator-angular is that it produces what can be thought of as a Gruntfile boilerplate that we can add to or modify.
 
 Need to build to `../../some/other/path/build` instead of `dist`? Just change `yeoman.dist` at the top of the `grunt.initConfig` function. Want to use Less instead of Sass/Compass? Install [grunt-contrib-less][7], add a `less` configuration block, and call the `less` task wherever `compass` would get called. Want to use Angular's [html5Mode][] and pushState for prettier urls? [I've got us covered][10]. We haven't even scratched the surface of [available Grunt packages][8].
 
