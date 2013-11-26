@@ -9,7 +9,7 @@ layout: post
 
 The [ErgoDox][] is a split-hand ergonomic keyboard with mechanical switches and open source firmware running on a [Teensy][] microcontroller. While other keyboards offer [dip-switches][codekeyboard] or GUI config tools, the firmware and layout(s) can be [built from source][0] on the command line or through MassDrop's [layout configuration tool][]. Flashing a new build onto the ErgoDox is easy with the multi-platform [Teensy loader][]. And the hardware side is equally customizable with [many][3] [beautiful][4] [examples][5].
 
-Because of this flexibility, I've been able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. It also has a QWERTY layer for guests and when I want to play a game (I'm *farrrrr* too ~~efficient~~ lazy to remap every game).
+Because of this flexibility, I've been able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. My layout also has a QWERTY layer for guests and when I want to play a game (I'm *farrrrr* too ~~lazy~~ efficient to remap keys every game).
 
 ## About the Ergodox
 
