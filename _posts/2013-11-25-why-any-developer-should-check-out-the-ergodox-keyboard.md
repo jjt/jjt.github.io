@@ -4,6 +4,7 @@ title: Why any developer should check out the ErgoDox keyboard
 layout: post
 ---
 
+![jjt-ergo-prototype.jpg](/assets/media/jjt-ergo-prototype.jpg)
 ***TL;DR: It's a well-designed matrix keyboard with customizable open-source firmware and a durable split hand case, all backed by a good community***
 
 The [ErgoDox][] is a split-hand ergonomic keyboard with mechanical switches and open source firmware running on a [Teensy][] microcontroller. While other keyboards offer dip-switches or even GUI config tools, the ErgoDox can be easily compiled from source. The firmware and layout(s) can be [compiled from source][0] or built and downloaded using MassDrop's [layout configuration tool][]. Flashing a new build onto the ErgoDox is easy with the multi-platform [Teensy loader][].
