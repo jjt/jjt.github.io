@@ -18,9 +18,9 @@ This is great for us developers, as we can fine tune our layouts to let our fing
 
 ## On ~~laziness~~ efficiency
 
-Take a look at the heat map generated from a standard QWERTY keyboard if it were to have typed out the source code for [Underscore 1.5.1](http://underscorejs.org/underscore.js):
+Take a look at the heat map generated from a standard QWERTY keyboard if it were to have typed out the source code for [Underscore 1.5.1](http://underscorejs.org/underscore.js)
 
-[![Screen Shot 2013-11-26 at 02.57.15.png](/assets/media/Screen Shot 2013-11-26 at 02.57.15.png)](/assets/media/Screen Shot 2013-11-26 at 02.57.15.png)
+Notice how much activity there is up for our poor right pinky finger? 
 
 
 
