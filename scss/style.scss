@@ -11,7 +11,7 @@ $max-width: 700px;
 @import "../assets/bower_components/solarized/scss/solarized";
 @import "functions/all.scss";
 
-$body-color: $solarized-3;
+$body-color: $solarized-01;
 $link-color: $solarized-blue;
 $link-hover-color: darken($link-color, 10%);
 
@@ -87,19 +87,27 @@ code {
 
 }
 
+%full-width-image {
+  border:1px solid $body-bg;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
 a.imglink {
   display:block;
   border-bottom:0;
   width: 100%;
   img {
-    border:1px solid $body-bg;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
-    width: 100%;
+    @extend %full-width-image;
   }
   &:hover img {
     box-shadow: 0 0 2px 2px rgba($solarized-blue, 0.4);
   }
 } 
+
+.post-body img {
+  @extend %full-width-image;
+}
 
 
 
@@ -338,7 +346,6 @@ hr.end {
 
 .blurb  {
   @extend .gamma;
-  color: $solarized-0;
 }
 
 

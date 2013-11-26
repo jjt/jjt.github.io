@@ -10,6 +10,8 @@ $bfs: $base-font-size;
 $base-leading-factor: 1;
 $base-vertical-unit: $base-line-height * $base-leading-factor;
 $bvu: $base-vertical-unit;
+$body-color: #555 !default;
+$header-color: lighten($body-color,8%);
 
 html {
   font: #{em($base-font-size-num)}/#{em($base-line-height-num)} $helvetica;
@@ -24,13 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1,h2,h3,h4,h5,h6 {
-  color: $solarized-0;
   margin-top: 0;
   line-height: 1.5rem;
   //position:relative;
 }
 
 h1,h2,h3 {
+  color: $header-color;
   font-weight: normal;
   letter-spacing: -0.05em;
 }
@@ -115,7 +117,6 @@ pre {
 p > code {
   line-height:0;
 }
-
 
 
 
