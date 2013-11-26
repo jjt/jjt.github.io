@@ -12,7 +12,8 @@ What this all adds up to is a highly configurable keyboard that can be tailored 
 
 Because of this flexibility, I've been able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. My layout also has a QWERTY layer for guests and when I want to play a game (I'm *farrrrr* too ~~lazy~~ efficient to remap keys every game).
 
-![ergo-layout.jpg](/assets/media/ergo-layout.jpg)
+![ergo-layout.jpg](/assets/media/ergo-layout.jpg)![ergo-layout.jpg](/assets/media/ergo-layout.jpg)
+
 
 
 ## But first, some history
