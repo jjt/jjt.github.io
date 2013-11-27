@@ -12,27 +12,19 @@ The [ErgoDox][] is a split-hand ergonomic keyboard with mechanical switches and 
 
 Because of this flexibility, I was able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. My layout also has a QWERTY layer for guests and for gaming, as I'm *farrrrr* too ~~lazy~~ efficient to remap keys in every game.
 
-If you're not familiar with the concept of keyboard layers, don't fret; you switch between different keyboard layers likely hundreds of times an hour. A layer is simply a map from keys to characters. Switching between layers is often triggered by holding down a meta key, like shift. The shift key switches the keyboard from its "default" layer to the "uppercase" layer, which causes certain keys to output different characters (ex. "a" becomes "A", "3" becomes "#").  The ErgoDox firmware extends this idea to an arbitrary number of user-defined layers that can be triggered and toggled by any key.
+If you're not familiar with the concept of keyboard layers, don't fret; you switch between different keyboard layers likely hundreds of times an hour. A layer is simply a map from physical keys to characters. Switching between layers is often triggered by holding down a meta key, like shift. The shift key switches the keyboard from its "default" layer to the "uppercase" layer, which causes certain keys to output different characters (ex. "a" becomes "A", "3" becomes "#").
 
-This is great for us developers, as we can fine tune our layouts to let our fingers be ~~lazy~~ efficient.
+The ErgoDox firmware abstracts this idea to an arbitrary number of user-defined layers that can be triggered and toggled by any key. This is great for us developers, as we can fine tune our layouts to let our fingers be ~~lazy~~ efficient.
 
 ## On ~~laziness~~ efficiency
 
 Take a look at the heat map generated from a standard QWERTY keyboard if it were to have typed out the source code for [Underscore 1.5.1](http://underscorejs.org/underscore.js)
 
-Notice how much activity there is up for our poor right pinky finger? 
 
 
 
 
 
-## But first, some history
-
-Based off of the [Kinesis Advantage][6], the ErgoDox is the brain child of a Canadian who goes by Dox (hence the name). It was developed and prototyped over the course of a couple of years by Dox and a number of other users of [geekhack][] and [Deskthority][]. Early last year the prototypes were testing very well and the project was approaching production readiness, but there was a lack of people willing to step up and do logistics (ordering parts, assembling kits, shipping, collecting money, etc) which is where [Massdrop][] came in
-
-The members of GH and DT both know this, and they run many excellent group buys
-
-The forums are still alive with threads about the keyboard, so there's plenty of support and discussion available.
 
 
 
@@ -40,9 +32,7 @@ The forums are still alive with threads about the keyboard, so there's plenty of
 
 This is my first mechanical keyboard after many happy years on [Thinkpad travel keyboards][2] and I've been enjoying the satisfying feel of the switches' tactile bump at the actuation point. I went with Cherry MX browns, which are very quiet at the point of actuation. They will click from the keys bottoming out and from releasing the key, however, but I think most non-chiclet keyboards will do so.
 
-I managed to snag one of the last prototype boards and assembled the parts myself. Since it would have been expensive to produce a one-off case due in part to its [intricate plate layer][10], I opted for board-mount switches instead and just sat the PCBs right on fun foam. It worked very well - the foam distributed the weight along the PCB and let the solder tails sink in. 
-
-
+I managed to snag one of the last prototype boards and assembled the parts myself. Since it would have been expensive to produce a one-off case due in part to its [intricate plate layer][10], I opted for board-mount switches instead and just sat the PCBs right on fun foam. It worked very well - the foam distributed the weight along the PCB while letting the solder tails sink in.
 
 ![jjt-ergo-prototype.jpg](/assets/media/jjt-ergo-prototype.jpg)
 
