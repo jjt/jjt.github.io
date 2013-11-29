@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "The ErgoDox keyboard a year in, and why you should get one"
 layout: post
 ---
