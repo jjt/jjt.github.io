@@ -14,9 +14,9 @@ Because of this flexibility, I was able to [program my own Colemak layout][mylay
 
 If you're not familiar with the concept of keyboard layers, don't fret; you switch between different keyboard layers likely hundreds of times an hour. A layer is simply a map from physical keys to characters. Switching between layers is often triggered by holding down a meta key, like shift. The shift key switches the keyboard from its "default" layer to the "uppercase" layer, which causes certain keys to output different characters (ex. "a" becomes "A", "3" becomes "#").
 
-The ErgoDox firmware abstracts this idea to an arbitrary number of user-defined layers that can be triggered and toggled by any key. This is great for us developers, as we can fine tune our layouts to let our fingers be ~~lazy~~ efficient.
+The ErgoDox firmware abstracts this idea to an arbitrary number of user-defined layers that can be triggered and toggled by any key. This is great for us developers, as we can fine tune our layouts to let our fingers be <del>lazy</del> efficient.
 
-## On ~~laziness~~ efficiency
+## On <del>laziness</del> efficiency
 
 Take a look at the heat maps generated if we were to type out [Underscore 1.5.2](/assets/bower_components/underscore/underscore.js) with QWERTY, Colemak, Programmer Dvorak, ErgoDox QWERTY, ErgoDox Colemak and my custom ErgoDox Colemak layout:
 
