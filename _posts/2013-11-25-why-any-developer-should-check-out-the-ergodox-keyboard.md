@@ -10,7 +10,7 @@ The [ErgoDox][] is a split-hand ergonomic keyboard with mechanical switches and 
 
 ##What this all adds up to is a *highly configurable keyboard* that can be tailored to fit your *exact* needs.
 
-Because of this flexibility, I was able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. This has all resulted in an improved typing experience - not necessarily an increase in WPM, but a reduction of finger movement.
+Because of this flexibility, I was able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. This has all resulted in an improved typing experience - not necessarily an increase in WPM, but a reduction of finger movement and an increase in comfort.
 
 If you're not familiar with the concept of keyboard layers, don't fret; you switch between different keyboard layers likely hundreds of times an hour. A layer is simply a map from physical keys to characters. Switching between layers is often triggered by holding down a meta key, like shift. The shift key switches the keyboard from its "default" layer to the "uppercase" layer, which causes certain keys to output different characters (ex. "a" becomes "A", "3" becomes "#").
 
