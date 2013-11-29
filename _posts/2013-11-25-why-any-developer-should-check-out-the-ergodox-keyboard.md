@@ -18,10 +18,20 @@ The ErgoDox firmware abstracts this idea to an arbitrary number of user-defined 
 
 ## On ~~laziness~~ efficiency
 
-Take a look at the heat maps generated if we were to type out [Underscore 1.5.1](http://underscorejs.org/underscore.js) with QWERTY, Colemak, ErgoDox QWERTY, and my custom ErgoDox Colemak layout.
+Take a look at the heat maps generated if we were to type out [Underscore 1.5.2](/assets/bower_components/underscore/underscore.js) with QWERTY, Colemak, Programmer Dvorak, ErgoDox QWERTY, ErgoDox Colemak and my custom ErgoDox Colemak layout:
 
-
-
+(QWERTY)
+[![QWERTY](/assets/media/heat-qwerty.png)](/assets/media/heat-qwerty.png)
+(Colemak)
+[![Colemak](/assets/media/heat-colemak.png)](/assets/media/heat-colemak.png)
+(Programmer Dvorak)
+[![Programmer Dvorak](/assets/media/heat-programmer-dvorak.png)](/assets/media/heat-programmer-dvorak.png)
+(ErgoDox QWERTY)
+[![ErgoDox QWERTY](/assets/media/heat-ergo-qwerty.png)](/assets/media/heat-ergo-qwerty.png)
+(ErgoDox Colemak)
+[![ErgoDox Colemak](/assets/media/heat-ergo-colemak.png)](/assets/media/heat-ergo-colemak.png)
+(ErgoDox Colemak JJT)
+[![ErgoDox Colemak JJT](/assets/media/heat-ergo-jjt.png)](/assets/media/heat-ergo-jjt.png)
 
 
 
