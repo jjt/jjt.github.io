@@ -61,7 +61,7 @@ Or: I'll give you my ErgoDox when you pry it from my cold, dead hands. I will ta
 
 This is my first mechanical keyboard after many happy years with [Thinkpad travel keyboards][2] and I've been enjoying the satisfying feel of the switches' tactile bump at the actuation point. I went with Cherry MX browns, which are very quiet at the point of actuation. They will click from the keys bottoming out and from releasing the key, however, but I think most non-chiclet keyboards will do so.
 
-[The current sale](https://www.massdrop.com/buy/ergodox) has one day left at time of writing, and seems to go on every couple of months. For $240, it's a hell of keyboard.
+[The current sale](https://www.massdrop.com/buy/ergodox) has one day left at time of writing, and seems to go on every couple of months. For $240 (with keycaps), it's a hell of keyboard.
 
 *Anti-disclaimer: I have no affiliation with Massdrop, other than as a satisfied repeat customer* 
 
