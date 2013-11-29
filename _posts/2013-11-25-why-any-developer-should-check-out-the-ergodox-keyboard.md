@@ -1,6 +1,6 @@
 ---
 published: false
-title: Why any developer should check out the ErgoDox keyboard
+title: "The ErgoDox keyboard a year in, and why you should get one"
 layout: post
 ---
 
@@ -8,7 +8,7 @@ layout: post
 
 The [ErgoDox][] is a split-hand ergonomic keyboard with mechanical switches and open source, layer-based firmware running on a [Teensy][] microcontroller. While other keyboards offer [dip-switches][codekeyboard] or GUI config tools, the firmware and layouts can be [built from source][0] on the command line or through a [layout configuration tool][]. Flashing a new build onto the ErgoDox is easy with the multi-platform [Teensy loader][]. And the hardware side is equally hackable, as [these][3] [examples][4] [show][5].
 
-###What this all adds up to is a *highly configurable keyboard* that can be tailored to fit your *exact* needs.
+##What this all adds up to is a *highly configurable keyboard* that can be tailored to fit your *exact* needs.
 
 Because of this flexibility, I was able to [program my own Colemak layout][mylayout] that adds a layer for common programming symbols on and near the home row, while enjoying a more ergonomic experience by allowing me to separate, rotate, and pitch the keyboard halves as needed. My layout also has a QWERTY layer for guests and for gaming, as I'm *farrrrr* too ~~lazy~~ efficient to remap keys in every game.
 
@@ -18,7 +18,8 @@ The ErgoDox firmware abstracts this idea to an arbitrary number of user-defined 
 
 ## On ~~laziness~~ efficiency
 
-Take a look at the heat map generated from a standard QWERTY keyboard if it were to have typed out the source code for [Underscore 1.5.1](http://underscorejs.org/underscore.js)
+Take a look at the heat maps generated if we were to type out [Underscore 1.5.1](http://underscorejs.org/underscore.js) with QWERTY, Colemak, ErgoDox QWERTY, and my custom ErgoDox Colemak layout.
+
 
 
 
