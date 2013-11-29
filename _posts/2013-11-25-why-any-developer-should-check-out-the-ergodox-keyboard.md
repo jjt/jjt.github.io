@@ -53,7 +53,7 @@ I've since got a proper case from the defacto current supplier, [Massdrop][]. Th
 
 ## Massdrop to the rescue!
 
-The project stalled somewhat after the prototype stage, as no forum member wanted to step up to arrange payment handling and logistics for a couple hundred orders and $50,000+ worth of parts. After a while and much heated discussion, Massdrop was decided upon for stepped up and now periodically offers the ErgoDox as a kit with a beautiful CNC cut acrylic or aluminum case. They've also put together [very detailed assembly instructions][20] and made the previously-mentioned [layout configuration tool][].
+The project stalled somewhat after the prototype stage, as no forum member wanted to step up to arrange payment handling and logistics for a couple hundred orders and $50,000+ worth of parts. After a while and much heated discussion, Massdrop was decided upon for logistics and now periodically offers the ErgoDox as a kit with a beautiful CNC-cut acrylic or aluminum case. They've also put together [very detailed assembly instructions][20] and made the previously-mentioned [layout configuration tool][].
 
 ## Love me, love my ErgoDox
 
