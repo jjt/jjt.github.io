@@ -45,7 +45,7 @@ Since I switched to the ErgoDox and from QWERTY to my Colemak layout at the same
 
 ## Where we're at, where we've been
 
-The ErgoDox was developed over the course of a couple years on [Deskthority][] [geekhack][] by Dox, with help from other users. I managed to snag one of the last prototype boards and assembled the parts myself. Since it would have been expensive to produce a one-off case due in part to its [intricate plate layer][10], I opted for board-mount switches instead and just sat the PCBs right on fun foam. It worked very well - the foam distributed the weight along the PCB while letting the solder tails sink in.
+The ErgoDox was developed over the course of a couple years on [Deskthority][] and [geekhack][] by Dox, with help from other users. I managed to snag one of the last prototype boards and assembled the parts myself. Since it would have been expensive to produce a one-off case due in part to its [intricate plate layer][10], I opted for board-mount switches instead and just sat the PCBs right on fun foam. It worked very well - the foam distributed the weight along the PCB while letting the solder tails sink in.
 
 ![jjt-ergo-prototype.jpg](/assets/media/jjt-ergo-prototype.jpg)
 
