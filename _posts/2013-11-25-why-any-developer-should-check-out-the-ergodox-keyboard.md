@@ -54,7 +54,7 @@ The ErgoDox was developed over the course of a couple years on [Deskthority][] a
 
 [![jjt-ergo-prototype.jpg](/assets/media/jjt-ergo-prototype.jpg)](/assets/media/jjt-ergo-prototype.jpg)
 
-I've since got a proper case from the defacto current supplier, [Massdrop][]. They're a site that facilitates group buys from manufacturers to save users money. They have a registration wall so they can be classified as something other than a retailer - annoying, I know, but necessary.
+I've since got a proper case from the defacto supplier, [Massdrop][]. They're a site that facilitates group buys from manufacturers to save users money. They have a registration wall so they can be classified as something other than a retailer - annoying, I know, but necessary.
 
 ## Massdrop to the rescue!
 
