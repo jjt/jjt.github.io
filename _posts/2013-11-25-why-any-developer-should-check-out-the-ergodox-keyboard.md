@@ -22,6 +22,8 @@ Take a look at the heat maps generated if we were to type out [Underscore 1.5.2]
 
 <em><small>Note: an earlier version of this article had the space key over-represented due to Underscore (rightly!) using spaces instead of tabs. Jus' kiddin about the rightly. Well, not really, but this isn't the place for a holy war.</small></em>
 
+  
+
 ###QWERTY
 [![QWERTY](/assets/media/heat-qwerty.png)](/assets/media/heat-qwerty.png)
 
