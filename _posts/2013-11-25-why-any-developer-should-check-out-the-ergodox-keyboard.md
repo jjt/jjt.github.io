@@ -20,9 +20,7 @@ The ErgoDox firmware abstracts this idea to an arbitrary number of user-defined 
 
 Take a look at the heat maps generated if we were to type out [Underscore 1.5.2](/assets/bower_components/underscore/underscore.js) with QWERTY, Colemak, Programmer Dvorak, ErgoDox QWERTY, ErgoDox Colemak and my custom ErgoDox Colemak layout:
 
-<em><small>Note: an earlier version of this article had the space key over-represented due to Underscore (rightly!) using spaces instead of tabs. Jus' kiddin about the rightly. Well, not really, but this isn't the place for a holy war.</small></em>
-
-  
+<p><em><small>Note: an earlier version of this article had the space key over-represented due to Underscore (rightly!) using spaces instead of tabs. Jus' kiddin about the rightly. Well, not really, but this isn't the place for a holy war.</small></em></p>  
 
 ###QWERTY
 [![QWERTY](/assets/media/heat-qwerty.png)](/assets/media/heat-qwerty.png)
