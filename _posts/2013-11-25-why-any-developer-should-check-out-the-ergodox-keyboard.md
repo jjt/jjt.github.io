@@ -52,7 +52,7 @@ Having these common programming symbols under the homerow means that my fingers 
 
 Since I switched from a standard QWERTY keyboard to an ErgoDox with a custom layout at the same time, it's tough to say how much the physical keyboard format, Colemak layout, and the symbol layer each contribute to the improvement I've noticed. But I'd wager that it's pretty evenly split, and I would recommend thinking of at least the fn layer, if not the 'Dox and/or Colemak.
 
-The really great thing about building your firmware from source is that you can iterate very easily using familiar workflows (edit, compile, deploy; lather, rinse, repeat). For example, while I was analyzing the heatmaps for this article I started thinking about how I probably use the fn layer keys more than the meta, and I should switch them. I'm also thinking about swapping the delete thumb key and the right shift key. Obviously the source code can't contain the number of delete keypresses, but I'm just guessing that I use shift more than delete.
+The really great thing about building your firmware from source is that you can iterate very easily using familiar workflows (edit, compile, deploy; lather, rinse, repeat). For example, while I was analyzing the heatmaps for this article I started thinking about how I probably use the fn layer keys more than the meta, and I should switch them. I'm also thinking about swapping the delete thumb key and the right shift key. Obviously the source code can't contain the number of delete keypresses, but I'm just guessing that I use shift more than delete. With most keyboards, you just wouldn't be able to entertain ideas like this, let alone execute on them in minutes or less.
 
 ## Where we're at, where we've been
 
