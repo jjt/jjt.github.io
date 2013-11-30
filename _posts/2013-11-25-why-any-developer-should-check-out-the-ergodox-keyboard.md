@@ -64,6 +64,9 @@ The project stalled somewhat after the prototype stage, as no forum member wante
 
 Or: I'll give you my ErgoDox when you pry it from my cold, dead hands. I will take this wherever I need to code, or buy multiple copies of it if transport isn't viable. 
 
+![jjt-ergodox.jpg](/assets/media/jjt-ergodox.jpg)
+
+
 This is my first mechanical keyboard after many happy years with [Thinkpad travel keyboards][2] and I've been enjoying the satisfying feel of the switches' tactile bump at the actuation point. I went with Cherry MX browns, which are very quiet at the point of actuation. They will click from the keys bottoming out and from releasing the key, however, but I think most non-chiclet keyboards will do so.
 
 [The current sale](https://www.massdrop.com/buy/ergodox) has one day left at time of writing, and seems to go on every couple of months. For $240 (with keycaps), it's a hell of keyboard.
