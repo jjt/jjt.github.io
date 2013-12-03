@@ -54,7 +54,7 @@ Since I switched from a standard QWERTY keyboard to an ErgoDox with a custom lay
 
 The really great thing about building your firmware from source is that you can iterate very easily using familiar workflows (edit, compile, deploy; lather, rinse, repeat). For example, while I was analyzing the heatmaps for this article I started thinking about how I probably use the fn layer keys more than GUI (Win/Command), and I should switch them. I'm also thinking about swapping the delete thumb key and the right shift key. Obviously the source code can't contain the number of delete keypresses, but I'm just guessing that I use shift more than delete. With most keyboards, you just wouldn't be able to entertain ideas like this, let alone execute on them in minutes or less.
 
-<em><small>Update: my thumbs violently rejected the GUI/fn layer switch, attemping to quit macvim half a dozen times. I'm sure I could retrain them, but it seems like such a small gain.</small></em>
+<p><em><small>Update: my thumbs violently rejected the GUI/fn layer switch, attemping to quit macvim half a dozen times. I'm sure I could retrain them, but it seems like such a small gain.</small></em></p>
 
 ## Where we're at, where we've been
 
