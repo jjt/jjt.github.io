@@ -54,6 +54,8 @@ Since I switched from a standard QWERTY keyboard to an ErgoDox with a custom lay
 
 The really great thing about building your firmware from source is that you can iterate very easily using familiar workflows (edit, compile, deploy; lather, rinse, repeat). For example, while I was analyzing the heatmaps for this article I started thinking about how I probably use the fn layer keys more than the meta, and I should switch them. I'm also thinking about swapping the delete thumb key and the right shift key. Obviously the source code can't contain the number of delete keypresses, but I'm just guessing that I use shift more than delete. With most keyboards, you just wouldn't be able to entertain ideas like this, let alone execute on them in minutes or less.
 
+<em><small>Update: my thumbs violently rejected the gui/L1 switch, attemping to quit macvim half a dozen times. I'm sure I could retrain them, but it seems like such a small gain.</small></em>
+
 ## Where we're at, where we've been
 
 The ErgoDox was developed over the course of a couple years on [Deskthority][] and [geekhack][] by Dox, with help from other users. I managed to snag one of the last prototype boards and assembled the parts myself. Since it would have been expensive to produce a one-off case due in part to its [intricate plate layer][10], I opted for board-mount switches instead and just sat the PCBs right on fun foam. It worked very well - the foam distributed the weight along the PCB while letting the solder tails sink in.
