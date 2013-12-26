@@ -38,7 +38,7 @@ The first thing is to make sure we have Node available, as everything in this ar
 For installating Node, I'd recommend
 [nvm][1015] if you're on Linux/Mac, or the Windows installer from [the Node homepage][1001]. Much like pyenv/rbenv/rvm, nvm allows us to install, manage, and switch seamlessly between Node versions. *Highly recommended*.
  
-    $ curl https://raw.github.com/creationix/nvm/master/install.sh
+    $ curl -O https://raw.github.com/creationix/nvm/master/install.sh
     $ cat install.sh         # Let's see what they want us to install
     $ sh install.sh && source ~/.nvm/nvm.sh
     $ nvm install 0.10   # Stable minor branch at time of writing
