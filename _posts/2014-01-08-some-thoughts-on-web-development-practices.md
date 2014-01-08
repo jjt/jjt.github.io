@@ -14,7 +14,7 @@ I've worked for many years with SVN and switched to using Git and Mercurial (Hg)
 
 As to Git vs Hg, Github has soundly won the war for the former. Just look at the traffic for [Github][0] vs that of [BitBucket][1]. Or that 95% of open-source web projects seem to be on Github. Most of the best OSS contributers in web development seem to work on Github projects.
 
-***TL;DR** Use Git and Github unless there's a compelling reason not to.*
+***TL;DR*** *Use Git and Github unless there's a compelling reason not to.*
 
 [Github]: https://github.com
 [BitBucket]: https://bitbucket.com
