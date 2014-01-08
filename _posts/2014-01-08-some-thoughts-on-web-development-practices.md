@@ -69,7 +69,7 @@ Humans are very fallible, so whenever I can automate something in the build proc
 
 Another huge advantage to Grunt is the ability to duplicate workflow between developers. Instead of the css guy having to dig through his shell scripts or history to find the proper `compass` command to let another dev change the css, it can be put into a Gruntfile and checked into source control. Then instead of firing emails/IMs back and forth and copy+pasting commands, the second dev can just run `grunt compass`.
 
-Concat/minify and compass compilation are only a handful of the [more than 2,000 grunt plugins available][20]. Chances are, you can leverage at least a half dozen to make your developers' lives easier.
+Concat/minify and compass compilation are only a handful of the [more than 2,000 grunt plugins available][20]. Chances are, you can leverage at least a half dozen to make you and your developers' lives easier.
 
 [Grunt]:http://gruntjs.com/
 [Gulp]:http://gulpjs.com/
@@ -79,7 +79,9 @@ Concat/minify and compass compilation are only a handful of the [more than 2,000
 
 Package management systems have many advantages like dependency resolution, easy installation/upgrading, and (in theory) reproducability. Anyone using a form of Linux/Unix will have used them. Anyone using Rails will be familiar with [Rubygems][], Node.js devs will be familiar with [npm][], and even PHP now has [Composer][]. [Bower][] brings these advantages into the world of frontend web code.
 
-Prior to Bower, if I needed to add a js library like [lodash][] to a site I would go to the library's home page, find the distribution, download it, and unzip into a static folder. Now it's just `bower install lodash --save`. What's that `--save` flag? Oh, that's just Bower adding the installed version of lodash to `bower.json` file. This means that I can check `bower.json` into source control and not lodash itself. After another developer checks out Neatgif.com, all they have to do is run `bower install` and it will download all of the libs automatically.
+Prior to Bower, if I needed to add a js library like [lodash][] to a site I would go to its home page, find the distribution, download it, and unzip into a static folder. Now it's just `bower install lodash --save`. What's that `--save` flag? Oh, that's just Bower adding the installed version of lodash to `bower.json` file.
+
+This means that I can check `bower.json` into source control and not the libraries themselves. After another developer checks out Neatgif.com, all they have to do is run `bower install` and it will download all of the libs automatically, including any dependencies.
 
 When you have a half-dozen libraries (each with deps) and a team of developers, a package management system like Bower really shines.
 
