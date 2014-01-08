@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Some thoughts on web development practices
 layout: post
 ---
