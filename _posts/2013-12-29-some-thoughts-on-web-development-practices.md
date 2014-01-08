@@ -4,11 +4,9 @@ title: Some thoughts on web development practices
 layout: post
 ---
 
-## Development environments and procedures matter
-
 In a decade of creating and developing web sites/apps for a variety of clients and employers I've used a lot of different environments and procedures. Here are some random thoughts on what makes for a good experience for everyone involved.
 
-### Git/Hg > SVN > Dreamweaver lock files > no SVC
+## Git/Hg > SVN > Dreamweaver lock files > no SVC
 
 Well hopefully everyone knows that *any* sort of SVC is better than nothing, even if it is a dumb hard lock a la Dreamweaver. 2004/5 was a wild time.
 
@@ -24,7 +22,7 @@ As to Git vs Hg, Github has soundly won the war for the former. Just look at the
 [0]: http://www.alexa.com/siteinfo/github.com
 [1]: http://www.alexa.com/siteinfo/bitbucket.org
 
-### Root-relative urls, even in development
+## Root-relative urls, even in development
 
 A root-relative url is of the form `/path/to/resource`. This can apply to both static assets (`<img src="/images/neat.gif">`) and internal links (`<a href="/posts/about-neat-dot-gif">About neat.gif</a>`). When a browser sees this, it fills in the missing protocol, domain, and (optional) port with that of the site. So if we're on `http://neatgif.com` and we see an img tag pointing to `/images/neat.gif`, the browser resolves this as `http://neatgif.com/images/neat.gif`.
 
@@ -34,7 +32,7 @@ Don't use relative urls. Period. They don't play well with pretty urls (which yo
 
 But how can you develop multiple sites locally if you have to serve every site out of the root of a domain? Well, by setting up...
 
-### A separate domain for each site you develop
+## A separate domain for each site you develop
 
 Both Nginx and Apache have support for [virtual hosts][10], which let us alias multiple domain names to different IPs, or the same IP (127.0.0.1, for instance). I'm a fan of Nginx, but either one will work.
 
@@ -65,7 +63,7 @@ So if I want to spin up a new Node.js project about real time neat.gifs, all I h
 [12]: http://wiki.nginx.org/FullExample#proxy_conf
 [14]: http://i.imgur.com/OtHkTz1.gif
 
-### Use a tool like Grunt to automate repetitive tasks
+## Use a tool like Grunt to automate repetitive tasks
 
 Humans are very fallible, so whenever I can automate something in the build process, I'm happy. Tools like [Grunt][] or [Gulp][] can help you with this. So instead of having to remember to concatenate then minify your js + css each time you want to pushing to production, you can just run `grunt build` and all of that will be taken care of for you.
 
@@ -77,7 +75,7 @@ Concat/minify and compass compilation are only a handful of the [more than 2,000
 [Gulp]:http://gulpjs.com/
 [20]: http://gruntjs.com/plugins
 
-### Embrace package management
+## Embrace package management
 
 Package management systems have many advantages like dependency resolution, easy installation/upgrading, and (in theory) reproducability. Anyone using a form of Linux/Unix will have used them. Anyone using Rails will be familiar with [Rubygems][], Node.js devs will be familiar with [npm][], and even PHP now has [Composer][]. [Bower][] brings these advantages into the world of frontend web code.
 
