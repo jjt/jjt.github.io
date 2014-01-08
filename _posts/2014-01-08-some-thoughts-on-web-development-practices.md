@@ -12,7 +12,7 @@ Well hopefully everyone knows that *any* sort of SVC is better than nothing, eve
 
 I've worked for many years with SVN and switched to using Git and Mercurial (Hg) in the past few years, with a preference for Git. With [GitHub][] and [BitBucket][], you get a great UI on the world's best app platform (the Intertubes). The distributed nature of Git/Hg means easier branching and great workflows, and avoids a central point of failure. A previous employer used SVN, hosted from a server in his house. Even though we were only a couple of kilometers away from each other, it was often a high-latency connection and simple things like `svn log` would often take minutes to complete. Frustrating, to say the least.
 
-As to Git vs Hg, Github has soundly won the war for the former. Just look at the traffic for [Github][0] vs that of [BitBucket][1]. Or the fact that 95% of open-source web projects seem to be on Github. Most of the best OSS contributers in web development seem to work on Github projects.
+As to Git vs Hg, Github has soundly won the war for the former. Just look at the traffic for [Github][0] vs that of [BitBucket][1]. Or that 95% of open-source web projects seem to be on Github. Most of the best OSS contributers in web development seem to work on Github projects.
 
 ***TL;DR** Use Git and Github unless there's a compelling reason not to.*
 
