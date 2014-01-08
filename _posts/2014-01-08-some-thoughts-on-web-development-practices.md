@@ -55,7 +55,7 @@ You can also use Nginx (and Apache, IIRC) to act as a proxy to other servers, li
 <small><em>My `proxy.conf` is very similar to [this standard one][12], no magic.</em></small>
 
 
-So if I want to spin up a new Node.js project about real time neat.gifs, all I have to do is run `node server.js`, and point my browser to `neatgifs.node`. [Neat][14].
+So if I want to spin up a new Node.js project about real time neat.gifs, all I have to do is run `node server.js`, and point my browser to `http://neatgifs.node`. [Neat][14].
 
 
 [10]: http://en.wikipedia.org/wiki/Virtual_hosting
