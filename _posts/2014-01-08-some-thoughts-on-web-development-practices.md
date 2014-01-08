@@ -28,7 +28,7 @@ A root-relative url is of the form `/path/to/resource`. This can apply to both s
 
 Absolute urls are fine, but they require extra overhead to deal with the changes between development, staging, and production environments. If your framework or build stack deals with this for you in a configuration file, then by all means use absolute urls. But they're not as flexible.
 
-Don't use relative urls. Period. They don't play well with pretty urls (which you're using, right???), and lead to extra overhead determining the correct pathing (`../../../images/neat.gif` didn't work... I wonder if it's `../../../../images/neat.gif`...). Using root-relative paths gives a *single* source, regardless of how deeply nested in directories we are.
+Don't use relative urls. Period. They don't play well with pretty urls (which you're using, right???), and lead to extra overhead determining the correct pathing (*Hmmm.. `../../../images/neat.gif` didn't work... I wonder if it's `../../../../images/neat.gif`...*). Using root-relative paths yeilds a *single* url for a resource, regardless of how deeply nested in directories we are.
 
 But how can you develop multiple sites locally if you have to serve every site out of the root of a domain? Well, by setting up...
 
