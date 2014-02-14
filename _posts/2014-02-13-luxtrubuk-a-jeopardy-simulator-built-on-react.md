@@ -28,17 +28,17 @@ React components are modules of code that render markup based on properties and 
 
 For my money, the killer feature of React is its virtual DOM. When a component's `render()` function is called, it updates its virtual DOM and then does a diff with the actual DOM to apply any changes. You can call `render()` on your top-level component and if nothing has changed (state or props), React won't even touch the DOM. Since the DOM is usually a bottleneck, this is a big performance win.
 
-I'm somewhat torn on JSX. It allows you to write HTML-like code which gets transpiled to native javascript calls to `React.DOM`. I [used it extensively][8] for the project, but I'm just not a fan of XML-style markup. Since I like CoffeeScript, I'd follow the lead of [vjeux][30] and [Evan Martin][20] for a cleaner syntax.
+I'm somewhat torn on JSX. It allows you to write HTML-like code which gets transpiled to native javascript calls to `React.DOM`. I [used it extensively][8] for the project, but I'm just not a fan of XML-style markup. Since I like CoffeeScript, I'd follow the lead of [vjeux][30] and [Evan Martin][20] for a cleaner syntax on my next React project.
 
 ## Prefer gulp to Grunt
-I'm planning on writing an article on gulp so I'll only touch on it here. TL;DR gulp is the clear winner for a build system.
+I'm planning on writing an article on gulp so I'll only touch on it here. **TL;DR** gulp is the clear winner for a build system over Grunt.
 
-Its use of streams and code instead of config is a natural match for this kind of project. [LUXTRUBUK's gulpfile][40] is probably half the size of a corresponding Gruntfile, and it's more readable. Tasks happen lightning fast, sometimes in the *sub-millisecond* range. For more info on gulp and its advantages, check out [this slide deck][50].
+Its use of Node streams and code instead of config is a natural match for this kind of project. [LUXTRUBUK's gulpfile][40] is probably half the size of a corresponding Gruntfile, and it's more readable. Tasks happen lightning fast, sometimes in the *sub-millisecond* range. For more info on gulp and its advantages, check out [this slide deck][50].
 
 ## Lesson learned: web development OSS is awesome
-Could I have done LUXTRUBUK in spaghetti jQuery without Bower, gulp, React, etc? Sure, but it would have probably taken longer and been very fragile to change.
+Could I have done LUXTRUBUK in spaghetti jQuery without React, Bower, gulp, Lo-Dash, etc? Sure, but it would have probably taken longer and been very fragile to change.
 
-Lately there have been posts decrying the sheer number of new tools and frameworks that keep popping up. While I respect that sentiment and don't think that the authors were advocating jQuery pasta, I feel that we're very fortunate to be in a position to complain about the number of tools available to us.
+Lately there have been a few posts decrying the sheer number of new tools and frameworks that keep popping up While I respect that sentiment and don't think that the authors were advocating jQuery pasta, I feel that we're very fortunate to be in a position to complain about the number of tools available to us.
 
 
 [LUXTRUBUK]: http://luxtrubuk.jjt.io
