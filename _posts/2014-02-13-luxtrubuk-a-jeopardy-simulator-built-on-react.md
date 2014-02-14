@@ -5,9 +5,7 @@ layout: post
 ---
 
 ## WHAT ARE WE YELLING ABOUT?!?!
-My friends and I like JEOPARDY!™. So we found old episodes on YouTube and "played" along, yelling out answers before the contestants and writing down our scores on paper. It was fun, but finding new episodes would become a chore. And as it turns out, the actual contestants were much better than us and we missed a lot of questions.
-
-So when I needed a small project to try out Facebook's [React][0], a JEOPARDY!™ game seemed like the perfect fit.
+My friends and I like JEOPARDY!™. So we found old episodes on YouTube and "played" along, yelling out answers before the contestants and writing down our scores on paper. It was fun, but finding new episodes would become a chore. And as it turns out, the actual contestants were much better than us and we missed a lot of questions. So when I needed a small project to try out Facebook's [React][0], a JEOPARDY!™ game seemed like the perfect fit.
 
 And like that, [LUXTRUBUK][] was born.
 
