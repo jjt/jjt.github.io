@@ -50,6 +50,7 @@ Lately there have been a few posts decrying the sheer number of new tools and fr
 [gulp]: http://gulpjs.com
 [Grunt]: http://gruntjs.com
 [s3_website]: https://github.com/laurilehmijoki/s3_website
+[Browserify]: http://browserify.org/
 [70]: https://github.com/laurilehmijoki/s3_website/blob/master/additional-docs/example-configurations.md
 [0]: http://facebook.github.io/react/index.html
 [4]: http://luxtrubuk.jjt.io/data/games/efb4210a3e3edad92c46422bbe355daf.json
