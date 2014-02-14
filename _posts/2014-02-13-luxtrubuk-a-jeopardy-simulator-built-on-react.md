@@ -17,7 +17,7 @@ My goal with LUXTRUBUK was to put as much of the functionality in the frontend a
 
 The data for each game is stored in a json file, [like this one][4].
 
-The frontend is basically just React with help from [Zepto][] and [Lo-Dash][], all packaged up with [Browserify][] which lets us use CommonJS-style includes in the browser. I rolled up a [stupidly-simple router][60], but I might replace that with [Director][] at some point.
+The frontend is basically just React with help from [Zepto][] and [Lo-Dash][]. I rolled up a [stupidly-simple router][60], but I might replace that with [Director][] at some point. I elected to go CommonJS-style modules for my code and used [Browserify][] to package them up for the browser. I find this strategy simpler and cleaner than AMD and Require.js.
 
 For a build task runner, I elected to try out [gulp][] this time instead of my usual [Grunt][]. Run the develop task and we have watching compilation of CoffeeScript, JSX, Sass, and Browserify, as well as running Mocha tests. When it's time to build, gulp will compile, concatenate, and minify everything into a `dist/` directory.
 
