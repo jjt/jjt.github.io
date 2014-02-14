@@ -13,7 +13,7 @@ And like that, [LUXTRUBUK][] was born.
 
 My goal with LUXTRUBUK was to put as much of the functionality in the frontend as possible. I ended up with a backend that has one purpose: selecting a random gamehash from an array and returning it to the client. I could have put that array into the frontend but I wanted to spare the client another ~144kB.
 
-*Sidenote: someone should start an AaaS (Arrays as a Service). Major perk is that you get to say "ass" in a funny intonation.*
+*Sidenote: someone should start an AaaS (Arrays as a Service). Major perk is that you get to say "ass" with a funny intonation.*
 
 The data for each game is stored in a json file, [like this one][4].
 
@@ -36,7 +36,7 @@ Its use of Node streams and code instead of config is a natural match for this k
 ## Lesson learned: web development OSS is awesome
 Could I have done LUXTRUBUK in spaghetti jQuery without React, Bower, gulp, Lo-Dash, etc? Sure, but it would have probably taken longer and been very fragile to change.
 
-Lately there have been a few posts decrying the sheer number of new tools and frameworks that keep popping up While I respect that sentiment and don't think that the authors were advocating jQuery pasta, I feel that we're very fortunate to be in a position to complain about the number of tools available to us.
+Lately there have been a few posts decrying the sheer number of new tools and frameworks that keep popping up, making the authors feel compelled to try everything lest they fall behind. While I respect that sentiment and don't think they were advocating jQuery pasta, I feel that we're very fortunate to be in a position to complain about the number of tools available to us.
 
 
 [LUXTRUBUK]: http://luxtrubuk.jjt.io
