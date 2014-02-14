@@ -4,6 +4,8 @@ title: "LUXTRUBUK: a JEOPARDY!™ simulator built on React"
 layout: post
 ---
 
+
+
 ## WHAT ARE WE YELLING ABOUT?!?!
 My friends and I like JEOPARDY!™. So we found old episodes on YouTube and "played" along, yelling out answers before the contestants and writing down our scores on paper. It was fun, but finding new episodes would become a chore. And as it turns out, the actual contestants were much better than us and we missed a lot of questions.
 
