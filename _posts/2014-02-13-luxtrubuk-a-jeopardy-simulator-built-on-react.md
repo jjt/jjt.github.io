@@ -17,16 +17,20 @@ My goal with LUXTRUBUK was to put as much of the functionality in the frontend a
 
 The data for each game is stored in a json file, [like this one][4].
 
-The frontend is basically just React with help from [Zepto][] and [Lo-Dash][]. I rolled up a [stupidly-simple router][60], but I might replace that with [Director][] at some point.
+The frontend is basically just React with help from [Zepto][] and [Lo-Dash][], all packaged up with [Browserify][] which lets us use CommonJS-style includes in the browser. I rolled up a [stupidly-simple router][60], but I might replace that with [Director][] at some point.
 
-For a build task runner, I elected to try out [gulp][] this time instead of my usual [Grunt][]. Boy am I ever glad I did.
+For a build task runner, I elected to try out [gulp][] this time instead of my usual [Grunt][]. Run the develop task and we have watching compilation of CoffeeScript, JSX, Sass, and Browserify, as well as running Mocha tests. When it's time to build, gulp will compile, concatenate, and minify everything into a `dist/` directory.
+
+Then it's on to [s3_website][], which is a ruby gem that makes easy work out of deploying to S3/CloudFront a breeze. Supply a [configuration file][70] and run a few commands to get set up, then it's just `s3_website push --site dist` to deploy.
+
+But the real star of the show here is React.
 
 ## React is a great view layer
 React components are modules of code that render markup based on properties and state. They are structured so that the flow of data is always down - components can include other components and set their props, but the child components have no reference to their parents.
 
 For my money, the killer feature of React is its virtual DOM. When a component's `render()` function is called, it updates its virtual DOM and then does a diff with the actual DOM to apply any changes. You can call `render()` on your top-level component and if nothing has changed (state or props), React won't even touch the DOM. Since the DOM is usually a bottleneck, this is a big performance win.
 
-I'm somewhat torn on JSX. It allows you to write HTML-like code which gets transpiled to native javascript calls to `React.DOM`. I [used it extensively][8] for the project, but I'm just not a fan of XML-style markup. Since I like CoffeeScript, I'd follow the lead of [vjeux][30] and [Evan Martin][20] for a cleaner syntax on my next React project.
+I'm somewhat torn on JSX. It allows you to write HTML-like code which gets transpiled to native javascript calls to `React.DOM`. I [used it extensively][8] for the project, but I'm just not a fan of XML-style markup. Since I like CoffeeScript, I'd follow the lead of [vjeux][30] and [Evan Martin][20] for a cleaner syntax on my next React project. And there will be a next React project if I can help it.
 
 ## Prefer gulp to Grunt
 I'm planning on writing an article on gulp so I'll only touch on it here. **TL;DR** gulp is the clear winner for a build system over Grunt.
@@ -45,6 +49,8 @@ Lately there have been a few posts decrying the sheer number of new tools and fr
 [Director]: https://github.com/flatiron/director
 [gulp]: http://gulpjs.com
 [Grunt]: http://gruntjs.com
+[s3_website]: https://github.com/laurilehmijoki/s3_website
+[70]: https://github.com/laurilehmijoki/s3_website/blob/master/additional-docs/example-configurations.md
 [0]: http://facebook.github.io/react/index.html
 [4]: http://luxtrubuk.jjt.io/data/games/efb4210a3e3edad92c46422bbe355daf.json
 [10]: http://facebook.github.io/react/docs/jsx-in-depth.html
