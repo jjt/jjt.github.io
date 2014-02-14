@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "LUXTRUBUK: a JEOPARDY!™ simulator built on React"
 layout: post
 ---
