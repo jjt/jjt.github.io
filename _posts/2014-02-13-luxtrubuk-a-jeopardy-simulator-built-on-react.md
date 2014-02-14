@@ -21,7 +21,7 @@ The frontend is basically just React with help from [Zepto][] and [Lo-Dash][], a
 
 For a build task runner, I elected to try out [gulp][] this time instead of my usual [Grunt][]. Run the develop task and we have watching compilation of CoffeeScript, JSX, Sass, and Browserify, as well as running Mocha tests. When it's time to build, gulp will compile, concatenate, and minify everything into a `dist/` directory.
 
-Then it's on to [s3_website][], which is a ruby gem that makes easy work out of deploying to S3/CloudFront a breeze. Supply a [configuration file][70] and run a few commands to get set up, then it's just `s3_website push --site dist` to deploy.
+For easy deployments to S3/CloudFront I'm using the ruby gem [s3_website][]. Supply a [configuration file][70] and run two s3_website commands to get set up, then it's just `s3_website push --site dist` to deploy.
 
 But the real star of the show here is React.
 
