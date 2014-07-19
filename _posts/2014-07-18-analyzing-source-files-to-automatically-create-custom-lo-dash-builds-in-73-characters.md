@@ -68,7 +68,7 @@ Then on to the next UNIX workhorse, [`tr`](http://unixhelp.ed.ac.uk/CGI/man-cgi?
 	$> ack '_\.(\w*)' -h --output '$1' | sort -u | tr '\n' ','
     assign,contains,each,find,isArray,map,merge,pluck,random,sortBy,union,zipObject,
     
-The Lo-Dash CLI doesn't complain about the trailing comma. If it did, we could just pipe the output of `tr` into `sed 's/$,//'` to strip it out.
+The Lo-Dash CLI doesn't complain about the trailing comma. If it did, we could just pipe the output of `tr` into `sed 's/,$//'` to strip it out.
 
 And now we're done! We just need to feed the previous output into the `include` parameter of `lodash`:
 		
