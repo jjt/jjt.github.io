@@ -12,7 +12,7 @@ layout: post
 For those who don't know about [Lo-Dash](http://lodash.com/), it's an enhanced version of [Underscore](http://underscorejs.org/) that brings about performance, additional features, and customization in builds. If you haven't heard of Underscore/Lo-Dash or haven't seen the eponymous `_.` in code, do yourself a favour and check them out. But use Lo-Dash instead of Underscore.
 
 ## Modular Builds
-One of the best parts of the last few years in Javascript development is a trend away from monolithic libraries toward breaking down code into small, narrowly-focused modules and composing/combining them into larger modules as needed. This has numerous benefits, one of which is a reduced download size for our users. To this end the [Lo-Dash CLI](http://lodash.com/custom-builds) can compile custom builds with only the functions you specify. For example, if all you wanted was [`_.pluck`](http://lodash.com/docs#pluck) and [`_.zipObject`](http://lodash.com/docs#zipObject), you could run the following command:
+One of the best parts of the last few years in Javascript development is a trend away from monolithic libraries toward breaking down code into small, narrowly-focused modules and composing/combining them into larger modules as needed. This has numerous benefits, one of which is a reduced download size for our users. To this end the [Lo-Dash CLI](http://lodash.com/custom-builds) can compile custom builds with only the functions you specify. For example, if all you wanted from Lo-Dash was [`_.pluck`](http://lodash.com/docs#pluck) and [`_.zipObject`](http://lodash.com/docs#zipObject), you could generate a build with the following command:
 
     $> lodash include=pluck,zipObject
     
@@ -29,7 +29,7 @@ Since we can rely on the Lo-Dash CLI, all we have to do is get all of the functi
 
 To do this, we'll start by using [Ack](http://beyondgrep.com/). I'm sure there's a way to do this with grep, but Ack has been a welcome addition for me over the past few years. It's portable, fast, has better output by default, and has great configuration options (per-directory `.ackrc` files are fantastic).
 
-Since the Lo-Dash function names are all camelCase, we can use a simple regular expression that captures just the function name: `_\.(\w*)`. The `-h` suppresses the filename output and `--output '$1'` tells Ack that we want to output the first capture group instead of the entire match:
+Since the Lo-Dash function names are all camelCase, we can use a simple regular expression that captures just the function name: `_\.(\w*)`. The `-h` flag suppresses the filename output and `--output '$1'` tells Ack that we want to output the first capture group instead of the entire match with surrounding line:
 
     $> ack '_\.(\w*)' -h --output '$1'
     union
