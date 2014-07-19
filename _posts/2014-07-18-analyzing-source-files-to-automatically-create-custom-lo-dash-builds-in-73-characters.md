@@ -16,7 +16,7 @@ One of the best parts of the last few years in Javascript development is a trend
 
     $> lodash include=pluck,zipObject
     
-That's all well and good if you know which functions you'll use ahead of time. But during development I find myself dipping liberally into Lo-Dash's functions, so I include the full library. For deployment, I'd like to build a minimal Lo-Dash library comprised of only the functions I actually use in my code.
+That's all well and good if you know which functions you'll use ahead of time. But during development I find myself dipping liberally into Lo-Dash's bucket of functions, so I include the full library. For deployment, I'd like to build a minimal Lo-Dash library comprised of only the functions I actually use in my code.
 
 Since I'm ~~lazy~~ a developer, I don't want to have to parse through my code manually to determine which Lo-Dash functions I used. When I was using [Grunt](http://gruntjs.com/) as my task runner I built an npm module, [grunt-lodash-autobuild](https://github.com/jjt/grunt-lodash-autobuild), to automate the process. Pretty simple stuff: it uses `shell.grep` to find all of the calls to Lo-Dash functions and passes the names to [grunt-lodash](https://github.com/lodash/grunt-lodash) which does the actual build.
 
