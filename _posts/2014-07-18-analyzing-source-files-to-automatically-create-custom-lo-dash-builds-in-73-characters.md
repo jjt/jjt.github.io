@@ -27,7 +27,7 @@ Now that I'm on [Gulp](http://gulpjs.com/)\*, I wanted to replicate that Grunt p
 ## Composability
 Since we can rely on the Lo-Dash CLI, all we have to do is get all of the function names in our source code, format them, and pass them as an argument to `lodash`.
 
-To do this, we'll start by using [Ack](http://beyondgrep.com/) to get a list of all Lo-Dash functions that we call in our code. I'm sure that grep could easily handle this job as well, but Ack has been a welcome addition for me over the past few years. It's portable, fast, has better output by default, and has great configuration options (per-directory `.ackrc` files are fantastic).
+To do this, we'll start by using [Ack](http://beyondgrep.com/) to get a list of all Lo-Dash functions that we've used in our code. I'm sure that grep could easily handle this job as well, but Ack has been a welcome addition for me over the past few years. It's portable, fast, has better output by default, and has great configuration options (per-directory `.ackrc` files are fantastic).
 
 Since the Lo-Dash function names are all camelCase, we can use a simple regular expression that captures just the function name: `_\.(\w*)`. The `-h` flag suppresses the filename output and `--output '$1'` tells Ack that we want to output the first capture group instead of the entire match with surrounding line:
 
