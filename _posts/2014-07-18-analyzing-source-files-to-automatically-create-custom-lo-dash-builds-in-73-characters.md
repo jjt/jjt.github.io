@@ -74,6 +74,6 @@ And now we're done! We just need to feed the previous output into the `include` 
 		
      $> lodash include=$(ack '_\.(\w*)' -h --output '$1' | sort -u | tr '\n' ',')
      
-This could easily be wrapped in your task runner of choice by wrapping it in a shell call, or just triggered manually if you eschew Gulp et al.
+This could easily be integrated with your task runner of choice by wrapping it in a shell call, or just triggered manually if you eschew Gulp et al and like to roll it raw.
 
 Composition. It's what's for dinner.
