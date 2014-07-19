@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Analyzing source files to automatically create custom Lo-Dash builds in 73 characters"
 layout: post
 ---
