@@ -4,7 +4,7 @@ title: Building a board game with React.js
 layout: post
 ---
 
-### DEFCON: Fun
+## DEFCON: Fun
 
 If you like board games and are looking for a good 1v1 experience where luck plays a small but not insignificant part, look no further than [Twilight Struggle](http://en.wikipedia.org/wiki/Twilight_Struggle). There's a good reason it's [#1 on BoardGameGeek](http://boardgamegeek.com/browse/boardgame).
 
@@ -14,7 +14,7 @@ I was hooked from my first play and soon started searching out general strategy 
 
 The tool of choice for such an undertaking? [React](http://facebook.github.io/react/index.html), with a [router](https://github.com/flatiron/director) and other libs of sundry to glue everything together.
 
-### React
+## React
 
 React components at their core are very simple to reason about. They have properties and state, and a `render()` method that outputs markup based on them. Properties are passed in by a parent React component (or [`React.renderComponent`](http://facebook.github.io/react/docs/top-level-api.html#react.rendercomponent) and should be treated as immutable, while state is internal to a component and mutable. Whenever the properties or state of a component change, React renders the component into markup but only modifies the DOM if anything changed. How? [Magic](http://calendar.perfplanet.com/2013/diff/).
 
@@ -45,13 +45,13 @@ For example let's look at what happens when someone interacts with a [`BoardStat
 
 All in all, React is a great choice for representing a stateful system like a board game.
 
-### Card Explorer
+## Card Explorer
 
 Not too much to write about for this one. The [`Cards`](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee) page component has three stateful parts: sort order, filtering by card id, and a toggle to show the full text of the card. Whenever any of those change from a user interacting with the controls, from changing the url, or reloading the page, React updates the page accordingly by [sorting and filtering the set of cards](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee#L137-L149). Unlike other view layers where you would have to distinguish between the state on load and in response to user action, a React component doesn't care. It's concerned with props and state, that's it.
 
 Each card has a detail page with a [simple component](https://github.com/jjt/TwiStrug/blob/master/src/pages/Card.coffee) that just renders the data for the card. All of the logic is in [the router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee#L45-L53), where it should be.
 
-### Opportunities for refactoring and re-architecting
+## Opportunities for refactoring and re-architecting
 
 The board view has lots of game logic mixed in, and that should be moved into a model/class that handles all of the data and leaves `Board` as a pure view that reacts to the game data. Since the game is only used in one place (the board), I'm not too worried about it, but it would be cleaner to do so.
 
@@ -59,7 +59,7 @@ I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I
 
 The game state is a nested object, and something like [Cortex](https://github.com/mquan/cortex) would be very useful. Either that or I should switch the representation of game state from a nice object to its 176-char encoded form and use functions to decode/encode when necessary. Having a plain string would make it easy for React to pick up on changes and eliminate the few `shouldComponentUpdate()` methods that I defined.
 
-### My Reaction
+## My Reaction
 
 Interacting with the DOM and keeping it in sync with state in a performant and robust way can be one of the hardest parts of designing web apps these days. The push for true two-way binding and excitement around [Object.observe](http://bocoup.com/weblog/javascript-object-observe/) should illustrate this. React saves developers time by treating the DOM as a stateless canvas and re-rendering a component based on its state.
 
