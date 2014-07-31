@@ -24,9 +24,15 @@ The tool of choice for such an undertaking? [React](http://facebook.github.io/re
 
 ## React
 
-React components at their core are very simple to reason about. They have properties and state, and a `render()` method that outputs markup based on those. Properties are passed in by a parent React component (or [`React.renderComponent`](http://facebook.github.io/react/docs/top-level-api.html#react.rendercomponent)) and should be treated as immutable. State is internal to a component, and mutable. Whenever the properties or state of a component change, React renders the component but only modifies the DOM if anything changed. How? React renders components to a *virtual DOM* then [efficiently diffs it](http://calendar.perfplanet.com/2013/diff/) with the actual DOM, changing only what's necessary.
+React components at their core are very simple to reason about. They're encapsulated objects with *properties*, *state*, and a `render()` method that renders the component. A component's `render()` method functions as a template that contains markup and and/or other React components.
 
-TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) [mixed in](http://facebook.github.io/react/docs/reusable-components.html#mixins). This is the entry point for the app and handles all routing and top-level controller concerns. TwiStrug doesn't have any async (API calls, page-specific JS modules, etc) since I use [Browserify](http://browserify.org/) to bundle everything including card and board data. I'm using Browserify transforms [Coffeeify](https://github.com/jnordberg/coffeeify) 
+Component properties should be treated as immutable and are passed by either the top-level [`React.renderComponent()`](http://facebook.github.io/react/docs/top-level-api.html#react.rendercomponent)) function or a parent React component. State is mutable, internal to a component, and shouldn't be modified from outside. Whenever the properties or state of a component change, React renders the component but only modifies the DOM if anything changed. How? By rendering components to a *virtual DOM* then [efficiently diffing it](http://calendar.perfplanet.com/2013/diff/) with the actual DOM, changing only what's necessary.
+
+Beyond the basics, React components also handle [events](http://facebook.github.io/react/docs/events.html), a [mixin system](http://facebook.github.io/react/docs/reusable-components.html#mixins), and have a number of [lifecycle methods](http://facebook.github.io/react/docs/component-specs.html) for digging in.
+
+## TwiStrug (or: "Twist Rug")
+
+TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) mixed in. This is the entry point for the app and handles all routing and top-level controller concerns. TwiStrug doesn't have any async (API calls, page-specific JS modules, etc) since I use [Browserify](http://browserify.org/) to bundle everything including card and board data. I'm using Browserify transforms [Coffeeify](https://github.com/jnordberg/coffeeify) 
 to compile CoffeeScript, and [Bulkify](https://github.com/substack/bulkify) which lets us write [one-line index modules](https://github.com/jjt/TwiStrug/blob/master/src/libs/index.coffee):
 
     # libs/sum.coffee
@@ -48,7 +54,7 @@ The application [file structure](https://github.com/jjt/TwiStrug/tree/master/src
     TwiStrug.coffee   Main entry point  
     router.coffee     Routing mixin for above  
 
-The router takes incoming routes and sets the state of `TwiStrug` to the appropriate key to load a view from `/pages`. When React detects that change in state, it runs [`TwiStrug.render()`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee#L55) and shows the page. To change pages, just change the state of the main component. Easy peasy.
+The app takes incoming routes and sets the state of `TwiStrug` to the appropriate key to load a view from `/pages`. When React detects that change in state, it runs [`TwiStrug.render()`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee#L55) and shows the page. To change pages, just change the state of the main component. Easy peasy.
 
 ## Virtual Board
 
