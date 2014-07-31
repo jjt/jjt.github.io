@@ -22,13 +22,12 @@ TwiStrug is structured around nested React components. There's a main React comp
 
 The [file structure](https://github.com/jjt/TwiStrug/tree/master/src) is pretty simple:
 
-```
-    views/     React components, each in its own file
-    pages/     Views that represent a url (#/cards, #/board, etc)
-    libs/      A melting pot of classes and utility functions
-    TwiStrug   Main entry point
-    router     Routing mixin for above
-```
+
+    views/     React components, each in its own file  
+    pages/     Views that represent a url (#/cards, #/board, etc)  
+    libs/      A melting pot of classes and utility functions  
+    TwiStrug   Main entry point  
+    router     Routing mixin for above  
 
 The router takes incoming routes and sets the state of `TwiStrug` to the appropriate key to load a view from `/pages`. When React detects that change in state, it runs [`TwiStrug.render()`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee#L55) and shows the page. To change pages, just change the state of the main component. Easy peasy.
 
