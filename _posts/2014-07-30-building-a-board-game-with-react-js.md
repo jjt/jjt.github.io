@@ -82,7 +82,7 @@ Each card has a detail page with a [simple component](https://github.com/jjt/Twi
 
 ## Refactoring
 
-The board view has lots of board state logic mixed in. That should be moved into a  model object that handles all of the data, making `Board` less of a *viewModel* and more of a pure *view*. I'm not too worried as the board is only used in that one view.
+The board view has a lot of board state logic mixed in. That should be moved into a  model object that handles all of the data, making `Board` less of a *viewModel* and more of a pure *view*. I'm not too worried though, as the board is only used in that one view.
 
 I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I can. Since I didn't want to give it up to use [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html), I used the bare `React.DOM` methods as outlined in [a blog post](http://blog.vjeux.com/2013/javascript/react-coffeescript.html) by React developer [Vjeux](https://twitter.com/Vjeux). It works for the most part but I had to straddle the syntactical line between brittle and overwrought, with all of the extra brackets. I'd like to move the [return value](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardNodeIP.coffee#L31-L48) of each `render()` method into its own module, much like traditional templates (Jade, Handlebars, etc). 
 
@@ -92,7 +92,7 @@ The game state is a nested object, and something like [Cortex](https://github.co
 
 Interacting with the DOM and keeping it in sync with state in a performant and robust way can be one of the hardest parts of designing web apps these days. The push for true two-way binding and excitement around [Object.observe](http://bocoup.com/weblog/javascript-object-observe/) should illustrate this. React saves developers time and headache by treating the DOM as a stateless canvas and re-rendering a component based on its state.
 
-And to top it all off the [#reactjs IRC](http://jsfiddle.net/vjeux/Zf5sQ/) is well populated and the React developers are usually there, willing to lend a hand. I've asked a couple of stupid/obvious questions and they were answered swiftly and without a hint of impatience.
+And to top it all off the [#reactjs IRC](http://jsfiddle.net/vjeux/Zf5sQ/) is well populated and the React developers are usually there, willing to lend a hand. I've asked a couple of stupid/obvious questions and they were answered fully and without a hint of impatience.
 
 I wouldn't be surprised if React found its way into the Backbones, Embers, and Angulars of the future. Or dispatching the MVC paradigm entirely, there's [Flux](http://facebook.github.io/react/docs/flux-overview.html) for large sites, or homespun MVC-ish architectures like that used in TwiStrug for smaller sites.
 
