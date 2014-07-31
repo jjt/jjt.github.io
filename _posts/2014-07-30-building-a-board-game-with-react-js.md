@@ -1,6 +1,6 @@
 ---
 published: true
-title: ""
+title: Building a board game with React.js
 layout: post
 ---
 
