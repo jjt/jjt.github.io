@@ -30,7 +30,7 @@ Component properties should be treated as immutable and are passed in by either 
 
 Beyond the basics, React components also have [events](http://facebook.github.io/react/docs/events.html), [mixins](http://facebook.github.io/react/docs/reusable-components.html#mixins), and a number of [lifecycle methods](http://facebook.github.io/react/docs/component-specs.html) for fine-grained control.
 
-## TwiStrug *(or: "Twist Rug")*
+## TwiStrug *(codename: "Twist Rug")*
 
 TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) mixed in. This is the entry point for the app and handles all routing and top-level controller concerns.
 
