@@ -84,7 +84,7 @@ Each card has a detail page with a [simple component](https://github.com/jjt/Twi
 
 ## Refactoring and Hindsight
 
-`views/Board` has a lot of board state logic mixed in. That should be moved into a  model object that handles, making `views/Board` less of a *viewModel* and more of a pure *view*. The coupling isn't too concerning though, as the board model would only be used in that one view.
+`views/Board` contains a lot of board logic which should be moved into a separate model. This would make `views/Board` less of a *viewModel* and more of a pure *view*. The coupling isn't too concerning though, as the board model would only be used in that one view.
 
 I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I can. I didn't want to give it up to use [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html), so I used the bare `React.DOM` methods as outlined in [a blog post](http://blog.vjeux.com/2013/javascript/react-coffeescript.html) by React developer [Vjeux](https://twitter.com/Vjeux). It works for the most part but I had to straddle the syntactical line between brittle and overwrought, with all of the extra brackets. I'd like to move the [return value](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardNodeIP.coffee#L31-L48) of each `render()` method into its own JSX module, and treat it much like a traditional template (Jade, Handlebars, etc). JSX compilation would be handled by a Browserify transform: [reactify](https://github.com/andreypopp/reactify).
 
