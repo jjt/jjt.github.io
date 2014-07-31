@@ -6,9 +6,17 @@ layout: post
 
 ## DEFCON: Fun
 
-If you like board games and are looking for a good 1v1 experience where luck plays a small but not insignificant part, look no further than [Twilight Struggle](http://en.wikipedia.org/wiki/Twilight_Struggle). There's a good reason it's [#1 on BoardGameGeek](http://boardgamegeek.com/browse/boardgame).
+If you like board games and are looking for an intense 1v1 Cold War experience where luck plays a small but not insignificant part, look no further than [Twilight Struggle](http://en.wikipedia.org/wiki/Twilight_Struggle). There's a good reason it's [#1 on BoardGameGeek](http://boardgamegeek.com/browse/boardgame). Its simple mechanic belies a deeper strategic richness.
 
 [![Twilight Struggle Board](http://twistrug.jjt.io/images/tsboard-sm.jpg)](http://twistrug.jjt.io/images/tsboard.jpg)
+
+The best synopsis I've read is from a [BGG review](http://boardgamegeek.com/thread/471953/rogers-reviews-deluxe-twilight-struggle-comprehens):
+
+> Twilight Struggle is a card driven game played over a maximum of 10 turns. The game may end sooner (and frequently does).
+
+>[It] is fundamentally a game about area control. There are six geopolitical regions on the map: Europe (split into Eastern and Western Europe subregions), Asia (including the Southeast Asia subregion), the Middle East, Africa, Central America, and South America. Within each region are countries that have a stability number, representing how stable the government tends to be. 
+
+> Having control of countries helps determine whether you have presence, domination, or control of a region, which in turn helps you earn victory points. Within each region, there are a number of battleground countries, which are considered key to the region.
 
 I was hooked from my first play and soon started searching out general strategy and somewhere to help learn the 110 unique cards. I came across the inimitable [Twilight Strategy](http://twilightstrategy.com/) but quickly became overwhelmed by each card page referencing at least six other cards, all unlinked. So I made [TwiStrug](http://twistrug.jjt.io) as a way to learn the cards more readily (hyperlinks!). Then I started thinking about how to optimize the board layout for a smaller screen, which then quickly spiralled out of control into building a playable virtual board because hey, I'm that kind of nerd.
 
@@ -63,12 +71,13 @@ I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I
 
 The game state is a nested object, and something like [Cortex](https://github.com/mquan/cortex) would be very useful. Either that or I should switch the representation of game state from a nice object to its 176-char encoded form and use functions to decode/encode when necessary. Having a plain string would make it easy for React to pick up on changes and eliminate the few `shouldComponentUpdate()` methods that I defined.
 
-## My Reaction
+## My React-ion (harharhar)
 
-Interacting with the DOM and keeping it in sync with state in a performant and robust way can be one of the hardest parts of designing web apps these days. The push for true two-way binding and excitement around [Object.observe](http://bocoup.com/weblog/javascript-object-observe/) should illustrate this. React saves developers time by treating the DOM as a stateless canvas and re-rendering a component based on its state.
-
-I wouldn't be surprised if React found its way into the Backbones, Embers, and Angulars of the future. Or dispatching the MVC paradigm entirely, there's [Flux](http://facebook.github.io/react/docs/flux-overview.html) for large sites, or homespun MVC-ish architectures like that used in TwiStrug for smaller sites.
+Interacting with the DOM and keeping it in sync with state in a performant and robust way can be one of the hardest parts of designing web apps these days. The push for true two-way binding and excitement around [Object.observe](http://bocoup.com/weblog/javascript-object-observe/) should illustrate this. React saves developers time and headache by treating the DOM as a stateless canvas and re-rendering a component based on its state.
 
 And to top it all off the [#reactjs IRC](http://jsfiddle.net/vjeux/Zf5sQ/) is well populated and the React developers are usually there, willing to lend a hand. I've asked some stupid/obvious questions which were answered swiftly and without a hint of impatience.
 
-**TL;DR I ♥ React**
+I wouldn't be surprised if React found its way into the Backbones, Embers, and Angulars of the future. Or dispatching the MVC paradigm entirely, there's [Flux](http://facebook.github.io/react/docs/flux-overview.html) for large sites, or homespun MVC-ish architectures like that used in TwiStrug for smaller sites.
+
+
+*TL;DR I ♥ React*
