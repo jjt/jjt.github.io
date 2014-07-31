@@ -34,8 +34,8 @@ Beyond the basics, React components also have [events](http://facebook.github.io
 
 TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) mixed in. This is the entry point for the app and handles all routing and top-level controller concerns.
 
-I use [Browserify](http://browserify.org/) to bundle almost everything, including [card](https://github.com/jjt/TwiStrug/blob/master/app/data/cards.json) and [board](https://github.com/jjt/TwiStrug/blob/master/app/data/map-data.json) data. I'm using Browserify transforms [Coffeeify](https://github.com/jnordberg/coffeeify)
-to compile CoffeeScript, and [Bulkify](https://github.com/substack/bulkify) which lets us write [one-line index modules](https://github.com/jjt/TwiStrug/blob/master/src/libs/index.coffee):
+I use [Browserify](http://browserify.org/) to bundle almost everything, including [card](https://github.com/jjt/TwiStrug/blob/master/app/data/cards.json) and [board](https://github.com/jjt/TwiStrug/blob/master/app/data/map-data.json) data. I'm using Browserify transforms [coffeeify](https://github.com/jnordberg/coffeeify)
+to compile CoffeeScript, and [bulkify](https://github.com/substack/bulkify) which lets us write [one-line index modules](https://github.com/jjt/TwiStrug/blob/master/src/libs/index.coffee):
 
     # libs/sum.coffee
     module.exports = (a,b) -> a + b
