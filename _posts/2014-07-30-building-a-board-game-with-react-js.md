@@ -82,7 +82,7 @@ Each card has a detail page with a [simple component](https://github.com/jjt/Twi
 
 ## Refactoring
 
-The board view has lots of game logic mixed in, and that should be moved into a model/class that handles all of the data and leaves `Board` as a pure view that reacts to the game data. Since the game is only used in that one view, I'm not too worried about it, but it would be cleaner.
+The board view has lots of board state logic mixed in. That should be moved into a  model object that handles all of the data and leaves `Board` as a purer view. Since the board is only used in that one view, I'm not too worried about it, but it would be cleaner.
 
 I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I can. Since I didn't want to give it up to use [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html), I used the bare `React.DOM` methods as outlined in [a blog post](http://blog.vjeux.com/2013/javascript/react-coffeescript.html) by React developer [Vjeux](https://twitter.com/Vjeux). It works for the most part but I had to straddle the syntactical line between brittle and overwrought, with all of the extra brackets. I'd like to move the [return value](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardNodeIP.coffee#L31-L48) of each `render()` method into its own module, much like traditional templates (Jade, Handlebars, etc). 
 
