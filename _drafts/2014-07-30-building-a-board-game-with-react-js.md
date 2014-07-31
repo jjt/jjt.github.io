@@ -32,9 +32,9 @@ The [file structure](https://github.com/jjt/TwiStrug/tree/master/src) is pretty 
 
 The router takes incoming routes and sets the state of `TwiStrug` to the appropriate key to load a view from `/pages`. When React detects that change in state, it runs [`TwiStrug.render()`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee#L55) and shows the page. To change pages, just change the state of the main component. Easy peasy.
 
-### Virtual Board
+## Virtual Board
 
-![TwiStrug virtual board](http://twistrug.jjt.io/images/home-board.jpg)
+[![TwiStrug virtual board](http://twistrug.jjt.io/images/home-board.jpg)](http://twistrug.jjt.io/#/board)
 
 When you think about it, game boards are just a physical representation of the state of a game at any given time. When a player moves their token from one place to another it's like updating an object in memory (or creating a new immutable state object if that's your thing). On most physical boards, the state and its display are one and the same. On a computer, they are decoupled. React is a perfect fit for doing a board game because you just have to worry about changing the game state and React will automatically figure out what needs to change to display the board.
 
@@ -49,6 +49,8 @@ For example let's look at what happens when someone interacts with a [`BoardStat
 All in all, React is a great choice for representing a stateful system like a board game.
 
 ## Card Explorer
+
+[![TwiStrug Card Explorer](http://twistrug.jjt.io/images/home-cards.jpg)](http://twistrug.jjt.io/#/cards)
 
 Not too much to write about for this one. The [`Cards`](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee) page component has three stateful parts: sort order, filtering by card id, and a toggle to show the full text of the card. Whenever any of those change from a user interacting with the controls, from changing the url, or reloading the page, React updates the page accordingly by [sorting and filtering the set of cards](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee#L137-L149). Unlike other view layers where you would have to distinguish between the state on load and in response to user action, a React component doesn't care. It's concerned with props and state, that's it.
 
