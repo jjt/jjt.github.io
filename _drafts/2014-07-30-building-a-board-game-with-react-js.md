@@ -52,9 +52,9 @@ All in all, React is a great choice for representing a stateful system like a bo
 
 [![TwiStrug Card Explorer](http://twistrug.jjt.io/images/home-cards.jpg)](http://twistrug.jjt.io/#/cards)
 
-Not too much to write about for this one. The [`Cards`](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee) page component has three stateful parts: sort order, filtering by card id, and a toggle to show the full text of the card. Whenever any of those change from a user interacting with the controls, from changing the url, or reloading the page, React updates the page accordingly by [sorting and filtering the set of cards](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee#L137-L149). Unlike other view layers where you would have to distinguish between the state on load and in response to user action, a React component doesn't care. It's concerned with props and state, that's it.
+Not too much to write about for this one. The [`Cards`](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee) page component has three stateful parts: sort order, filtering by card id, and a toggle to show the full text of the card. Whenever any of those change from a user interacting with the controls, from changing the url, or reloading the page, React updates the page accordingly by [sorting and filtering the set of cards](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee#L137-L149). Unlike other view layers where you might have to distinguish between the state on page load and in response to user action, a React component doesn't care. It's concerned with props and state, that's it.
 
-Each card has a detail page with a [simple component](https://github.com/jjt/TwiStrug/blob/master/src/pages/Card.coffee) that just renders the data for the card. All of the logic is in [the router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee#L45-L53), where it should be.
+Each card has a detail page with a [simple component](https://github.com/jjt/TwiStrug/blob/master/src/pages/Card.coffee) that just renders the data for the card. All of the logic for loading a given card and navigating between the cards is in [the router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee#L45-L53).
 
 ## Opportunities for refactoring and re-architecting
 
