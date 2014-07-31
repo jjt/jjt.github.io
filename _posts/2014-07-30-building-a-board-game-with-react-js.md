@@ -74,9 +74,9 @@ For example let's look at what happens when someone interacts with a [`BoardStat
 
 All in all, React is a great choice for representing a stateful system like a board game.
 
-## Card Explorer
+## Card Reference
 
-[![TwiStrug Card Explorer](http://twistrug.jjt.io/images/home-cards.jpg)](http://twistrug.jjt.io/#/cards)
+[![TwiStrug Card Reference](http://twistrug.jjt.io/images/home-cards.jpg)](http://twistrug.jjt.io/#/cards)
 
 Not too much to write about for this one. The [`Cards`](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee) page component has three stateful parts: sort order, filtering by card id, and a toggle to show the full text of the card. Whenever any of those change from a user interacting with the controls, changing the url, or reloading the page, React updates the page accordingly by [sorting and filtering the set of cards](https://github.com/jjt/TwiStrug/blob/master/src/pages/Cards.coffee#L137-L149) and rendering them. Unlike other view layers where you might have to distinguish between the state on page load and in response to user action, a React component doesn't care. It's concerned with props and state, that's it.
 
