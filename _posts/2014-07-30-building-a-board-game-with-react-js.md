@@ -18,7 +18,7 @@ The best synopsis I've read is from a [BGG review](http://boardgamegeek.com/thre
 
 > Having control of countries helps determine whether you have presence, domination, or control of a region, which in turn helps you earn victory points. Within each region, there are a number of battleground countries, which are considered key to the region.
 
-I was hooked from my first play and soon started searching out general strategy and somewhere to help learn the 110 unique cards. I came across the inimitable [Twilight Strategy](http://twilightstrategy.com/) but quickly became overwhelmed by each card page referencing at least six other cards, all unlinked. So I made [TwiStrug](http://twistrug.jjt.io) as a way to learn the cards more readily (hyperlinks!). Then I started thinking about how to optimize the board layout for a smaller screen, which then quickly spiralled out of control into building a playable virtual board because hey, I'm that kind of nerd.
+I was hooked from my first play and soon started searching out general strategy and somewhere to help me learn the 110 unique cards. I came across the inimitable [Twilight Strategy](http://twilightstrategy.com/) but quickly became overwhelmed by each card page referencing at least six other cards, all unlinked. So I made [TwiStrug](http://twistrug.jjt.io) as a way to learn the cards more readily (hyperlinks!). Then I started thinking about how to optimize the board layout for a smaller screen, which then quickly spiralled out of control into building a playable virtual board because hey, I'm that kind of nerd.
 
 The tool of choice for such an undertaking? [React](http://facebook.github.io/react/index.html), with a [router](https://github.com/flatiron/director) and other libs of sundry to glue everything together.
 
@@ -26,9 +26,9 @@ The tool of choice for such an undertaking? [React](http://facebook.github.io/re
 
 React components at their core are very simple to reason about. They're encapsulated objects with *properties*, *state*, and a `render()` method that renders the component. A component's `render()` method functions as a template that contains markup and and/or other React components.
 
-Component properties should be treated as immutable and are passed by either the top-level [`React.renderComponent()`](http://facebook.github.io/react/docs/top-level-api.html#react.rendercomponent)) function or a parent React component. State is mutable, internal to a component, and shouldn't be modified from outside. Whenever the properties or state of a component change, React renders the component but only modifies the DOM if anything changed. How? By rendering components to a *virtual DOM* then [efficiently diffing it](http://calendar.perfplanet.com/2013/diff/) with the actual DOM, changing only what's necessary.
+Component properties should be treated as immutable and are passed in by either the top-level [`React.renderComponent()`](http://facebook.github.io/react/docs/top-level-api.html#react.rendercomponent)) function or a parent React component. State is mutable, internal to a component, and shouldn't be modified from outside. Whenever the properties or state of a component change, React renders the component but only modifies the DOM if anything changed. How? By rendering components to a *virtual DOM* then [efficiently diffing it](http://calendar.perfplanet.com/2013/diff/) with the actual DOM, changing only what's necessary.
 
-Beyond the basics, React components also handle [events](http://facebook.github.io/react/docs/events.html), a [mixin system](http://facebook.github.io/react/docs/reusable-components.html#mixins), and have a number of [lifecycle methods](http://facebook.github.io/react/docs/component-specs.html) for digging in.
+Beyond the basics, React components also have [events](http://facebook.github.io/react/docs/events.html), [mixins](http://facebook.github.io/react/docs/reusable-components.html#mixins), and a number of [lifecycle methods](http://facebook.github.io/react/docs/component-specs.html) for fine-grained control.
 
 ## TwiStrug (or: "Twist Rug")
 
