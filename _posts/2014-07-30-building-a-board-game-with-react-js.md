@@ -18,21 +18,23 @@ The best synopsis I've read is from a [BGG review](http://boardgamegeek.com/thre
 
 > Having control of countries helps determine whether you have presence, domination, or control of a region, which in turn helps you earn victory points. Within each region, there are a number of battleground countries, which are considered key to the region.
 
-I was hooked from my first play and soon started searching out general strategy and somewhere to help me learn the 110 unique cards. I came across the inimitable [Twilight Strategy](http://twilightstrategy.com/) but quickly became overwhelmed by each card page referencing at least six other cards, all unlinked. So I made [TwiStrug](http://twistrug.jjt.io) as a way to learn the cards more readily (hyperlinks!). Then I started thinking about how to optimize the board layout for a smaller screen, which then quickly spiralled out of control into building a playable virtual board because hey, I'm that kind of nerd.
+I was hooked from my first play and soon started searching out a resource for learning about the 110 unique cards. I came across the inimitable [Twilight Strategy](http://twilightstrategy.com/) but quickly became overwhelmed by each card page referencing at least six other cards, all unlinked. So I made [TwiStrug](http://twistrug.jjt.io) as a way to learn the cards more readily (hyperlinks!). Then I started thinking about how to optimize the board layout for a smaller screen, which then quickly spiralled out of control into building a playable virtual board because hey, I'm that kind of nerd.
 
 The tool of choice for such an undertaking? [React](http://facebook.github.io/react/index.html), with a [router](https://github.com/flatiron/director) and other libs of sundry to glue everything together.
 
 ## React
 
-React components at their core are very simple to reason about. They're encapsulated objects with *properties*, *state*, and a `render()` method that renders the component. A component's `render()` method functions as a template that contains markup and and/or other React components.
+React components at their core are very simple to reason about. They're encapsulated objects with *properties*, *state*, and a `render()` method that renders the component. A component's `render()` method functions as a template that contains markup and/or other React components.
 
 Component properties should be treated as immutable and are passed in by either the top-level [`React.renderComponent()`](http://facebook.github.io/react/docs/top-level-api.html#react.rendercomponent)) function or a parent React component. State is mutable, internal to a component, and shouldn't be modified from outside. Whenever the properties or state of a component change, React renders the component but only modifies the DOM if anything changed. How? By rendering components to a *virtual DOM* then [efficiently diffing it](http://calendar.perfplanet.com/2013/diff/) with the actual DOM, changing only what's necessary.
 
 Beyond the basics, React components also have [events](http://facebook.github.io/react/docs/events.html), [mixins](http://facebook.github.io/react/docs/reusable-components.html#mixins), and a number of [lifecycle methods](http://facebook.github.io/react/docs/component-specs.html) for fine-grained control.
 
-## TwiStrug (or: "Twist Rug")
+## TwiStrug *(or: "Twist Rug")*
 
-TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) mixed in. This is the entry point for the app and handles all routing and top-level controller concerns. TwiStrug doesn't have any async (API calls, page-specific JS modules, etc) since I use [Browserify](http://browserify.org/) to bundle everything including card and board data. I'm using Browserify transforms [Coffeeify](https://github.com/jnordberg/coffeeify) 
+TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) mixed in. This is the entry point for the app and handles all routing and top-level controller concerns.
+
+I use [Browserify](http://browserify.org/) to bundle almost everything, including [card](https://github.com/jjt/TwiStrug/blob/master/app/data/cards.json) and [board](https://github.com/jjt/TwiStrug/blob/master/app/data/map-data.json) data. I'm using Browserify transforms [Coffeeify](https://github.com/jnordberg/coffeeify)
 to compile CoffeeScript, and [Bulkify](https://github.com/substack/bulkify) which lets us write [one-line index modules](https://github.com/jjt/TwiStrug/blob/master/src/libs/index.coffee):
 
     # libs/sum.coffee
@@ -80,15 +82,15 @@ Not too much to write about for this one. The [`Cards`](https://github.com/jjt/T
 
 Each card has a detail page with a [simple component](https://github.com/jjt/TwiStrug/blob/master/src/pages/Card.coffee) that just renders the data for the card. All of the logic for loading a given card and navigating between the cards is in [the router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee#L45-L53).
 
-## Refactoring
+## Refactoring and Hindsight
 
-The board view has a lot of board state logic mixed in. That should be moved into a  model object that handles all of the data, making `Board` less of a *viewModel* and more of a pure *view*. I'm not too worried though, as the board is only used in that one view.
+`views/Board` has a lot of board state logic mixed in. That should be moved into a  model object that handles, making `views/Board` less of a *viewModel* and more of a pure *view*. The coupling isn't too concerning though, as the board model would only be used in that one view.
 
-I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I can. Since I didn't want to give it up to use [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html), I used the bare `React.DOM` methods as outlined in [a blog post](http://blog.vjeux.com/2013/javascript/react-coffeescript.html) by React developer [Vjeux](https://twitter.com/Vjeux). It works for the most part but I had to straddle the syntactical line between brittle and overwrought, with all of the extra brackets. I'd like to move the [return value](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardNodeIP.coffee#L31-L48) of each `render()` method into its own module, much like traditional templates (Jade, Handlebars, etc). 
+I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I can. I didn't want to give it up to use [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html), so I used the bare `React.DOM` methods as outlined in [a blog post](http://blog.vjeux.com/2013/javascript/react-coffeescript.html) by React developer [Vjeux](https://twitter.com/Vjeux). It works for the most part but I had to straddle the syntactical line between brittle and overwrought, with all of the extra brackets. I'd like to move the [return value](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardNodeIP.coffee#L31-L48) of each `render()` method into its own JSX module, and treat it much like a traditional template (Jade, Handlebars, etc). JSX compilation would be handled by a Browserify transform: [reactify](https://github.com/andreypopp/reactify).
 
-The game state is a nested object, and something like [Cortex](https://github.com/mquan/cortex) would be useful. Either that or I should switch the representation of game state from a nice object to its 176-char encoded form and use functions to decode/encode when necessary. Having a plain string would make it easier for React to pick up on state changes and eliminate the few `shouldComponentUpdate()` methods that I defined (likely a premature optimization). 
+The board state is a structured object, and something like [Cortex](https://github.com/mquan/cortex) would be useful. Either that or I should switch the representation of board state from a nice object to its 176-char encoded form and use functions or board model methods to decode/encode when necessary. Either solution would make it easier for React to pick up on state changes and eliminate the few `shouldComponentUpdate()` methods that I defined (likely a premature optimization). 
 
-## My React-ion (harharhar)
+## My React-ion *(harharhar)*
 
 Interacting with the DOM and keeping it in sync with state in a performant and robust way can be one of the hardest parts of designing web apps these days. The push for true two-way binding and excitement around [Object.observe](http://bocoup.com/weblog/javascript-object-observe/) should illustrate this. React saves developers time and headache by treating the DOM as a stateless canvas and re-rendering a component based on its state.
 
