@@ -30,7 +30,7 @@ Component properties should be treated as immutable and are passed in by either 
 
 Beyond the basics, React components also have [events](http://facebook.github.io/react/docs/events.html), [mixins](http://facebook.github.io/react/docs/reusable-components.html#mixins), and a number of [lifecycle methods](http://facebook.github.io/react/docs/component-specs.html) for fine-grained control.
 
-## TwiStrug *(codename: "Twist Rug")*
+## TwiStrug <span class="subhead">(codename: "Twist Rug")</span>
 
 TwiStrug is structured around nested React components. There's a main React component, [`TwiStrug`](https://github.com/jjt/TwiStrug/blob/master/src/Twistrug.coffee), with a [router](https://github.com/jjt/TwiStrug/blob/master/src/router.coffee) mixed in. This is the entry point for the app and handles all routing and top-level controller concerns.
 
@@ -90,7 +90,7 @@ I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I
 
 The board state is a structured object, and something like [Cortex](https://github.com/mquan/cortex) would be useful. Either that or I should switch the representation of board state from a nice object to its 176-char encoded form and use functions or board model methods to decode/encode when necessary. Either solution would make it easier for React to pick up on state changes and eliminate the few `shouldComponentUpdate()` methods that I defined (likely a premature optimization). 
 
-## My React-ion *(harharhar)*
+## My React-ion <span class="subhead">(harharhar)</span>
 
 Interacting with the DOM and keeping it in sync with state in a performant and robust way can be one of the hardest parts of designing web apps these days. The push for true two-way binding and excitement around [Object.observe](http://bocoup.com/weblog/javascript-object-observe/) should illustrate this. React saves developers time and headache by treating the DOM as a stateless canvas and re-rendering a component based on its state.
 

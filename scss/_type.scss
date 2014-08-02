@@ -154,3 +154,10 @@ p > code {
 .text-left {
   text-align: left;
 }
+
+
+.subhead {
+  color:lighten($header-color, 20%);
+  font-style:italic;
+  font-size:0.7em;
+}
