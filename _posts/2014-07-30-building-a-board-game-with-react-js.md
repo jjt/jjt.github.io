@@ -70,9 +70,27 @@ I designed the board for local play, but a user on BGG suggested that a sharable
 
 [`Board.render()`](https://github.com/jjt/TwiStrug/blob/master/src/views/Board.coffee#L273) renders sub-components whose properties are comprised of `Board.props` (country info+positions) and `Board.state`. None of the sub-components have their own state (with the exception of the dice) which makes things nice and easy to reason about. However, this means that we have to have some way of a child component letting its parent know that an action has taken place, such as moving DEFCON from 4 to 3. The recommended way is for the parent to pass a handler method as a property on the child component.
 
-For example let's look at what happens when someone interacts with a [`BoardStatusValue`](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardStatusValue.coffee) component to move DEFCON from 4 to 3. The arrows each have an [`onClick`](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardStatusValue.coffee#L15) handler, which is `@props.handleValClick()`. This handler is passed in as a property by its parent component, [`BoardStatus`](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardStatus.coffee#L61), which in turn is a property passed in from [`Board`](https://github.com/jjt/TwiStrug/blob/master/src/views/Board.coffee#L336). So when someone clicks an arrow in `BoardStatusValue`, it's really calling `Board.handleValClick()`. This system works, and it preserves the idea that components should have no knowledge of their parents, but it would quickly become tedious if we had a dozen such click handlers spread across numerous deeply-nested components.
+For example let's look at what happens when someone interacts with a [`BoardStatusValue`](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardStatusValue.coffee) component to move DEFCON from 4 to 3. The arrows each have an [`onClick`](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardStatusValue.coffee#L15) handler, which is `@props.handleValClick()`. This handler is passed in as a property by its parent component, [`BoardStatus`](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardStatus.coffee#L61), which in turn is a property passed in from [`Board`](https://github.com/jjt/TwiStrug/blob/master/src/views/Board.coffee#L336). So when someone clicks an arrow in `BoardStatusValue`, it's really calling `Board.handleValClick()`. This system works, and it preserves the idea that components should have no knowledge of their parents, but it would quickly become tedious if we had a dozen such click handlers spread across numerous deeply-nested components. Even so, React is a great choice for representing a stateful system like a board game.
 
-All in all, React is a great choice for representing a stateful system like a board game.
+## Keyboard all the things!!
+I'm BFFs with my keyboard, as any developer should be. Consequently, everything on the TwiStrug board is controllable by keyboard shortcuts, right down to rolling the dice. My favorite part of the whole project has to be how the influence placement turned out. Here's a short gif/gfy/webm of a standard USSR setup:
+
+<a href="http://twistrug.jjt.io/data/twistrug-ip-keyboard-placement-720p.webm" title="Click for 720p webm"><img class="gfyitem" data-id="ClearcutAdolescentCoelacanth" /></a>
+
+I used the following sequence to record that video:
+    
+        i               // Start (I)PbK mode
+        e               // Select (E)urope
+        e               // Select (E)ast Germany
+        r enter         // +1 USSR in East Germany, confirm
+        p               // Select (P)oland
+        r r r r enter   // +4 USSR in Poland, confirm
+        y               // Select (Y)ugoslavia 
+        r enter         // +1 USSR in Yugoslavia, confirm
+        esc             // Exit Europe selection
+        esc             // Exit IPbK mode
+    
+It looks even better without comments or newlines: `i e e r enter p r r r r enter y r enter esc esc`. I went slowly in the video to demonstrate the system - once you learn the shortcuts it's quick to do everything on the board.
 
 ## Card Reference
 
@@ -84,7 +102,7 @@ Each card has a detail page with a [simple component](https://github.com/jjt/Twi
 
 ## Refactoring and Hindsight
 
-`views/Board` contains a lot of board logic which should be moved into a separate model. This would make `views/Board` less of a *viewModel* and more of a pure *view*. The coupling isn't too concerning though, as the board is only really used in that one view.
+`views/Board` is pretty chunky. In addition to the keyboard IP placement stuff, it's got a bunch of board state logic which should be moved into a separate model. This would make `views/Board` less of a *viewModel* and more of a pure *view*. The coupling isn't too concerning though, as the board is only really used in that one view.
 
 I'm a huge fan of [CoffeeScript](http://coffeescript.org/) and use it wherever I can. I didn't want to give it up to use [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html), so I used the bare `React.DOM` methods as outlined in [a blog post](http://blog.vjeux.com/2013/javascript/react-coffeescript.html) by React developer [Vjeux](https://twitter.com/Vjeux). It works for the most part but I had to straddle the syntactical line between brittle and overwrought, with all of the extra brackets. I'd like to move the [return value](https://github.com/jjt/TwiStrug/blob/master/src/views/BoardNodeIP.coffee#L31-L48) of each `render()` method into its own JSX module, and treat it much like a traditional template (Jade, Handlebars, etc). JSX compilation would be handled by a Browserify transform: [reactify](https://github.com/andreypopp/reactify).
 
@@ -99,3 +117,12 @@ And to top it all off the [#reactjs IRC](http://jsfiddle.net/vjeux/Zf5sQ/) is we
 I wouldn't be surprised if React found its way into the Backbones, Embers, and Angulars of the future. Or dispatching the MVC paradigm entirely, there's [Flux](http://facebook.github.io/react/docs/flux-overview.html) for large sites, or homespun MVC-ish architectures like that used in TwiStrug for smaller sites.
 
 *TL;DR I ♥ React*
+
+<script>
+ (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
+    s.parentNode.insertBefore(g, s);
+}(document, 'script'));
+</script>
