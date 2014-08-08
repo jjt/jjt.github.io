@@ -12,7 +12,7 @@ If you like board games and are looking for an intense 1v1 Cold War experience w
 
 The best synopsis I've read is from a [BGG review](http://boardgamegeek.com/thread/471953/rogers-reviews-deluxe-twilight-struggle-comprehens):
 
-> Twilight Struggle is a card driven game played over a maximum of 10 turns. The game may end sooner (and frequently does).
+> Twilight Struggle is a card driven game played over a maximum of 10 turns [each comprised of 6 or 7 rounds]. The game may end sooner (and frequently does).
 
 >[It] is fundamentally a game about area control. There are six geopolitical regions on the map: Europe (split into Eastern and Western Europe subregions), Asia (including the Southeast Asia subregion), the Middle East, Africa, Central America, and South America. Within each region are countries that have a stability number, representing how stable the government tends to be. 
 
