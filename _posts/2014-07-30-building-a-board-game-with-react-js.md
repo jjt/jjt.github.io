@@ -116,7 +116,7 @@ Interacting with the DOM and keeping it in sync with state in a performant and r
 
 And to top it all off the [#reactjs IRC](http://jsfiddle.net/vjeux/Zf5sQ/) is well populated and the React developers are usually there, willing to lend a hand. I've asked a couple of stupid/obvious questions and they were answered fully and without a hint of impatience.
 
-I wouldn't be surprised if React found its way into the Backbones, Embers, and Angulars of the future. Or dispatching the MVC paradigm entirely, there's [Flux](http://facebook.github.io/react/docs/flux-overview.html) for large sites, or homespun MVC-ish architectures like that used in TwiStrug for smaller sites.
+I wouldn't be surprised if React found its way into the Backbones, Embers, and Angulars of the future. Or dispatching the MVC paradigm entirely, there's [Flux](http://facebook.github.io/react/docs/flux-overview.html) for large sites, or homespun Flux-ish/MVC-ish architectures like that used in TwiStrug for smaller sites.
 
 *TL;DR I ♥ React*
 
