@@ -5,7 +5,7 @@ description: ""
 tagline: "Oh boy, I bet it's even hosted on Github too"
 category: null
 tags: []
-published: true
+published: false
 ---
 
 *update:* Jekyll-Bootstrap was okay, but my blog is now [The New Hotness](/2013/06/20/the-new-hotness) 
