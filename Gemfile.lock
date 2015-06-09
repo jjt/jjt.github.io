@@ -62,3 +62,6 @@ DEPENDENCIES
   rdiscount (= 1.6.8)
   redcarpet (= 2.2.2)
   sass (= 3.2.9)
+
+BUNDLED WITH
+   1.10.3

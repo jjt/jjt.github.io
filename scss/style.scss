@@ -211,6 +211,7 @@ a.imglink {
   padding:0.32rem 0 0;
   width:24%;
   float:left;
+  max-width: 340px;
   //background:$solarized-3;
   a {
     display:block;
@@ -240,6 +241,9 @@ a.imglink {
       padding:0;
       color:$solarized-1;
     }
+  }
+  .g-face {
+    margin: 0 auto;
   }
   .g-guys-title p {
   }
@@ -358,7 +362,8 @@ hr.end {
 
 
 .blurb  {
-  @extend .gamma;
+  @extend .beta;
+  line-height: 2rem;
 }
 
 
